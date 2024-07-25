@@ -1,0 +1,77 @@
+<!-- pitch_template.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lessons.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/lessons.js') }}"></script>
+
+<div class="container-fluid black-border spacer {{ pitch.color }}"><br>
+    <h1 class="black-text">{{ pitch['name'] }}</h1>
+</div>
+
+<br><br>
+<div class="row">
+    <div class="col-3">
+        <div class="row">
+            <h3 class="black-text">
+                <span class="underline">Speed:</span>
+                <br>
+                <span class="{{ pitch.color}}">
+                    {{pitch.speed}}
+                </span>
+            </h3>
+        </div>
+        <br>
+        <div class="row">
+            <h3 class="black-text">
+                <span class="underline">Movement:</span>
+                <div>
+                    {{pitch.movement}}
+                </div>
+            </h3>
+        </div>
+        <br>
+        <div class="row">
+            <h3 class="black-text bold">
+                <div>
+                    {{pitch.short_info}}
+                </div>
+            </h3>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="row">
+            <video  controls>
+                <source src="{{ url_for('static', filename=video) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <br><br>
+        <div class="row">
+            <a href="{{ url_for('pitch', pitch_name=next_pitch.path) }}" class="btn btn-primary black-text {{next_pitch.color}}">Next Pitch: {{next_pitch.name}}</a>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="row">
+            <h3 class="black-text">
+                Trajectory:
+            </h3>
+            <div>
+                <img src="{{ url_for('static', filename='images/' ~ pitch.name ~ '-right.png') }}" alt="{{ pitch.name }} Path" width="230">
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="row">
+            <div id="quizButtonContainer"></div>
+            <input type="hidden" id="currentPitchName" value="{{pitch.name}}">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

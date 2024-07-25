@@ -1,0 +1,142 @@
+#title{
+    text-align: center;
+}
+
+.accent-color{
+    color: #BEE7FE;
+}
+
+.base-color{
+    color: #FFFFFF;
+}
+
+.lgray-base{
+    background-color: #CBCBCB;
+}
+
+.dkgray-base{
+    background-color: #696A6A;
+}
+
+.black-text{
+    color: black;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+#center-img{
+    vertical-align: top;
+    text-align: center;
+    margin-top: 0;
+}
+
+.red-base{
+    background-color: rgb(220, 47, 47);
+}
+
+.white{
+    color: white;
+}
+
+.navy{
+    background-color: rgb(2, 2, 55);
+}
+
+
+.gray{
+    background-color: gray;
+}
+
+.lgray{
+    color: lightgray;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.font1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.underline{
+    text-decoration: underline; 
+}
+
+.italic{
+    font-style: italic;
+}
+
+.large{
+    font-size: large;
+}
+
+.inline{
+    display: inline-block;
+}
+
+li {
+    list-style-type: decimal;
+  }
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger {
+    background: #f8f9fa;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 200%;
+    z-index: 1;
+}
+
+#home-nav{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.stadium-img{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#pitch-diagram{
+    margin-left: 100px;
+}
+
+#quiz-diagram{
+    text-align: right;
+    padding-right: 200px;
+}
+
+.home-img{
+    width: 70%;
+}
+
+.navbar{
+    margin-left: 30pt;
+    margin-right: 30pt;
+}

@@ -1,0 +1,45 @@
+{
+"Projects": {
+    "SWE": {
+        "Frontend":[{       
+            "Name": "NFL_website",
+            "Title": "NFL Webiste",
+            "Summary": "This project...",
+            "img": "",
+            "Description": "This is a group project...",
+            "Completion": "December 2023",
+            "Github": "http///git...",
+            "Tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+            },
+            {
+            "Name": "Baseball",
+            "Title": "NFL Webiste",
+            "Summary": "This project...",
+            "img": "",
+            "Description": "This is a group project...",
+            "Completion": "December 2023",
+            "Github": "http///git...",
+            "Tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+            }]
+            },
+        "Backend":[],
+        "Database": [],
+        "Mobile": []
+    },
+    "AI/Machine Learning":{
+        "AI": [],
+        "Natural Language Processing":[{
+            "Name": "BERT",
+            "Title": "NFL Webiste",
+            "Summary": "This project...",
+            "img": "",
+            "Description": "This is a group project...",
+            "Completion": "December 2023",
+            "Github": "http///git...",
+            "Tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+            }],
+        "Robotics": [],
+        "Computer Vision": [],
+        "ML": []
+    }
+}

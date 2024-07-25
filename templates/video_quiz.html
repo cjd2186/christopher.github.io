@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<title>Video Pitch Quiz</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/video_quiz.js') }}"></script>
+<div class="container mt-4">
+    <h1>Identify the Pitch - Level 2</h1>
+    <p>Question <span id="currentQuestionNumber">1</span> of <span id="totalQuestions">{{ videos|length }}</span></p>
+    <form id="quiz-form" method="post">
+        <div id="quiz-container">
+            {% for video in videos %}
+            <div class="video-question" style="display: none;">
+                <video width="320" height="240" controls>
+                    <source src="{{ url_for('static', filename=video) }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <label>Select the type of pitch:</label>
+                <select class="form-control pitch-select" onchange="checkAnswer(this, '{{ loop.index0 }}')">
+                    <option value="">Select an option</option>
+                    <option value="Four-Seam">Four-Seam</option>
+                    <option value="Two-Seam">Two-Seam</option>
+                    <option value="Slider">Slider</option>
+                    <option value="Curveball">Curveball</option>
+                    <option value="Changeup">Changeup</option>
+                </select>
+                <div class="feedback"></div>
+            </div>
+            {% endfor %}
+        </div>
+        <button type="button" onclick="prevQuestion()" class="btn btn-info" id="prevBtn" style="display: none;">Previous</button>
+        <button type="button" onclick="nextQuestion()" class="btn btn-primary" id="nextBtn">Next</button>
+        <button type="button" onclick="submitQuiz()" class="btn btn-success" id="submitBtn" style="display: none;">Submit Answers</button>
+    </form>
+    <div id="quiz-result"></div>
+</div>
+{% endblock %}
+
