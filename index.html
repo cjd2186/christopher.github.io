@@ -1,0 +1,37 @@
+<!-- home.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Christopher's Portfolio
+{% endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="container-fluid">
+        <br>
+        <div>
+            <div class="row">
+                <div class="col-4"></div>
+                    <h1> Christopher Demirjian</h1>
+                <div class="col-4" id="headshot">
+                    <img src="/static/images/Lors_headshot_yearbook.jpeg" alt="headshot" width= flex class= "img-fluid"> 
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5" id="pitch-diagram">
+                <br>
+                <h4>Learn Each Pitch:</h4>
+                <span class="clickable">
+                    <img onclick="goToPage('/lessons')" src="https://cdn.shopify.com/s/files/1/0013/5865/9642/files/001_grande.jpeg?v=1567748868" alt="Pitch Diagrams" class="home-img">
+                </span>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
