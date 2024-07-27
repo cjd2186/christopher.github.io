@@ -1,0 +1,125 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    Christopher's Portfolio
+</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
+
+    <!-- Bootstrap CSS (Latest version from your second layout) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery and jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            $(window).on('scroll', function () {
+                var currentScrollTop = $(this).scrollTop();
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    $('.navbar').css('top', '-60px'); // Adjust height to the navbar height
+                } else {
+                    // Scrolling up
+                    $('.navbar').css('top', '0');
+                }
+                lastScrollTop = currentScrollTop;
+            });
+        });
+    </script>
+</head>
+<body class="dkgray-base">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Navbar Brand -->
+            <img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40">
+            <a class="navbar-brand" id="home-nav" href="index.html#home"> Home </a>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#about">About Me</a>
+                    <a class="nav-link" href="#exp">Professional Experience</a>
+                    <a class="nav-link" href="#swe">SWE Work</a>
+                    <a class="nav-link" href="#ml">ML Work</a>
+                    <a class="nav-link" href="#cyber">Cybersecurity</a>
+                    <a class="nav-link" href="#contact">Contact Me</a>
+                    <!--a class="nav-link" href="/search bar">Contact Me</a-->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </nav>
+
+    <div class="container-fluid dkgray-base">    
+        <div id="scenery-container">
+            <div id="scenery"></div>
+        </div>
+        <div class= "main-container">
+            
+<body>
+    <h1>Accelerate Program Intern</h1>
+    <img src="" alt="Accelerate Program Intern">
+    <p>This is a group project...</p>
+    <p>Time: August 2023 - December 2023</p>
+    <p>Tags: 
+        
+        <span class="tag" style="background-color: #D3D3D3;">
+            Agile
+        </span>
+        
+        <span class="tag" style="background-color: #D3D3D3;">
+            Cloud
+        </span>
+        
+        <span class="tag" style="background-color: #F05032;">
+            Git
+        </span>
+        
+        <span class="tag" style="background-color: #D3D3D3;">
+            CSS
+        </span>
+        
+        <span class="tag" style="background-color: #4CAF50;">
+            Teamwork
+        </span>
+        
+    </p>
+    <a href="index.html">Back to Home</a>
+</body>
+
+        </div>
+
+        <section id="contact">
+            <h2>How to contact me</h2>
+            <hr>
+            <dl class="alt">
+                <dt>Email</dt>
+                <dd>cjd2186@columbia.edu</dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/christopher-demirjian-b5783822a/" class="fab fa-linkedin" target="_blank" aria-label="link to linked-in page"></a></li>
+                <li><a href="https://github.com/cjd2186" class="fab fa-github" target="_blank" aria-label="link to github page"></a></li>
+            </ul>
+        </section>
+    </div>
+    
+</body>
+</html>

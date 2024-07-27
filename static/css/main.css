@@ -1,0 +1,210 @@
+#title{
+    text-align: center;
+}
+
+.content {
+    height: auto; /* Just for scrolling effect */
+    padding-top: 60px; /* Make space for the navbar */
+}
+.main-container{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    border-radius: 0px 0px 50px 50px;
+    padding-bottom: 20px;
+}
+
+#contact{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.accent-color{
+    color: #BEE7FE;
+}
+
+.base-color{
+    color: #FFFFFF;
+}
+
+.lgray-base{
+    background-color: #CBCBCB;
+}
+
+.dkgray-base{
+    background-color:  rgb(190, 190, 190);
+}
+
+.black-text{
+    color: black;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+#center-img{
+    vertical-align: top;
+    text-align: center;
+    margin-top: 0;
+}
+
+.red-base{
+    background-color: rgb(220, 47, 47);
+}
+
+.white{
+    color: white;
+}
+
+.navy{
+    background-color: rgb(2, 2, 55);
+}
+
+
+.gray{
+    background-color: gray;
+}
+
+.lgray{
+    color: lightgray;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.font1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.underline{
+    text-decoration: underline; 
+}
+
+.italic{
+    font-style: italic;
+}
+
+.large{
+    font-size: large;
+}
+
+.inline{
+    display: inline-block;
+}
+
+li {
+    list-style-type: decimal;
+  }
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger {
+    background: #f8f9fa;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 200%;
+    z-index: 1;
+}
+
+#home-nav{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.stadium-img{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#pitch-diagram{
+    margin-left: 100px;
+}
+
+#quiz-diagram{
+    text-align: right;
+    padding-right: 200px;
+}
+
+.home-img{
+    width: 70%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    background-color: white; /* Ensure the navbar has a background */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+}
+
+body {
+    padding-top: 60px; /* Adjust based on the height of your navbar */
+}
+/* Adjust the value to the height of your fixed navbar */
+
+section {
+    padding-top: 60px; /* or use margin-top: 60px; */
+    margin-top: -60px; /* This negative margin compensates for the added padding */
+}
+
+#home{
+    padding-top: 10px;
+}
+
+#scenery-container {
+    position: relative; /* Context for absolutely positioned children */
+    width: 1496px; /* Fixed width with units */
+    height: 200px; /* Fixed height to fit the container */
+    overflow: hidden; /* Prevent content from overflowing */
+    border-radius: 50px 50px 0 0; /* Rounded top corners */
+    padding: 0; /* No extra padding */
+    margin: 0 auto; /* Center the container */
+
+}
+
+#scenery {
+    position: absolute; /* Absolute positioning for background image */
+    top: 0; /* Align with the top of the container */
+    left: 0; /* Align with the left of the container */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background-image: url('/christopher.github.io/static/images/clouds_snow.png'); /* Background image URL */
+    background-size: cover; /* Cover the container, cropping if necessary */
+    background-position: center bottom; /* Align bottom of the image with the container bottom */
+    background-repeat: no-repeat; /* Prevent image tiling */
+}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Christopher's Portfolio
+{% endblock %}
+
+    
+{% block content %}
+<body>
+    <h1>{{ project.title }}</h1>
+    <img src="{{ project.img }}" alt="{{ project.title }}">
+    <p>{{ project.description }}</p>
+    <p>Completion: {{ project.completion }}</p>
+    <p>Tags: 
+        {% for tag in project.tags %}
+        <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+            {{ tag }}
+        </span>
+        {% endfor %}
+    </p>
+    <a href="index.html">Back to Home</a>
+</body>
+
+{% endblock %}

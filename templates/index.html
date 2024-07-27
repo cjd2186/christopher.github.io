@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Christopher's Portfolio
+{% endblock %}
+
+    
+{% block content %}
+<link rel="stylesheet" href="/christopher.github.io/static/css/index.css">
+<section id="home">
+    <div id="container-fluid">
+        <div class="row" id="top-name">
+            <h1> Christopher Demirjian</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-3">  
+                <br>
+                <div class="row" id="headshot">
+                    <img src="/christopher.github.io/static/images/Lors_headshot_yearbook.png" alt="headshot of Christopher" style="width: 325px"> 
+                </div>
+                <div class="row" id="blurb">
+                    <div id="student">
+                        Master's Student in Machine Learning
+                    </div>
+                    <div id="job">
+                        Software, Machine Learning Engineer
+                    </div>
+                    <div id="school">
+                        Columbia Engineering
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" id="about">
+                <br>
+                <br>
+                <h2> About Me </h2>
+                <p>
+                    I am currently a graduate student at Columbia University in the City of New York. <br>
+                    I thrive when working in teams, love to collaborate, and I am a dedicated, passionate learner. <br>
+                    I enjoy learning new technologies and I am looking to work as a Software Developer and Machine Learning <br>
+                    Engineer where I can learn and grow.<br>
+                </p>
+            </div>
+            <div class="col-3">
+                    <div class="image-container">
+                        <img src="/christopher.github.io/static/images/resume_thumb.png" alt="Resume Thumbnail" style="width: 300px; height: auto;">
+                        <a href="/christopher.github.io/static/pdf/Christopher_Demirjian_Resume_git.pdf" target="_blank" class="overlay-button">View Resume</a>
+                    </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section id="exp">
+    <h2>Professional Experience</h2>
+    <hr>
+    <p>Details about my professional experience.</p>
+
+</section>
+
+<section id="swe">
+    <h2>Software Engineering Projects</h2>
+    <hr>
+    <div class="frontend">
+        <h3> Frontend Projects </h3>
+        {% for project in projects.swe.frontend %}
+            <div class="project">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <p>Completion: {{ project.completion }}</p>
+                <div class="thumbnail-container">
+                    <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
+                        <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                        <div class="play-button">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <p>{{ project.summary }}</p>
+                <p>Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </p>
+                <span class="project-git">
+                    <a href="{{ project.git }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                </span>
+                <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <button type="button" class="btn btn-outline-info">Read More</button>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="ml">
+    <h2>Machine Learning Projects</h2>
+    <hr>
+    {% for project in projects.aiml %}
+        <img src="{{ project.img }}" alt="{{ project.name }} visual" width="300">
+    {% endfor %}
+    <p>Details about my professional experience.</p>
+</section>
+
+<section id="cyber">
+    <h2>Cyber Security Projects</h2>
+    <hr>
+    <p>Details about my professional experience.</p>
+</section>
+{% endblock %}

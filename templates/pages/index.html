@@ -1,0 +1,325 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    Christopher's Portfolio
+</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
+
+    <!-- Bootstrap CSS (Latest version from your second layout) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery and jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            $(window).on('scroll', function () {
+                var currentScrollTop = $(this).scrollTop();
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    $('.navbar').css('top', '-60px'); // Adjust height to the navbar height
+                } else {
+                    // Scrolling up
+                    $('.navbar').css('top', '0');
+                }
+                lastScrollTop = currentScrollTop;
+            });
+        });
+    </script>
+</head>
+<body class="dkgray-base">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Navbar Brand -->
+            <img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40">
+            <a class="navbar-brand" id="home-nav" href="index.html#home"> Home </a>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#about">About Me</a>
+                    <a class="nav-link" href="#exp">Professional Experience</a>
+                    <a class="nav-link" href="#swe">SWE Work</a>
+                    <a class="nav-link" href="#ml">ML Work</a>
+                    <a class="nav-link" href="#cyber">Cybersecurity</a>
+                    <a class="nav-link" href="#contact">Contact Me</a>
+                    <!--a class="nav-link" href="/search bar">Contact Me</a-->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </nav>
+
+    <div class="container-fluid dkgray-base">    
+        <div id="scenery-container">
+            <div id="scenery"></div>
+        </div>
+        <div class= "main-container">
+            
+<link rel="stylesheet" href="/christopher.github.io/static/css/index.css">
+<section id="home">
+    <div id="container-fluid">
+        <div class="row" id="top-name">
+            <h1> Christopher Demirjian</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-3">  
+                <br>
+                <div class="row" id="headshot">
+                    <img src="/christopher.github.io/static/images/Lors_headshot_yearbook.png" alt="headshot of Christopher" style="width: 325px"> 
+                </div>
+                <div class="row" id="blurb">
+                    <div id="student">
+                        Master's Student in Machine Learning
+                    </div>
+                    <div id="job">
+                        Software, Machine Learning Engineer
+                    </div>
+                    <div id="school">
+                        Columbia Engineering
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" id="about">
+                <br>
+                <br>
+                <h2> About Me </h2>
+                <p>
+                    I am currently a graduate student at Columbia University in the City of New York. <br>
+                    I thrive when working in teams, love to collaborate, and I am a dedicated, passionate learner. <br>
+                    I enjoy learning new technologies and I am looking to work as a Software Developer and Machine Learning <br>
+                    Engineer where I can learn and grow.<br>
+                </p>
+            </div>
+            <div class="col-3">
+                    <div class="image-container">
+                        <img src="/christopher.github.io/static/images/resume_thumb.png" alt="Resume Thumbnail" style="width: 300px; height: auto;">
+                        <a href="/christopher.github.io/static/pdf/Christopher_Demirjian_Resume_git.pdf" target="_blank" class="overlay-button">View Resume</a>
+                    </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section id="exp">
+    <h2>Professional Experience</h2>
+    <hr>
+    <p>Details about my professional experience.</p>
+
+</section>
+
+<section id="swe">
+    <h2>Software Engineering Projects</h2>
+    <hr>
+    <div class="frontend">
+        <h3> Frontend Projects </h3>
+        
+            <div class="project">
+                <h4>LC2Eval Web Demo</h4>
+                <hr class="bar">
+                <p>Completion: December 2023</p>
+                <div class="thumbnail-container">
+                    <a href="https://www.youtube.com/watch?v=GRYElY8QH3o" target="_blank">
+                        <img src="https://img.youtube.com/vi/GRYElY8QH3o/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                        <div class="play-button">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <p>Python Streamlit code for Yale NLP Research Paper Companion Website</p>
+                <p>Tags: 
+                    
+                    <span class="tag" style="background-color: #D3D3D3;">
+                        Cloud
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4285F4;">
+                        GCP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #67C4D8;">
+                        REST
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #00D1FF;">
+                        FAST API
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF9900;">
+                        AWS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                </p>
+                <span class="project-git">
+                    <a href="" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                </span>
+                <a href="/christopher.github.io/templates/pages/Yale_website.html" class="read-more-button">
+                    <button type="button" class="btn btn-outline-info">Read More</button>
+                </a>
+            </div>
+        
+            <div class="project">
+                <h4>How to Identify Pitches in Baseball</h4>
+                <hr class="bar">
+                <p>Completion: December 2023</p>
+                <div class="thumbnail-container">
+                    <a href="https://www.youtube.com/watch?v=QE0EdaDUWEc" target="_blank">
+                        <img src="https://img.youtube.com/vi/QE0EdaDUWEc/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                        <div class="play-button">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <p>This project...</p>
+                <p>Tags: 
+                    
+                    <span class="tag" style="background-color: #D3D3D3;">
+                        Cloud
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF9900;">
+                        AWS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                </p>
+                <span class="project-git">
+                    <a href="" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                </span>
+                <a href="/christopher.github.io/templates/pages/Baseball.html" class="read-more-button">
+                    <button type="button" class="btn btn-outline-info">Read More</button>
+                </a>
+            </div>
+        
+            <div class="project">
+                <h4>Fantasy Football Website</h4>
+                <hr class="bar">
+                <p>Completion: December 2023</p>
+                <div class="thumbnail-container">
+                    <a href="https://www.youtube.com/watch?v=9wvaQp-zsDY" target="_blank">
+                        <img src="https://img.youtube.com/vi/9wvaQp-zsDY/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                        <div class="play-button">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <p>This project...</p>
+                <p>Tags: 
+                    
+                    <span class="tag" style="background-color: #D3D3D3;">
+                        Cloud
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF9900;">
+                        AWS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                </p>
+                <span class="project-git">
+                    <a href="" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                </span>
+                <a href="/christopher.github.io/templates/pages/Fantasy.html" class="read-more-button">
+                    <button type="button" class="btn btn-outline-info">Read More</button>
+                </a>
+            </div>
+        
+    </div>
+</section>
+
+<section id="ml">
+    <h2>Machine Learning Projects</h2>
+    <hr>
+    
+        <img src="" alt=" visual" width="300">
+    
+        <img src="" alt=" visual" width="300">
+    
+        <img src="" alt=" visual" width="300">
+    
+        <img src="" alt=" visual" width="300">
+    
+        <img src="" alt=" visual" width="300">
+    
+    <p>Details about my professional experience.</p>
+</section>
+
+<section id="cyber">
+    <h2>Cyber Security Projects</h2>
+    <hr>
+    <p>Details about my professional experience.</p>
+</section>
+
+        </div>
+
+        <section id="contact">
+            <h2>How to contact me</h2>
+            <hr>
+            <dl class="alt">
+                <dt>Email</dt>
+                <dd>cjd2186@columbia.edu</dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/christopher-demirjian-b5783822a/" class="fab fa-linkedin" target="_blank" aria-label="link to linked-in page"></a></li>
+                <li><a href="https://github.com/cjd2186" class="fab fa-github" target="_blank" aria-label="link to github page"></a></li>
+            </ul>
+        </section>
+    </div>
+    
+</body>
+</html>

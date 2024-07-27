@@ -1,0 +1,107 @@
+{
+    "projects": {
+        "swe": {
+            "frontend": [
+                {
+                "name": "Yale_website",
+                "title": "LC2Eval Web Demo",
+                "summary": "Python Streamlit code for Yale NLP Research Paper Companion Website",
+                "video_id": "GRYElY8QH3o",
+                "description": "This is a group project...",
+                "completion": "December 2023",
+                "github": "",
+                "tags": ["Cloud", "GCP", "REST", "Python", "FAST API", "Wireshark", "AWS", "Columbia", "Teamwork"]
+                },
+                {
+                "name": "Baseball",
+                "title": "How to Identify Pitches in Baseball",
+                "summary": "This project...",
+                "video_id": "QE0EdaDUWEc",
+                "description": "This is a group project...",
+                "completion": "December 2023",
+                "github": "",
+                "tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+                },
+                {
+                "name": "Fantasy",
+                "title": "Fantasy Football Website",
+                "summary": "This project...",
+                "video_id": "9wvaQp-zsDY",
+                "description": "This is a group project...",
+                "completion": "December 2023",
+                "github": "",
+                "tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+                }
+            ],
+            "backend": [],
+            "database": [],
+            "mobile": []
+        },
+        "aiml": {
+            "ai": [],
+            "natural language processing": [
+                {
+                "name": "BERT",
+                "title": "NFL Webiste",
+                "summary": "This project...",
+                "img": "",
+                "description": "This is a group project...",
+                "completion": "December 2023",
+                "github": "http///git...",
+                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                }
+            ],
+            "robotics": [],
+            "computer vision": [],
+            "ml": []
+        },
+        "cyber":{
+            "networks": [
+                {
+                "name": "P4",
+                "title": "P4 IoT Firewall",
+                "summary": "This project...",
+                "img": "",
+                "description": "This is a research project...",
+                "completion": "December 2023",
+                "github": "http///git...",
+                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                },
+                {
+                "name": "C_Server",
+                "title": "HTTP Web Server in C",
+                "summary": "This project...",
+                "img": "",
+                "description": "This is a group project...",
+                "completion": "December 2023",
+                "github": "http///git...",
+                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                }
+            ]
+        }
+    },
+
+    
+    "jobs": {
+        "roles": {
+            "internships": [{       
+                "role": "Accelerate Program Intern",
+                "company": "IBM",
+                "summary": "This project...",
+                "img": "",
+                "description": "This is a group project...",
+                "time": "August 2023 - December 2023",
+                "tags": ["Agile", "Cloud", "Git", "CSS", "Teamwork"]
+                }],
+            "yale":[],
+            "columbia": []
+            }
+        },
+        "ta":{
+            "1002": []
+        },
+    
+        "fulltime":{
+            
+        }
+}
