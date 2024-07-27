@@ -42,7 +42,7 @@
     bottom: 200px; /* Position the button 10px from the bottom of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust position to truly center */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     color: #fff; /* White text color */
     padding: 10px 20px; /* Padding around the text */
     border: none; /* Remove default border */

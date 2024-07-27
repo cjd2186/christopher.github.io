@@ -53,7 +53,8 @@
             ],
             "robotics": [],
             "computer vision": [],
-            "ml": []
+            "ml": [],
+            "finstats": []
         },
         "cyber":{
             "networks": [

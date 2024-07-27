@@ -6,10 +6,11 @@
     height: auto; /* Just for scrolling effect */
     padding-top: 60px; /* Make space for the navbar */
 }
-.main-container{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 60px;
+
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 400px); /* Adjust based on the margin-left and margin-right */
     padding-left: 100px;
     padding-right: 100px;
     background-color: white;
@@ -188,13 +189,11 @@ section {
 
 #scenery-container {
     position: relative; /* Context for absolutely positioned children */
-    width: 1496px; /* Fixed width with units */
+    width: calc(100% - 400px); /* Match the width of main container, adjusting for side margins */
     height: 200px; /* Fixed height to fit the container */
     overflow: hidden; /* Prevent content from overflowing */
     border-radius: 50px 50px 0 0; /* Rounded top corners */
-    padding: 0; /* No extra padding */
-    margin: 0 auto; /* Center the container */
-
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 #scenery {
