@@ -7,7 +7,8 @@
     
 {% block content %}
 <link rel="stylesheet" href="/christopher.github.io/static/css/index.css">
-<section id="home">
+<script src="/christopher.github.io/static/js/index.js"></script>
+<section class="pad" id="home">
     <div id="container-fluid">
         <div class="row" id="top-name">
             <h1> Christopher Demirjian</h1>
@@ -21,26 +22,30 @@
                 </div>
                 <div class="row" id="blurb">
                     <div id="student">
-                        Master's Student in Machine Learning
+                        Master's Student: ML, AI
                     </div>
-                    <div id="job">
-                        Software, Machine Learning Engineer
+                    <div class="italic" id="job">
+                        Software Engineer, Machine Learning Engineer
                     </div>
-                    <div id="school">
+                    <div class="bold" id="school">
                         Columbia Engineering
                     </div>
                 </div>
             </div>
-            <div class="col-6" id="about">
+            <div class="col-6">
                 <br>
                 <br>
-                <h2> About Me </h2>
-                <p>
-                    I am currently a graduate student at Columbia University in the City of New York. <br>
-                    I thrive when working in teams, love to collaborate, and I am a dedicated, passionate learner. <br>
-                    I enjoy learning new technologies and I am looking to work as a Software Developer and Machine Learning <br>
-                    Engineer where I can learn and grow.<br>
+                <h2 class="bold"> About Me </h2>
+                <p id="about">
                 </p>
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <img src="/christopher.github.io/static/images/cc.png" class="crown">
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <img src="/christopher.github.io/static/images/seas.png" class="crown">
+                    </div>
+                </div>
             </div>
             <div class="col-3">
                     <div class="image-container">
@@ -52,34 +57,102 @@
     </div> 
 </section>
 
-<section id="exp">
-    <h2>Professional Experience</h2>
+
+<section class="pad" id="exp">
+    <h2 class="bold">Professional Experience</h2>
     <hr>
-    <p>Details about my professional experience.</p>
+    <section id="roles">
+        <h3> Internships </h3>
+        {% for job in jobs.roles.internships %}
+            <div class="project" id="{{job.company}}">
+                <h4>{{ job.role }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Duration: {{ job.time }}</h5>
+                <div class="row">
+                    <div class="col-3 logo-container d-flex justify-content-center align-items-center">
+                        <img src="{{ job.img }}" alt="Company Logo" class="logo">
+                    </div>
+                    <p class="col-9 sum">{{ job.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in job.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <a href="/christopher.github.io/templates/pages/{{job.company}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 
 </section>
 
-<section id="swe">
-    <h2>Software Engineering Projects</h2>
+<section class="pad" id="swe">
+    <h2 class="bold">Software Engineering Projects</h2>
     <hr>
-    <div class="frontend">
+    <section class="pad" id="frontend">
         <h3> Frontend Projects </h3>
         {% for project in projects.swe.frontend %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
+                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <div class="play-button">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="pad" id="backend">
+        <h3> Backend Projects </h3>
+        {% for project in projects.swe.backend %}
             <div class="project">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <p>Completion: {{ project.completion }}</p>
-                <div class="thumbnail-container">
-                    <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
-                        <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
-                        <div class="play-button">
-                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
-                            </svg>
-                        </div>
-                    </a>
+                <div class="row">
+                    <div class="col-6 thumbnail-container d-flex justify-content-center align-items-center">
+                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <div class="play-button">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
                 </div>
-                <p>{{ project.summary }}</p>
                 <p>Tags: 
                     {% for tag in project.tags %}
                     <span class="tag" style="background-color: {{ tag_colors[tag] }};">
@@ -87,19 +160,21 @@
                     </span>
                     {% endfor %}
                 </p>
-                <span class="project-git">
-                    <a href="{{ project.git }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
-                </span>
-                <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
-                    <button type="button" class="btn btn-outline-info">Read More</button>
-                </a>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.git }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
             </div>
         {% endfor %}
-    </div>
+        </section>
 </section>
 
-<section id="ml">
-    <h2>Machine Learning Projects</h2>
+<section class="pad" id="ml">
+    <h2 class="bold">Machine Learning Projects</h2>
     <hr>
     {% for project in projects.aiml %}
         <img src="{{ project.img }}" alt="{{ project.name }} visual" width="300">
@@ -107,9 +182,49 @@
     <p>Details about my professional experience.</p>
 </section>
 
-<section id="cyber">
-    <h2>Cyber Security Projects</h2>
+<section class="pad" id="cyber">
+    <h2 class="bold">Cyber Security Projects</h2>
     <hr>
     <p>Details about my professional experience.</p>
+</section>
+
+<section class="pad" id="certs">
+    <h2 class="bold">Certifications</h2>
+    <hr>
+    <div class="container">
+    <div class="row">
+        {% for cert in certs %}
+            <div class="col-md-6">
+                <div class="project" id="{{cert.name}}">
+                    <h4>{{ cert.name }}</h4>
+                    <hr class="bar">
+                    <h5 class="completion">Issued: {{ cert.issue }}</h5>
+                    <div class="row">
+                        <div class="col-5 logo-container d-flex justify-content-center align-items-center">
+                            <img src="{{ cert.img }}" alt="Certificate Image" class="logo">
+                        </div>
+                        <p class="col-6 sum">
+                            <a href="{{cert.link}}" class="read-more-button">
+                                <button type="button" class="btn btn-outline-info">See Certificate</button>
+                            </a>
+                        </p>
+                    </div>
+                    <p>Tags: 
+                        {% for tag in cert.tags %}
+                        <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                            {{ tag }}
+                        </span>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <!--Finish the row and being a new row to put columns-->
+            {% if loop.index % 2 == 0 and not loop.last %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
 </section>
 {% endblock %}

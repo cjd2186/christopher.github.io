@@ -3,38 +3,70 @@
         "swe": {
             "frontend": [
                 {
-                "name": "Yale_website",
-                "title": "LC2Eval Web Demo",
-                "summary": "Python Streamlit code for Yale NLP Research Paper Companion Website",
-                "video_id": "GRYElY8QH3o",
-                "description": "This is a group project...",
-                "completion": "December 2023",
-                "github": "",
-                "tags": ["Cloud", "GCP", "REST", "Python", "FAST API", "Wireshark", "AWS", "Columbia", "Teamwork"]
-                },
-                {
                 "name": "Baseball",
-                "title": "How to Identify Pitches in Baseball",
-                "summary": "This project...",
+                "title": "EdTech: How to Identify Pitches in Baseball",
+                "summary": "Interactive Web Application that teaches user how to identify baseball pitch types. <br><br> This group project showcases a full stack web application using a Flask framework, HTML, CSS, and Javascript.",
                 "video_id": "QE0EdaDUWEc",
-                "description": "This is a group project...",
-                "completion": "December 2023",
-                "github": "",
-                "tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+                "description": "This group project served as the final project for a graduate level User Interface Design course at Columbia University.<br><br> Coordinating work with three other students, we created a website that guides a user to learn how to identify different pitches in baseball. <br><br> We were able to leverage Flask Jinja templates and jQuery to make the website very interactive, including features such as drag and drop, multiple choices questions and a responsive quiz.",
+                "completion": "May 2024",
+                "github": "https://github.com/cjd2186/CRUD-Baseball_TechEd-Website",
+                "tags": ["Frontend", "jQuery", "Flask", "HTML", "CSS", "JavaScript", "Twitter-bootstrap", "Python", "UI-Design", "Teamwork", "Columbia"]
                 },
                 {
                 "name": "Fantasy",
                 "title": "Fantasy Football Website",
-                "summary": "This project...",
+                "summary": "CRUD Web Application that users can reference for 2023 Fantasy Football Player information.",
                 "video_id": "9wvaQp-zsDY",
-                "description": "This is a group project...",
-                "completion": "December 2023",
-                "github": "",
-                "tags": ["Cloud", "AWS", "Columbia", "Teamwork"]
+                "description": "This independent project served as the midterm project for a graduate level User Interface Design cours at Columbia University. <br><br> This full-stack web application utilizes Flask, Ajax, jQuery and Javascript to allow users to search, add, view, edit and delete player information. <br><br> Accessible and user-fosued design principles were engrained in this design.",
+                "completion": "March 2024",
+                "github": "https://github.com/cjd2186/CRUD-Application-NFL-Fantasy-Football-Reference-Website",
+                "tags": ["Frontend", "jQuery", "Flask", "HTML", "CSS", "JavaScript", "Ajax", "Search", "Twitter-bootstrap", "Independent", "Columbia"]
+                },
+                {
+                "name": "Yale_website",
+                "title": "LC2Eval Web Demo",
+                "summary": "This project served as the first iteration of the companion website for the Yale Natural Language Processing (NLP) Lab's paper 'LC2Eval.' <br><br> Using the Python Streamlit library, this website allowed for the paper's datasets and findings to be clearly visualized online.",
+                "video_id": "GRYElY8QH3o",
+                "description": "In the summer of 2023, I served as an undergraduate research assistant to Yale's NLP Lab under PI Professor Arman Cohan. <br><br>As an academic collaborator, I was introduced to the field of Natural Language Processing, learning about techniques such as tokenization, few-shot/zero-shot learning and prompting. Additionally, I created presentations on important NLP research papers to build my understanding and familiarity with academic research papers. <br><br> The LC2Eval research project evaluated 54 existing models from 13 organizations on 7 different tasks. The web demo I created with a lab partner clearly visualized the results obtained from this study, using the Python Streamlit libray to implement web design techniques such as pagination, tabling, sorting and searching. <br><br> The Lab's full paper can be found <a href='https://arxiv.org/abs/2309.17446' target='_blank'> here</a>.",
+                "completion": "August 2023",
+                "github": "https://github.com/cjd2186/Web_Demo",
+                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural-Language-Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
                 }
             ],
-            "backend": [],
-            "database": [],
+            "backend": [
+                {
+                    "name": "Cloud-Compute",
+                    "title": "",
+                    "summary": "",
+                    "image": "",
+                    "description": "",
+                    "completion": "Month Year",
+                    "github": "",
+                    "tags": ["", ""]
+                    },
+                {
+                    "name": "",
+                    "title": "",
+                    "summary": "",
+                    "image": "",
+                    "description": "",
+                    "completion": "Month Year",
+                    "github": "",
+                    "tags": ["", ""]
+                    }
+            ],
+            "database": [
+                {
+                    "name": "",
+                    "title": "",
+                    "summary": "",
+                    "image": "",
+                    "description": "",
+                    "completion": "Month Year",
+                    "github": "",
+                    "tags": ["", ""]
+                    }
+            ],
             "mobile": []
         },
         "aiml": {
@@ -85,24 +117,109 @@
     
     "jobs": {
         "roles": {
-            "internships": [{       
+            "internships": [
+                {
+                "role": "Columbia University IRT Lab Undergraduate Research Assistant",
+                "company": "Columbia",
+                "summary": "As an undergraduate junior, I served as an Undergraduate Research Assistant to Columbia's Internet Real Time (IRT) Lab under Professor Henning Schulzrinne.<br><br> My work centered around researching how to program rules for a firewall that protects Internet of Things (IoT) devices from malicous traffic. This firewall was programming in the P4 language, adding intelligence to the forwarding of packets in the dataplane of network traffic for these devices. <br><a href='/christopher.github.io/templates/pages/index.html#P4' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a>",
+                "img": "/christopher.github.io/static/images/columbia.png",
+                "description": "At the Columbia Internet Real Time Lab, under Professor Henning Schulzrinne, I analyzed Internet of Things (IoT) network traffic, and developed a firewall for devices on this network. <br><br> Distinct from most course projects, I worked independently under a single PhD advisor, rather than alongside a team of peers. <br> Being a self-starter, I was given broad specifications for the firewall's features, and utilized my creativity by conducting my own brainstorming, research and planning to successfully implement these specifications to my advisor's feedback.",
+                "time": "January 2023 - August 2023",
+                "tags": ["Cybersecurity", "Networks", "Wireshark", "P4", "Python", "Git", "Linux", "IoT", "Firewall", "Research", "Columbia"]
+                },
+                {
+                "role": "Yale University NLP Lab Undergraduate Research Assistant",
+                "company": "Yale",
+                "summary": "As a rising undergraduate senior, I served as an Undergraduate Research Assistant to Yale's Natural Language Processing (NLP) Lab under Professor Arman Cohan.<br><br> As a research assistant, I collaborated with researchers to learn about the field of NLP and constructed a web demo to display the results of the lab's paper L2CEval. <br><a href='/christopher.github.io/templates/pages/index.html#LC2Eval Web Demo' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a>",
+                "img": "/christopher.github.io/static/images/yale.png",
+                "description": "My time at the Yale NLP lab introduced me to the wonderful world of Natural Language Processing. <br><br> Here, I was able to collaborate with experienced researchers in the NLP field, allowing me to learn how to properly read, interpret and structure scientific research papers in Computer Science. This experience also bolstered my presentations skills, as I was able to summarize and present prominent papers on the frontier of NLP research to the lab each week. <br><br> My main task as a research assistant was to create a companion website for the lab's L2CEval Paper, which studied the performance of various Large Language Models on different lexical and semantic tasks. The website demo I created served as the predecessor to the current L2CEval website. This project taught me how to use Python's Streamlit library for web development and required me to analyze training and testing data from LLMs using HuggingFace.",
+                "time": "May 2023 - August 2023",
+                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural-Language-Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
+                },
+                {       
                 "role": "Accelerate Program Intern",
                 "company": "IBM",
-                "summary": "This project...",
-                "img": "",
-                "description": "This is a group project...",
-                "time": "August 2023 - December 2023",
-                "tags": ["Agile", "Cloud", "Git", "CSS", "Teamwork"]
-                }],
-            "yale":[],
-            "columbia": []
-            }
-        },
+                "summary": "During this remote IBM summer program, I learned the foundations of software engineering, industry expectations and new methodologies such as the Agile Word Method, Cloud Native Development and Software Development Lifecycle.",
+                "img": "/christopher.github.io/static/images/ibm.png",
+                "description": "As an IBM Accelerate Program Intern on the Software Track, I was introduced to how software development is carried out at larger technology companies to industry standards. <br><br> With IBM guidance and mentorship, I developed front-end and back-end applications using version control, security programming frameworks and cloud native development. In collaborating and growing as a software engineer at IBM, I was able to hone my skills in JavaScript, React, Cybersecurity and Google Cloud Platform. <br><br> In addition to the program coursework, I independently learned about Cyber Security Fundamentals, earning a digit credential in offensive and defensive cybersecurity perspectives, risk management and ethical components of security.",
+                "time": "June 2022 - August 2022",
+                "tags": ["Cybersecurity", "Agile", "Cloud", "Git", "HTML", "CSS", "JavaScript", "React", "Teamwork", "IBM"]
+                }
+                ]
+            },
         "ta":{
             "1002": []
         },
-    
-        "fulltime":{
-            
+        "fulltime":{  
         }
+    },
+
+    "certs":[
+        {
+        "name": "Problem Solving (Intermediate)",
+        "company": "Hackerrank",
+        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "issue": "July 2024",
+        "link": "https://www.hackerrank.com/certificates/6a0d693670fa?trk=public_profile_see-credential",
+        "tags": ["Problem Solving", "Python", "Backend", "Certificate"]
+        },
+        {
+        "name": "Rest API (Intermediate)",
+        "company": "Hackerrank",
+        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "issue": "July 2024",
+        "link": "https://www.hackerrank.com/certificates/1d66d767292a?trk=public_profile_see-credential",
+        "tags": ["Rest API", "Data-visualization", "Web", "Python", "Backend", "Certificate"]
+        },
+        {
+        "name": "SQL (Basic)",
+        "company": "Hackerrank",
+        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "issue": "July 2024",
+        "link": "https://www.hackerrank.com/certificates/60340eb2d092?trk=public_profile_see-credential",
+        "tags": ["SQL", "Data-visualization", "Database", "Certificate"]
+        },
+        {
+        "name": "Bloomberg Environmental Social and Governance Course",
+        "company": "Bloomberg",
+        "img": "/christopher.github.io/static/images/bloomberg_esg.png",
+        "issue": "May 2024",
+        "link": "https://portal.bloombergforeducation.com/certificates/m46F1m8KF9sVCpYagWiLAw8S?trk=public_profile_see-credential",
+        "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
+        },
+        {
+        "name": "Bloomberg Finance Fundamentals Course",
+        "company": "Bloomberg",
+        "img": "/christopher.github.io/static/images/bloomberg_fin.png",
+        "issue": "May 2024",
+        "link": "https://portal.bloombergforeducation.com/certificates/L1ZbMAWLcABXg6XNrgsnza2W?trk=public_profile_see-credential",
+        "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
+        },
+        {
+        "name": "Bloomberg Market Concepts Course",
+        "company": "Bloomberg",
+        "img": "/christopher.github.io/static/images/bloomberg_mkt.png",
+        "issue": "May 2024",
+        "link": "https://portal.bloombergforeducation.com/certificates/gzxoF4zb292FRLkVdyWt2RgJ?trk=public_profile_see-credential",
+        "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
+        },
+        {
+        "name": "IBM Accelerate - Software Developer",
+        "company": "IBM",
+        "img": "/christopher.github.io/static/images/ibm_accel.png",
+        "issue": "August 2022",
+        "link": "https://www.credly.com/badges/b3da068b-3c98-497b-aa67-8a7d9bfc39d9/linked_in_profile?trk=public_profile_see-credential",
+        "tags": ["Cybersecurity", "Agile", "Cloud", "Git", "HTML", "CSS", "JavaScript", "React", "Teamwork", "IBM", "Certificate"]
+        },
+        {
+        "name": "Cybersecurity Fundamentals ",
+        "company": "IBM",
+        "img": "/christopher.github.io/static/images/ibm_cyber.png",
+        "issue": "July 2022",
+        "link": "https://www.credly.com/badges/69425435-2caa-42d3-9a25-befd6efe19fb?source=linked_in_profile&trk=public_profile_see-credential",
+        "tags": ["Cybersecurity", "Cloud", "Networks", "IBM", "Certificate"]
+        }
+    ]
+    
+    
 }

@@ -1,9 +1,8 @@
-<!-- layout.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
     Christopher's Portfolio
 </title>
@@ -11,13 +10,11 @@
     <!-- Favicon -->
     <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
 
-    <!-- Bootstrap CSS (Latest version from your second layout) -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
-    <!-- jQuery and jQuery UI -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
@@ -25,80 +22,145 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <script src="/christopher.github.io/static/js/layout.js"></script>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var lastScrollTop = 0;
-            $(window).on('scroll', function () {
-                var currentScrollTop = $(this).scrollTop();
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    $('.navbar').css('top', '-60px'); // Adjust height to the navbar height
-                } else {
-                    // Scrolling up
-                    $('.navbar').css('top', '0');
-                }
-                lastScrollTop = currentScrollTop;
-            });
-        });
-    </script>
 </head>
 <body class="dkgray-base">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid nav-container">
             <!-- Navbar Brand -->
-            <img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40">
-            <a class="navbar-brand" id="home-nav" href="index.html#home"> Home </a>
-
+            <a class="navbar-brand" href="#"><img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40"></a>
+            <!-- Navbar Toggle (for mobile view) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="#about">About Me</a>
-                    <a class="nav-link" href="#exp">Professional Experience</a>
-                    <a class="nav-link" href="#swe">SWE Work</a>
-                    <a class="nav-link" href="#ml">ML Work</a>
-                    <a class="nav-link" href="#cyber">Cybersecurity</a>
-                    <a class="nav-link" href="#contact">Contact Me</a>
-                    <!--a class="nav-link" href="/search bar">Contact Me</a-->
-                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#exp">Professional Experience</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                            SWE Work
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#backend">Backend Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#database">Database Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#mobile">Mobile Work</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                            ML Work
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="index.html#ai">Artificial Intelligence</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#robotics">Robotics</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#cv">Computer Vision</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#mlw">Machine Learning</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#finstats">Financial Technology/Stats</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#certs">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search Tags [E.g. 'Python']" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
             </div>
         </div>
-        <br>
-        <br>
     </nav>
 
     <div class="container-fluid dkgray-base">    
         <div id="scenery-container">
             <div id="scenery"></div>
         </div>
-        <div class= "main-container">
+        <div class="main-container">
             
+<head>
+    <link rel="stylesheet" href="/christopher.github.io/static/css/project.css">
+</head>
 <body>
-    <h1>Fantasy Football Website</h1>
-    <img src="" alt="Fantasy Football Website">
-    <p>This is a group project...</p>
-    <p>Completion: December 2023</p>
-    <p>Tags: 
-        
-        <span class="tag" style="background-color: #D3D3D3;">
-            Cloud
-        </span>
-        
-        <span class="tag" style="background-color: #FF9900;">
-            AWS
-        </span>
-        
-        <span class="tag" style="background-color: #C4D8E2;">
-            Columbia
-        </span>
-        
-        <span class="tag" style="background-color: #4CAF50;">
-            Teamwork
-        </span>
-        
-    </p>
-    <a href="index.html">Back to Home</a>
+    <div class="summary">
+        <h1>Fantasy Football Website</h1>
+        <h3>Completion: March 2024</h3>
+        <p>This independent project served as the midterm project for a graduate level User Interface Design cours at Columbia University. <br><br> This full-stack web application utilizes Flask, Ajax, jQuery and Javascript to allow users to search, add, view, edit and delete player information. <br><br> Accessible and user-fosued design principles were engrained in this design.</p>
+        <p>Tags: 
+            
+            <span class="tag" style="background-color: #DC143C;">
+                Frontend
+            </span>
+            
+            <span class="tag" style="background-color: #0769AD;">
+                jQuery
+            </span>
+            
+            <span class="tag" style="background-color: #000000;">
+                Flask
+            </span>
+            
+            <span class="tag" style="background-color: #E34F26;">
+                HTML
+            </span>
+            
+            <span class="tag" style="background-color: #2DA2D5;">
+                CSS
+            </span>
+            
+            <span class="tag" style="background-color: #F7D35B;">
+                JavaScript
+            </span>
+            
+            <span class="tag" style="background-color: #0F7BC2;">
+                Ajax
+            </span>
+            
+            <span class="tag" style="background-color: #BEE7FE;">
+                Search
+            </span>
+            
+            <span class="tag" style="background-color: #BEE7FE;">
+                Twitter-bootstrap
+            </span>
+            
+            <span class="tag" style="background-color: #0AFFFF;">
+                Independent
+            </span>
+            
+            <span class="tag" style="background-color: #C4D8E2;">
+                Columbia
+            </span>
+            
+        </p>
+        <a href="index.html#Fantasy Football Website">
+            <button type="button" class="btn btn-outline-info">Back to Home</button>
+        </a>
+    </div>
 </body>
 
 
@@ -117,6 +179,10 @@
             </ul>
         </section>
     </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

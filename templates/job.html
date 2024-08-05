@@ -6,18 +6,25 @@
 
     
 {% block content %}
+<head>
+    <link rel="stylesheet" href="/christopher.github.io/static/css/project.css">
+</head>
 <body>
-    <h1>{{ job.role }}</h1>
-    <img src="{{ job.img }}" alt="{{ job.role }}">
-    <p>{{ job.description }}</p>
-    <p>Time: {{ job.time }}</p>
-    <p>Tags: 
-        {% for tag in job.tags %}
-        <span class="tag" style="background-color: {{ tag_colors[tag] }};">
-            {{ tag }}
-        </span>
-        {% endfor %}
-    </p>
-    <a href="index.html">Back to Home</a>
+    <div class="summary">
+        <h1>{{ jobs.role }}</h1>
+        <h3>Company: {{ jobs.company }}</h3>
+        <h4>Duration: {{ jobs.time }}</h4>
+        <p>{{ jobs.description }}</p>
+        <p>Tags: 
+            {% for tag in jobs.tags %}
+            <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                {{ tag }}
+            </span>
+            {% endfor %}
+        </p>
+        <a href="index.html#{{jobs.company}}">
+            <button type="button" class="btn btn-outline-info">Back to Home</button>
+        </a>
+    </div>
 </body>
 {% endblock %}

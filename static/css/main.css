@@ -1,4 +1,41 @@
-#title{
+/* Custom CSS */
+
+body.dkgray-base {
+    background-color: #CBCBCB;
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+    color: black; /* Ensure links are visible */
+}
+
+.navbar .nav-link:hover, .navbar .navbar-brand:hover, .dropdown:hover .nav-link {
+    background-color: #BEE7FE;
+    color: black;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: #62c3fc;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: lightgrey;
+}
+
+.navbar-nav .nav-item {
+    list-style: none; /* Remove list-style numbers */
+}
+
+.navbar {
+    margin-bottom: 0; /* Remove space below the navbar */
+    transition: top 0.2s ease-in-out; /* Smooth transition for hiding/showing the navbar */
+}
+
+/* Other styles */
+#title {
     text-align: center;
 }
 
@@ -18,7 +55,7 @@
     padding-bottom: 20px;
 }
 
-#contact{
+#contact {
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 10px;
@@ -29,107 +66,94 @@
     font-size: 20px;
 }
 
-.accent-color{
+.accent-color {
     color: #BEE7FE;
 }
 
-.base-color{
+.base-color {
     color: #FFFFFF;
 }
 
-.lgray-base{
+.lgray-base {
     background-color: #CBCBCB;
 }
 
-.dkgray-base{
-    background-color:  rgb(190, 190, 190);
+.dkgray-base {
+    background-color: rgb(190, 190, 190);
 }
 
-.black-text{
+.black-text {
     color: black;
 }
 
-.clickable{
+.clickable {
     cursor: pointer;
 }
 
-#center-img{
+#center-img {
     vertical-align: top;
     text-align: center;
     margin-top: 0;
 }
 
-.red-base{
+.red-base {
     background-color: rgb(220, 47, 47);
 }
 
-.white{
+.white {
     color: white;
 }
 
-.navy{
+.navy {
     background-color: rgb(2, 2, 55);
 }
 
-
-.gray{
+.gray {
     background-color: gray;
 }
 
-.lgray{
+.lgray {
     color: lightgray;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.font1{
+.font1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.underline{
-    text-decoration: underline; 
+.underline {
+    text-decoration: underline;
 }
 
-.italic{
+.italic {
     font-style: italic;
 }
 
-.large{
+.large {
     font-size: large;
 }
 
-.inline{
+.inline {
     display: inline-block;
 }
 
 li {
-    list-style-type: decimal;
-  }
-
-.hamburger-menu {
-    position: relative;
-}
-
-.hamburger {
-    background: #f8f9fa;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    margin-bottom: 10px;
+    list-style-type: none;
 }
 
 .menu {
     display: none;
     position: absolute;
     background-color: #f8f9fa;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     width: 200%;
     z-index: 1;
 }
 
-#home-nav{
+#home-nav {
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -145,52 +169,28 @@ li {
     background-color: #f1f1f1;
 }
 
-.stadium-img{
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-#pitch-diagram{
-    margin-left: 100px;
-}
-
-#quiz-diagram{
-    text-align: right;
-    padding-right: 200px;
-}
-
-.home-img{
+.home-img {
     width: 70%;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: top 0.3s;
-    background-color: white; /* Ensure the navbar has a background */
-    z-index: 1000; /* Ensure it stays on top of other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
 }
 
 body {
     padding-top: 60px; /* Adjust based on the height of your navbar */
 }
-/* Adjust the value to the height of your fixed navbar */
 
 section {
     padding-top: 60px; /* or use margin-top: 60px; */
     margin-top: -60px; /* This negative margin compensates for the added padding */
 }
 
-#home{
-    padding-top: 10px;
+#home {
+    padding-left: 20;
+    padding-right: 20;
 }
 
 #scenery-container {
     position: relative; /* Context for absolutely positioned children */
     width: calc(100% - 400px); /* Match the width of main container, adjusting for side margins */
-    height: 200px; /* Fixed height to fit the container */
+    height: 150px; /* Fixed height to fit the container */
     overflow: hidden; /* Prevent content from overflowing */
     border-radius: 50px 50px 0 0; /* Rounded top corners */
     margin: 0 auto; /* Center the container horizontally */

@@ -1,0 +1,113 @@
+.tag {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;  /* Capitalize the first letter of each tag */
+}
+
+.project-git {
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    width: 32px; /* Ensure the span fits the icon's width */
+    height: 32px; /* Ensure the span fits the icon's height */
+    margin: 5px;
+    margin-top: 3px;
+}
+
+.project-git .fab {
+    font-size: 32px; /* Adjust this value to make the icon larger or smaller */
+    color: #333; /* Change the color if needed */
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    line-height: 1; /* Ensure the icon's line-height does not affect alignment */
+}
+
+.project-git .fab:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.project{
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.project-row {
+    display: -webkit-box;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap; /* Optional: allows items to wrap to the next line if they don't fit */
+    justify-content: flex-start; /* Optional: aligns items to the start */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.icons li {
+    margin: 10px;
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #BEE7FE; /* Example background color */
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.icons a:hover {
+    background: navy; /* Darken on hover */
+}
+
+
+.icons .fa {
+    vertical-align: middle;
+}
+
+
+/* Overlay button style */
+.overlay-button {
+    position: absolute; /* Positions the button relative to the container */
+    bottom: 200px; /* Position the button 10px from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to truly center */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    font-size: 1em; /* Adjust font size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Button hover effect */
+.overlay-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    transform: translateX(-50%) scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.summary{
+    padding: 10px;
+    border-spacing: 5pt;
+    border: black solid 2px;
+    border-radius: 10pt;
+}
+

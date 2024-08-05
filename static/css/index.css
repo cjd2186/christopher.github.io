@@ -31,7 +31,7 @@
 #top-name{
     position: relative; /* Position the content on top of the background image */
     z-index: 2; /* Ensure the content is above the background */
-    padding: 20px; /* Optional: padding for content */
+    padding: 15px; /* Optional: padding for content */
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -105,8 +105,12 @@
 
 .thumbnail {
     max-width: 100%;
+    width: 100%;
     height: auto;
     cursor: pointer;
+    padding: 10pt;
+    border-right: black solid 2pt;
+    margin-bottom: 3pt;
 }
 
 .thumbnail-container {
@@ -143,11 +147,21 @@
     color: black;
 }
 
+.project-git {
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    width: 32px; /* Ensure the span fits the icon's width */
+    height: 32px; /* Ensure the span fits the icon's height */
+    margin: 5px;
+    margin-top: 3px;
+}
+
 .project-git .fab {
     font-size: 32px; /* Adjust this value to make the icon larger or smaller */
     color: #333; /* Change the color if needed */
     text-decoration: none;
     transition: transform 0.2s ease;
+    line-height: 1; /* Ensure the icon's line-height does not affect alignment */
 }
 
 .project-git .fab:hover {
@@ -156,8 +170,46 @@
 
 .project{
     margin: 10px;
-    padding: 5px;
+    padding: 30px;
     border: 3px solid black;
     border-radius: 5px;
     background-color: white;
+}
+
+.project-row {
+    display: -webkit-box;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.sum{
+    padding: 50px 0px;
+}
+
+#about{
+    padding: 10px 0px 10px 10px;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.logo {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 10pt;
+    border-right: black solid 2pt;
+    margin-bottom: 3pt;
+}
+
+.crown{
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pad{
+    padding-bottom: 90px;
 }
