@@ -65,8 +65,6 @@
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#ai">Artificial Intelligence</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#robotics">Robotics</a>
@@ -74,12 +72,13 @@
                             <a class="dropdown-item" href="index.html#cv">Computer Vision</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#mlw">Machine Learning</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.html#finstats">Financial Technology/Stats</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#finstats">Financial Technology/Stats</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#certs">Certifications</a>
@@ -88,10 +87,14 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search Tags [E.g. 'Python']" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>
+                <form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
+                    <label for="SearchInput"></label>
+                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>                 
                 </form>
+                <div id="searchResults"></div>
+
+                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
@@ -168,7 +171,7 @@
                     <div class="col-3 logo-container d-flex justify-content-center align-items-center">
                         <img src="/christopher.github.io/static/images/columbia.png" alt="Company Logo" class="logo">
                     </div>
-                    <p class="col-9 sum">As an undergraduate junior, I served as an Undergraduate Research Assistant to Columbia's Internet Real Time (IRT) Lab under Professor Henning Schulzrinne.<br><br> My work centered around researching how to program rules for a firewall that protects Internet of Things (IoT) devices from malicous traffic. This firewall was programming in the P4 language, adding intelligence to the forwarding of packets in the dataplane of network traffic for these devices. <br><a href='/christopher.github.io/templates/pages/index.html#P4' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a></p>
+                    <p class="col-9 sum">As an undergraduate junior, I served as an Undergraduate Research Assistant to Columbia's Internet Real Time (IRT) Lab under Professor Henning Schulzrinne.<br><br> My work centered around researching how to program rules for a firewall that protects Internet of Things (IoT) devices from malicous traffic. This firewall was programming in the P4 language, adding intelligence to the forwarding of packets in the dataplane of network traffic for these devices. <br><a href='/christopher.github.io/templates/pages/index.html#P4 IoT Firewall' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a></p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     
@@ -176,7 +179,7 @@
                         Cybersecurity
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
+                    <span class="tag" style="background-color: #222222;">
                         Networks
                     </span>
                     
@@ -204,7 +207,7 @@
                         IoT
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
+                    <span class="tag" style="background-color: #B22222;">
                         Firewall
                     </span>
                     
@@ -253,10 +256,10 @@
                     </span>
                     
                     <span class="tag" style="background-color: #00FF00;">
-                        Natural-Language-Processing
+                        Natural Language Processing
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
+                    <span class="tag" style="background-color: #FF6347;">
                         Data-visualization
                     </span>
                     
@@ -296,7 +299,7 @@
                         Cybersecurity
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
+                    <span class="tag" style="background-color: #E34F26;">
                         Agile
                     </span>
                     
@@ -357,7 +360,7 @@
                 <div class="row">
                     <div class="col-6 thumbnail-container">
                         <a href="https://www.youtube.com/watch?v=QE0EdaDUWEc" target="_blank">
-                            <img src="https://img.youtube.com/vi/QE0EdaDUWEc/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <img src="https://img.youtube.com/vi/QE0EdaDUWEc/hqdefault.jpg" alt="YouTube Thumbnail for EdTech: How to Identify Pitches in Baseball" class="thumbnail">
                             <div class="play-button">
                                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
@@ -431,7 +434,7 @@
                 <div class="row">
                     <div class="col-6 thumbnail-container">
                         <a href="https://www.youtube.com/watch?v=9wvaQp-zsDY" target="_blank">
-                            <img src="https://img.youtube.com/vi/9wvaQp-zsDY/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <img src="https://img.youtube.com/vi/9wvaQp-zsDY/hqdefault.jpg" alt="YouTube Thumbnail for Fantasy Football Website" class="thumbnail">
                             <div class="play-button">
                                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
@@ -505,7 +508,7 @@
                 <div class="row">
                     <div class="col-6 thumbnail-container">
                         <a href="https://www.youtube.com/watch?v=GRYElY8QH3o" target="_blank">
-                            <img src="https://img.youtube.com/vi/GRYElY8QH3o/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <img src="https://img.youtube.com/vi/GRYElY8QH3o/hqdefault.jpg" alt="YouTube Thumbnail for LC2Eval Web Demo" class="thumbnail">
                             <div class="play-button">
                                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
@@ -534,10 +537,10 @@
                     </span>
                     
                     <span class="tag" style="background-color: #00FF00;">
-                        Natural-Language-Processing
+                        Natural Language Processing
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
+                    <span class="tag" style="background-color: #FF6347;">
                         Data-visualization
                     </span>
                     
@@ -565,64 +568,361 @@
             </div>
         
     </section>
-
+    
     <section class="pad" id="backend">
         <h3> Backend Projects </h3>
         
-            <div class="project">
-                <h4></h4>
+            <div class="project" id="NFL Cloud Native Application">
+                <h4>NFL Cloud Native Application</h4>
                 <hr class="bar">
-                <p>Completion: Month Year</p>
+                <h5 class="completion">Completion: December 2023</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container d-flex justify-content-center align-items-center">
-                            <img src="https://img.youtube.com/vi//hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
-                            <div class="play-button">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
-                                </svg>
-                            </div>
-                        </a>
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/cloud_compute_diagram.png" alt="NFL Cloud Native Application diagram" class="thumbnail">
                     </div>
-                    <p class="col-6 sum"></p>
+                    <p class="col-6 sum">This cloud-based application NFL FanZone is built and designed for NFL fans' casual interaction and NFL-related information lookup. <br>It offers three features that will enhance fans' NFL experience: <br><br> &nbsp 1. NFL searching: fans can find information (eg. player stats, player basic information.) in HTML format or JSON format regarding their favorite players. The microservice also has operations to add/modify/delete players. <br><br> &nbsp 2. Team management: management personnel with different clearance levels can modify and query team/player information to keep fans updated. <br><br> &nbsp 3. Fan post-game reviews forum: fans can share insights and comments on games. <br><br> See PDF for full Project Report.</p>
                 </div>
-                <p>Tags: 
+                <h6 class="tag-text">Tags: 
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
-                        
+                    <span class="tag" style="background-color: #306998;">
+                        Python
                     </span>
                     
-                    <span class="tag" style="background-color: #BEE7FE;">
-                        
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
                     </span>
                     
-                </p>
+                    <span class="tag" style="background-color: #FFD700;">
+                        Database
+                    </span>
+                    
+                    <span class="tag" style="background-color: #5A6978;">
+                        Full Stack
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF9900;">
+                        AWS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #EA4335;">
+                        GCP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4285F4;">
+                        App-Engine
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF9900;">
+                        Lambda
+                    </span>
+                    
+                    <span class="tag" style="background-color: #569A31;">
+                        S3
+                    </span>
+                    
+                    <span class="tag" style="background-color: #E34F26;">
+                        Agile
+                    </span>
+                    
+                    <span class="tag" style="background-color: #00D1FF;">
+                        FAST API
+                    </span>
+                    
+                    <span class="tag" style="background-color: #F7931E;">
+                        Microservices
+                    </span>
+                    
+                    <span class="tag" style="background-color: #F05032;">
+                        Git
+                    </span>
+                    
+                    <span class="tag" style="background-color: #66DAD7;">
+                        Cloud
+                    </span>
+                    
+                    <span class="tag" style="background-color: #8A2BE2;">
+                        Middleware
+                    </span>
+                    
+                    <span class="tag" style="background-color: #67C4D8;">
+                        Rest API
+                    </span>
+                    
+                    <span class="tag" style="background-color: #000000;">
+                        Flask
+                    </span>
+                    
+                    <span class="tag" style="background-color: #787878;">
+                        Flask-alqemy
+                    </span>
+                    
+                    <span class="tag" style="background-color: #0DB7ED;">
+                        Docker
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4B0082;">
+                        IaaS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
                 <div class="project-row">
                     <span class="project-git">
-                        <a href="" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                        <a href="https://github.com/cjd2186/e6156-Cloud-Computing-Master-Repo" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/Cloud-Compute.html" class="read-more-button">
+                    <span class="project-git">
+                        <a href=/christopher.github.io/static/pdf/Final Project Report and Outlines.pdf class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/cloud_compute.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
             </div>
         
-            <div class="project">
-                <h4></h4>
+            <div class="project" id="NYC Parking Ticket Data Querying">
+                <h4>NYC Parking Ticket Data Querying</h4>
                 <hr class="bar">
-                <p>Completion: Month Year</p>
+                <h5 class="completion">Completion: November 2020</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container d-flex justify-content-center align-items-center">
-                            <img src="https://img.youtube.com/vi//hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
-                            <div class="play-button">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
-                                </svg>
-                            </div>
-                        </a>
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/nyc.png" alt="NYC Parking Ticket Data Querying diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program ingests parking ticket data taken from nyc.gov in Parking.csv file, in order to find different statistics of parking tickets</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #150458;">
+                        Pandas
+                    </span>
+                    
+                    <span class="tag" style="background-color: #B38E8F;">
+                        Statistics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Finance-Projects-Python/blob/main/Finance%20Projects/ParkingTickets.py" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/tickets.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Projects in Data Structures">
+                <h4>Projects in Data Structures</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: August 2021</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/struct.png" alt="Projects in Data Structures diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">Three smaller programs are implemented: <br> A stack in Java using an array <br> A queue in Java using two stacks <br> A counter in Java that keeps track of the K best objects</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #007396;">
+                        Java
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FFC107;">
+                        Object Oriented Programming
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Data Structures
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Java-Projects/tree/main/Java%20Projects/Data%20Structures" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/struct.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Video Poker in Java">
+                <h4>Video Poker in Java</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: April 2021</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/poker.png" alt="Video Poker in Java diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program allows for an interactive game of video poker. <br> Using Command Line Inputs, the user can choose to keep or trade in cards in their hand, place a bet, and win/lose credits based on the rank of their hand.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #007396;">
+                        Java
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FFC107;">
+                        Object Oriented Programming
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Java-Projects/tree/main/Java%20Projects/Video-Poker%20Game" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/Poker.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+
+    <section class="pad" id="database">
+        <h3> Database Projects </h3>
+        
+            <div class="project" id="Relational Database and Flask Application for NFL Player Querying">
+                <h4>Relational Database and Flask Application for NFL Player Querying</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: May 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/DB_diagram.png" alt="Relational Database and Flask Application for NFL Player Querying diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">Database and associated web application to allow NFL fans to track the statistics, status, and biographical information of each player in the NFL.<br> The current implementation of this project includes information for all the NFL teams and top players in the 2023 NFL season. <br><br> See PDF for full Project Report.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #FFD700;">
+                        Database
+                    </span>
+                    
+                    <span class="tag" style="background-color: #DC143C;">
+                        Frontend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #E34F26;">
+                        HTML
+                    </span>
+                    
+                    <span class="tag" style="background-color: #2DA2D5;">
+                        CSS
+                    </span>
+                    
+                    <span class="tag" style="background-color: #000000;">
+                        Flask
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Json
+                    </span>
+                    
+                    <span class="tag" style="background-color: #3367FF;">
+                        SQL
+                    </span>
+                    
+                    <span class="tag" style="background-color: #336791;">
+                        PostgreSQL
+                    </span>
+                    
+                    <span class="tag" style="background-color: #336700;">
+                        mySQL
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/4111_Databases_Flask_Project" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href=/christopher.github.io/static/pdf/DB_project_outline.pdf class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/db.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+
+    <section class="pad" id="mobile">
+        <h3> Mobile Projects</h3>
+        
+            <div class="project" id="Stay Tuned!">
+                <h4>Stay Tuned!</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: Soon!</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/swe/tbd.png" alt="Stay Tuned! diagram" class="thumbnail">
                     </div>
                     <p class="col-6 sum"></p>
                 </div>
-                <p>Tags: 
+                <h6 class="tag-text">Tags: 
                     
                     <span class="tag" style="background-color: #BEE7FE;">
                         
@@ -632,12 +932,654 @@
                         
                     </span>
                     
-                </p>
-                <div class="project-row">
+                </h6>
+                <!--div class="project-row">
                     <span class="project-git">
                         <a href="" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/.html" class="read-more-button">
+                    <a href="/christopher.github.io/templates/pages/tbd.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div-->
+            </div>
+        
+    </section>
+</section>
+
+<section class="pad" id="ml">
+    <h2 class="bold">Machine Learning Projects</h2>
+    <hr>
+    <section class="pad" id="nlp">
+        <h3> Natural Language Processing Projects </h3>
+        
+            <div class="project" id="Finetuning BERT for Semantic Role Labeling">
+                <h4>Finetuning BERT for Semantic Role Labeling</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: December 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/srl.png" alt="Finetuning BERT for Semantic Role Labeling diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This project trains and evaluates a PropBank-style Semantic Role Labeling (SRL) system by finetuning a pretrained BERT model. <br> BERT will be used to compute contextualized token represententations and then will be fine-tuned on the SRL task.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #00FF00;">
+                        NLP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Neural Network
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FFCA36;">
+                        HuggingFace
+                    </span>
+                    
+                    <span class="tag" style="background-color: #EE4C2C;">
+                        PyTorch
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Finetuning
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-e_fine_tuning_bert_for_srl-ipynb" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/srl.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="BERT Lexical Substitution">
+                <h4>BERT Lexical Substitution</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: November 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/bert_architecture.png" alt="BERT Lexical Substitution diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program solves a lexical substitution task, using, WordNet, pre-trained Word2Vec embeddings, and BERT.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #00FF00;">
+                        NLP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FFCA36;">
+                        HuggingFace
+                    </span>
+                    
+                    <span class="tag" style="background-color: #67C4D8;">
+                        Rest API
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Word2Vec
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Neural Network
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6F00;">
+                        TensorFlow
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BF281B;">
+                        Keras
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Prompting
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-d_lexical_substitution_word2vec_bert_chatgpt-py" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/bert.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Neural Network Dependency Parser">
+                <h4>Neural Network Dependency Parser</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: October 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/dependency.png" alt="Neural Network Dependency Parser diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This model is a trained feed-forward neural network that predicts the transitions of an arc-standard dependency parser</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #00FF00;">
+                        NLP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Neural Network
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6F00;">
+                        TensorFlow
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BF281B;">
+                        Keras
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-c_neural_network_dependency_parser-py" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/dependency.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Essay Classification with Trigram Language Model">
+                <h4>Essay Classification with Trigram Language Model</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: September 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/trigram.png" alt="Essay Classification with Trigram Language Model diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program builds a Trigram Language Model, which computes three word sequences to determine the probability of this triple of words occurring consecutively.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #00FF00;">
+                        NLP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-b_trigram_model-py" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/trigram.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+    <section class="pad" id="robotics">
+        <h3> Robotics Projects </h3>
+        
+            <div class="project" id="Lifelong Planning A* on Grid">
+                <h4>Lifelong Planning A* on Grid</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: May 2024</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/astar.png" alt="Lifelong Planning A* on Grid diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program implements a dynamic path planner for a point robot in a 2D terrain discretized as a grid world</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #ADD8E6;">
+                        Robotics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/LPA-/blob/main/p1_workbook.ipynb" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/astar.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+    <section class="pad" id="cv">
+        <h3> Computer Vision Projects </h3>
+        
+            <div class="project" id="Identifying Robot Collisions using Convolution Neural Network">
+                <h4>Identifying Robot Collisions using Convolution Neural Network</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: May 2024</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/cnn_diagram.png" alt="Identifying Robot Collisions using Convolution Neural Network diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">Using a Convolution Neural Network, images are able to fed into a model, and output whether the Kuka robot collides with obstacles or not.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #ADD8E6;">
+                        Robotics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #00FACD;">
+                        Computer Vision
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Finetuning
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Transfer Learning
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Pybullet
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #EE4C2C;">
+                        PyTorch
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/CNN_Robotics/blob/main/P3_Notebook.ipynb" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/cnn.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+    <section class="pad" id="mlw">
+        <h3> Classical Machine Learning Projects </h3>
+        
+            <div class="project" id="Reinforcement Learning-Frozen Lakes Toy Example">
+                <h4>Reinforcement Learning-Frozen Lakes Toy Example</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: March 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/ml/frozen_lakes.png" alt="Reinforcement Learning-Frozen Lakes Toy Example" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">Demonstration of Reinforcement Learning. <br> Man walks around ice grid, avoiding holes to reach goal. <br> By utilizing reinforcement learning, the man is able to learn how to properly navigate to the goal without falling into holes.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #AAFF0A;">
+                        Machine Learning
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Reinforcement-Learning" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/frozen_lakes.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+
+</section>
+
+<section class="pad" id="cyber">
+    <h2 class="bold">Cyber Security Projects</h2>
+    <hr>
+    <h3> Computer Networks Projects </h3>
+        
+            <div class="project" id="P4 IoT Firewall">
+                <h4>P4 IoT Firewall</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: August 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/p4.png" alt="P4 IoT Firewall diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">P4 Firewall from research in Columbia's Internet Real Time Lab: a white-list only firewall of Internet of Things (IoT) Devices programmed in P4. <br><br> This firewall is meant to prevent malicious traffic from entering the networks that IoT Devices (such as smart cameras, smart doorbells, smart light bulbs) are on. <br> For this reason, the P4 IoT firewall is essential to home network security.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #9370DB;">
+                        Research
+                    </span>
+                    
+                    <span class="tag" style="background-color: #000000;">
+                        P4
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Intelligence
+                    </span>
+                    
+                    <span class="tag" style="background-color: #B22222;">
+                        Firewall
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        IoT
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/P4-Firewall" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/P4.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Domain Name System Resolver">
+                <h4>Domain Name System Resolver</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: March 2022</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/dns.png" alt="Domain Name System Resolver diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This Domain Name System (DNS) Resolver server allows for a domain name to be inputted, and will output the ip address of this domain by querying other domain servers.<br> This server follows <a href='https://www.rfc-editor.org/rfc/rfc1035.html' target='_blank'>RFC 1035</a></p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Json
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Computer-Networks/tree/main/DNS%20Resolver" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/DNS.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Distance Vector Protcol RIPv2">
+                <h4>Distance Vector Protcol RIPv2</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: May 2022</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/ripv2.png" alt="Distance Vector Protcol RIPv2 diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program implements the Distance Vector Protcol 'Routing Information Protocol' (RIPv2), which allows for packets to be routed to their destination using the shortest possible path. <br> This program follows <a href='https://www.rfc-editor.org/rfc/rfc2453.html' target='_blank'>RFC 2453</a></p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Json
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Mininet
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Computer-Networks/tree/main/%20Distance%20Vector%20Protocol%20RIPv2%20Mininet" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/RipV2.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="HTTP Proxy Webserver">
+                <h4>HTTP Proxy Webserver</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: March 2022</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/proxy.png" alt="HTTP Proxy Webserver diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program implements a proxy web server. <br>The web proxy accepts incoming HTTP requests from the browser and relays it to the desired web site, thus is both an HTTP server and a client.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Computer-Networks/tree/main/Proxy%20Webserver" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/Proxy.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Transmission Control Protocol Lite">
+                <h4>Transmission Control Protocol Lite</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: March 2022</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/tcp.png" alt="Transmission Control Protocol Lite diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program implements a lite version of the Transmission Control Protocol (TCP), which is built using User Datagram Protocol (UDP). <br> This protocol allows for information to be exchanged between a client and server quickly and without information loss.<br> This program follows <a href='https://www.rfc-editor.org/rfc/rfc793.html' target='_blank'>RFC 793</a> </p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #339933;">
+                        Wireshark
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Computer-Networks/tree/main/TCP%20Implementation" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/TCP.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="HTTP Web Server in C">
+                <h4>HTTP Web Server in C</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: December 2021</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/cyber/c.png" alt="HTTP Web Server in C diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This program creates two web servers in the C programming language. <br> These servers act as an HTTP client and and HTTP proxy server, respectively.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #222222;">
+                        Networks
+                    </span>
+                    
+                    <span class="tag" style="background-color: #00599C;">
+                        C
+                    </span>
+                    
+                    <span class="tag" style="background-color: #F05032;">
+                        Git
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        HTTP
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/HTTP-Web-Server-and-Client" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/C_Server.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -646,29 +1588,174 @@
         </section>
 </section>
 
-<section class="pad" id="ml">
-    <h2 class="bold">Machine Learning Projects</h2>
+<section class="pad" id="finstats">
+    <h2 class="bold">Finance and Statistics Projects</h2>
     <hr>
-    
-        <img src="" alt=" visual" width="300">
-    
-        <img src="" alt=" visual" width="300">
-    
-        <img src="" alt=" visual" width="300">
-    
-        <img src="" alt=" visual" width="300">
-    
-        <img src="" alt=" visual" width="300">
-    
-        <img src="" alt=" visual" width="300">
-    
-    <p>Details about my professional experience.</p>
-</section>
+    <h3> Finance Projects</h3>
+        
+            <div class="project" id="Stock Option Pricing using Monte Carlo Simulation">
+                <h4>Stock Option Pricing using Monte Carlo Simulation</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: November 2020</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/finstats/monte_carlo.png" alt="Stock Option Pricing using Monte Carlo Simulation diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This project contains a variety of programs that use Monte Carlo Simulations to price various call options such as Asian Call Options, Barrier Call Options and European Call Options with the Black Scholes Merton Formula.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #150458;">
+                        Pandas
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4F8A79;">
+                        Finance
+                    </span>
+                    
+                    <span class="tag" style="background-color: #B38E8F;">
+                        Statistics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Finance-Projects-Python/blob/main/Finance%20Projects/MonteCarlo.py" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href= class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/monte_carlo.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="project" id="Finding Optimal Portfolio Weights Using Markowitz Portfolios">
+                <h4>Finding Optimal Portfolio Weights Using Markowitz Portfolios</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: May 2024</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/finstats/markowitz.png" alt="Finding Optimal Portfolio Weights Using Markowitz Portfolios diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This project uses Markowitz Portfolio Optimization to find the optimal weights to maximize returns on given stocks. <br><br>See PDF for full projec report.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #306998;">
+                        Python
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF8C00;">
+                        Backend
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4F8A79;">
+                        Finance
+                    </span>
+                    
+                    <span class="tag" style="background-color: #B38E8F;">
+                        Statistics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Markowitz-Portfolios" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href=christopher.github.io/static/pdf/Chris_Kaja_Zach_Markowitz Portfolios.pdf class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/markowitz.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+        </section>
 
-<section class="pad" id="cyber">
-    <h2 class="bold">Cyber Security Projects</h2>
-    <hr>
-    <p>Details about my professional experience.</p>
+        <h3> Statistics Projects</h3>
+        
+            <div class="project" id="Leveraging Statistics to Understand How to Build a Playoff Baseball Team">
+                <h4>Leveraging Statistics to Understand How to Build a Playoff Baseball Team</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: December 2023</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="/christopher.github.io/static/images/finstats/baseball_stats.png" alt="Leveraging Statistics to Understand How to Build a Playoff Baseball Team diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">This project seeks to explore the underlying team statistics that best can predict a team's likelihood of reaching the MLB playoffs. <br><br> See PDF for project report.</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    
+                    <span class="tag" style="background-color: #276DC3;">
+                        R
+                    </span>
+                    
+                    <span class="tag" style="background-color: #357440;">
+                        Microsoft Excel
+                    </span>
+                    
+                    <span class="tag" style="background-color: #BEE7FE;">
+                        Linear Regression
+                    </span>
+                    
+                    <span class="tag" style="background-color: #B38E8F;">
+                        Statistics
+                    </span>
+                    
+                    <span class="tag" style="background-color: #FF6347;">
+                        Data-visualization
+                    </span>
+                    
+                    <span class="tag" style="background-color: #4CAF50;">
+                        Teamwork
+                    </span>
+                    
+                    <span class="tag" style="background-color: #C4D8E2;">
+                        Columbia
+                    </span>
+                    
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="https://github.com/cjd2186/Baseball_Stats_Project/blob/main/Demirjian_Christopher_Huruk_Kaja_Isaza_Nicholas_Report.pdf" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href=/christopher.github.io/static/pdf/Demirjian_Christopher_Huruk_Kaja_Isaza_Nicholas_Report.pdf class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/baseball_stats.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        
+        </section>
 </section>
 
 <section class="pad" id="certs">
@@ -684,7 +1771,7 @@
                     <h5 class="completion">Issued: July 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/hackerrank.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/hackerrank.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://www.hackerrank.com/certificates/6a0d693670fa?trk=public_profile_see-credential" class="read-more-button">
@@ -723,7 +1810,7 @@
                     <h5 class="completion">Issued: July 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/hackerrank.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/hackerrank.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://www.hackerrank.com/certificates/1d66d767292a?trk=public_profile_see-credential" class="read-more-button">
@@ -737,7 +1824,7 @@
                             Rest API
                         </span>
                         
-                        <span class="tag" style="background-color: #BEE7FE;">
+                        <span class="tag" style="background-color: #FF6347;">
                             Data-visualization
                         </span>
                         
@@ -772,7 +1859,7 @@
                     <h5 class="completion">Issued: July 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/hackerrank.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/hackerrank.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://www.hackerrank.com/certificates/60340eb2d092?trk=public_profile_see-credential" class="read-more-button">
@@ -782,11 +1869,11 @@
                     </div>
                     <p>Tags: 
                         
-                        <span class="tag" style="background-color: #336791;">
+                        <span class="tag" style="background-color: #3367FF;">
                             SQL
                         </span>
                         
-                        <span class="tag" style="background-color: #BEE7FE;">
+                        <span class="tag" style="background-color: #FF6347;">
                             Data-visualization
                         </span>
                         
@@ -811,7 +1898,7 @@
                     <h5 class="completion">Issued: May 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/bloomberg_esg.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/bloomberg_esg.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://portal.bloombergforeducation.com/certificates/m46F1m8KF9sVCpYagWiLAw8S?trk=public_profile_see-credential" class="read-more-button">
@@ -852,7 +1939,7 @@
                     <h5 class="completion">Issued: May 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/bloomberg_fin.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/bloomberg_fin.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://portal.bloombergforeducation.com/certificates/L1ZbMAWLcABXg6XNrgsnza2W?trk=public_profile_see-credential" class="read-more-button">
@@ -891,7 +1978,7 @@
                     <h5 class="completion">Issued: May 2024</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/bloomberg_mkt.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/bloomberg_mkt.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://portal.bloombergforeducation.com/certificates/gzxoF4zb292FRLkVdyWt2RgJ?trk=public_profile_see-credential" class="read-more-button">
@@ -932,7 +2019,7 @@
                     <h5 class="completion">Issued: August 2022</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/ibm_accel.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/ibm_accel.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://www.credly.com/badges/b3da068b-3c98-497b-aa67-8a7d9bfc39d9/linked_in_profile?trk=public_profile_see-credential" class="read-more-button">
@@ -946,7 +2033,7 @@
                             Cybersecurity
                         </span>
                         
-                        <span class="tag" style="background-color: #BEE7FE;">
+                        <span class="tag" style="background-color: #E34F26;">
                             Agile
                         </span>
                         
@@ -999,7 +2086,7 @@
                     <h5 class="completion">Issued: July 2022</h5>
                     <div class="row">
                         <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="/christopher.github.io/static/images/ibm_cyber.png" alt="Certificate Image" class="logo">
+                            <img src="/christopher.github.io/static/images/certs/ibm_cyber.png" alt="Certificate Image" class="logo">
                         </div>
                         <p class="col-6 sum">
                             <a href="https://www.credly.com/badges/69425435-2caa-42d3-9a25-befd6efe19fb?source=linked_in_profile&trk=public_profile_see-credential" class="read-more-button">
@@ -1017,7 +2104,7 @@
                             Cloud
                         </span>
                         
-                        <span class="tag" style="background-color: #BEE7FE;">
+                        <span class="tag" style="background-color: #222222;">
                             Networks
                         </span>
                         

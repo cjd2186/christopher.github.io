@@ -65,8 +65,6 @@
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#ai">Artificial Intelligence</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#robotics">Robotics</a>
@@ -74,12 +72,13 @@
                             <a class="dropdown-item" href="index.html#cv">Computer Vision</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#mlw">Machine Learning</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.html#finstats">Financial Technology/Stats</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#finstats">Financial Technology/Stats</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#certs">Certifications</a>
@@ -88,10 +87,14 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search Tags [E.g. 'Python']" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>
+                <form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
+                    <label for="SearchInput"></label>
+                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>                 
                 </form>
+                <div id="searchResults"></div>
+
+                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
@@ -108,24 +111,28 @@
 <body>
     <div class="summary">
         <h1>HTTP Web Server in C</h1>
-        <h3>Completion: December 2023</h3>
-        <p>This is a group project...</p>
+        <h3>Completion: December 2021</h3>
+        <p>The HTTP client server acts as a limited version of wget, tot download a single file to the current directory given a host machine, port number and file path. <br><br>The http-client program works as follows:<br>The file from the given file path is read from its host machine, and the contents of the file is written to a new file in the current directory using the same file name.<br>The http-client.c file was implemented as follows: <br>First the host name inputted in the commandline argument is converted into an IP address. <br>Next, a socket for the TCP connection is created and connected to IP address. A GET request in then created with the file path, host machine, and port number.<br>This GET request is sent to the host server, and the client then reads the server's response as a file. <br>If the server response does not start with '200 OK', the client program terminates and shows an error message. <br>Upon reading the response, the headers following the first 200 OK line are bypassed until a blank line is read, preceding the message body The file body is read from and written to a new file one byte at a time, to ensure that the entire file body is downloaded properly. <br>Finally, the proper resources are closed and the client program terminates. <br><br><br> The HTTP web server acts a proxy server between the browser and a database server. <br>Usage:<br> The http-server must be terminated manually using ctrl-C, and will serve clients in succession, but not simultaneously. <br>The http-server is able to take GET requests from netcat/firefox, and deliver the necessary files to the client. The http-server is also able to send a dynamic webpage to a browser, in which mdb-lookup can be executed, accessing the mdb-lookup-server.</p>
         <p>Tags: 
             
-            <span class="tag" style="background-color: #BEE7FE;">
-                NLP
+            <span class="tag" style="background-color: #222222;">
+                Networks
             </span>
             
-            <span class="tag" style="background-color: #FF9900;">
-                AWS
+            <span class="tag" style="background-color: #00599C;">
+                C
+            </span>
+            
+            <span class="tag" style="background-color: #F05032;">
+                Git
+            </span>
+            
+            <span class="tag" style="background-color: #BEE7FE;">
+                HTTP
             </span>
             
             <span class="tag" style="background-color: #C4D8E2;">
                 Columbia
-            </span>
-            
-            <span class="tag" style="background-color: #4CAF50;">
-                Teamwork
             </span>
             
         </p>
@@ -134,7 +141,6 @@
         </a>
     </div>
 </body>
-
 
         </div>
 

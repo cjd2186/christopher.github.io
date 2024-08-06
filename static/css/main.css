@@ -32,6 +32,7 @@ body.dkgray-base {
 .navbar {
     margin-bottom: 0; /* Remove space below the navbar */
     transition: top 0.2s ease-in-out; /* Smooth transition for hiding/showing the navbar */
+    background-color: white;
 }
 
 /* Other styles */

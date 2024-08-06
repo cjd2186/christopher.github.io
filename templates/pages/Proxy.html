@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    Christopher's Portfolio
+</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="/christopher.github.io/static/js/layout.js"></script>
+    
+</head>
+<body class="dkgray-base">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid nav-container">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="#"><img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40"></a>
+            <!-- Navbar Toggle (for mobile view) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#exp">Professional Experience</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                            SWE Work
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#backend">Backend Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#database">Database Work</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#mobile">Mobile Work</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                            ML Work
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#robotics">Robotics</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#cv">Computer Vision</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html#mlw">Machine Learning</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#finstats">Financial Technology/Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#certs">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
+                    <label for="SearchInput"></label>
+                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>                 
+                </form>
+                <div id="searchResults"></div>
+
+                <script src="static/js/search.js"></script>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid dkgray-base">    
+        <div id="scenery-container">
+            <div id="scenery"></div>
+        </div>
+        <div class="main-container">
+            
+<head>
+    <link rel="stylesheet" href="/christopher.github.io/static/css/project.css">
+</head>
+<body>
+    <div class="summary">
+        <h1>HTTP Proxy Webserver</h1>
+        <h3>Completion: March 2022</h3>
+        <p><br><br>HOW TO RUN PROGRAM<br>In order to use the 'cjd2186_proxy.py' file, run the python-file locally under port 8080 (hard-coded). <br><br>OUTPUT<br>Upon running this program, the proxy will make a connection with the web-browser and the proxy will take in, and parse the GET request from the browser. The GET request will then be stored into a dictionary, and will be given a new 'X-Forwarded-For' heading, all of which will be sent to the web-server via a new connection. <br><br>LOGIC<br> Therefore, there will be a connection between the web browser, and the proxy, as well as between the proxy and the web server. After sending the GET request to the web server, the proxy will receive the response from the web server, and send the response to the web browser.</p>
+        <p>Tags: 
+            
+            <span class="tag" style="background-color: #222222;">
+                Networks
+            </span>
+            
+            <span class="tag" style="background-color: #306998;">
+                Python
+            </span>
+            
+            <span class="tag" style="background-color: #339933;">
+                Wireshark
+            </span>
+            
+            <span class="tag" style="background-color: #C4D8E2;">
+                Columbia
+            </span>
+            
+        </p>
+        <a href="index.html#HTTP Proxy Webserver">
+            <button type="button" class="btn btn-outline-info">Back to Home</button>
+        </a>
+    </div>
+</body>
+
+        </div>
+
+        <section id="contact">
+            <h2>How to contact me</h2>
+            <hr>
+            <dl class="alt">
+                <dt>Email</dt>
+                <dd>cjd2186@columbia.edu</dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/christopher-demirjian-b5783822a/" class="fab fa-linkedin" target="_blank" aria-label="link to linked-in page"></a></li>
+                <li><a href="https://github.com/cjd2186" class="fab fa-github" target="_blank" aria-label="link to github page"></a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

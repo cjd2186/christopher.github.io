@@ -105,7 +105,7 @@
                 <div class="row">
                     <div class="col-6 thumbnail-container">
                         <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
-                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
+                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail for {{project.title}}" class="thumbnail">
                             <div class="play-button">
                                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
@@ -133,36 +133,277 @@
             </div>
         {% endfor %}
     </section>
-
+    
     <section class="pad" id="backend">
         <h3> Backend Projects </h3>
         {% for project in projects.swe.backend %}
-            <div class="project">
+            <div class="project" id="{{project.title}}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
-                <p>Completion: {{ project.completion }}</p>
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container d-flex justify-content-center align-items-center">
-                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail" class="thumbnail">
-                            <div class="play-button">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
-                                </svg>
-                            </div>
-                        </a>
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
                     </div>
                     <p class="col-6 sum">{{ project.summary }}</p>
                 </div>
-                <p>Tags: 
+                <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
                     <span class="tag" style="background-color: {{ tag_colors[tag] }};">
                         {{ tag }}
                     </span>
                     {% endfor %}
-                </p>
+                </h6>
                 <div class="project-row">
                     <span class="project-git">
-                        <a href="{{ project.git }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="pad" id="database">
+        <h3> Database Projects </h3>
+        {% for project in projects.swe.database %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="pad" id="mobile">
+        <h3> Mobile Projects</h3>
+        {% for project in projects.swe.mobile %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <!--div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div-->
+            </div>
+        {% endfor %}
+    </section>
+</section>
+
+<section class="pad" id="ml">
+    <h2 class="bold">Machine Learning Projects</h2>
+    <hr>
+    <section class="pad" id="nlp">
+        <h3> Natural Language Processing Projects </h3>
+        {% for project in projects.aiml.nlp %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <section class="pad" id="robotics">
+        <h3> Robotics Projects </h3>
+        {% for project in projects.aiml.robotics %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <section class="pad" id="cv">
+        <h3> Computer Vision Projects </h3>
+        {% for project in projects.aiml.cv %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <section class="pad" id="mlw">
+        <h3> Classical Machine Learning Projects </h3>
+        {% for project in projects.aiml.mlw %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}}" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+</section>
+
+<section class="pad" id="cyber">
+    <h2 class="bold">Cyber Security Projects</h2>
+    <hr>
+    <h3> Computer Networks Projects </h3>
+        {% for project in projects.cyber.networks %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
                     <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
@@ -173,19 +414,76 @@
         </section>
 </section>
 
-<section class="pad" id="ml">
-    <h2 class="bold">Machine Learning Projects</h2>
+<section class="pad" id="finstats">
+    <h2 class="bold">Finance and Statistics Projects</h2>
     <hr>
-    {% for project in projects.aiml %}
-        <img src="{{ project.img }}" alt="{{ project.name }} visual" width="300">
-    {% endfor %}
-    <p>Details about my professional experience.</p>
-</section>
+    <h3> Finance Projects</h3>
+        {% for project in projects.finstats.finance %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+        </section>
 
-<section class="pad" id="cyber">
-    <h2 class="bold">Cyber Security Projects</h2>
-    <hr>
-    <p>Details about my professional experience.</p>
+        <h3> Statistics Projects</h3>
+        {% for project in projects.finstats.statistics %}
+            <div class="project" id="{{project.title}}">
+                <h4>{{ project.title }}</h4>
+                <hr class="bar">
+                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                <div class="row">
+                    <div class="col-6 thumbnail-container">
+                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    </div>
+                    <p class="col-6 sum">{{ project.summary }}</p>
+                </div>
+                <h6 class="tag-text">Tags: 
+                    {% for tag in project.tags %}
+                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </h6>
+                <div class="project-row">
+                    <span class="project-git">
+                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                    </span>
+                    <span class="project-git">
+                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                    </span>
+                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <button type="button" class="btn btn-outline-info">Read More</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+        </section>
 </section>
 
 <section class="pad" id="certs">

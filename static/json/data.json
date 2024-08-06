@@ -30,98 +30,265 @@
                 "description": "In the summer of 2023, I served as an undergraduate research assistant to Yale's NLP Lab under PI Professor Arman Cohan. <br><br>As an academic collaborator, I was introduced to the field of Natural Language Processing, learning about techniques such as tokenization, few-shot/zero-shot learning and prompting. Additionally, I created presentations on important NLP research papers to build my understanding and familiarity with academic research papers. <br><br> The LC2Eval research project evaluated 54 existing models from 13 organizations on 7 different tasks. The web demo I created with a lab partner clearly visualized the results obtained from this study, using the Python Streamlit libray to implement web design techniques such as pagination, tabling, sorting and searching. <br><br> The Lab's full paper can be found <a href='https://arxiv.org/abs/2309.17446' target='_blank'> here</a>.",
                 "completion": "August 2023",
                 "github": "https://github.com/cjd2186/Web_Demo",
-                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural-Language-Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
+                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural Language Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
                 }
             ],
             "backend": [
                 {
-                    "name": "Cloud-Compute",
-                    "title": "",
-                    "summary": "",
-                    "image": "",
-                    "description": "",
-                    "completion": "Month Year",
-                    "github": "",
-                    "tags": ["", ""]
-                    },
+                "name": "cloud_compute",
+                "title": "NFL Cloud Native Application",
+                "summary": "This cloud-based application NFL FanZone is built and designed for NFL fans' casual interaction and NFL-related information lookup. <br>It offers three features that will enhance fans' NFL experience: <br><br> &nbsp 1. NFL searching: fans can find information (eg. player stats, player basic information.) in HTML format or JSON format regarding their favorite players. The microservice also has operations to add/modify/delete players. <br><br> &nbsp 2. Team management: management personnel with different clearance levels can modify and query team/player information to keep fans updated. <br><br> &nbsp 3. Fan post-game reviews forum: fans can share insights and comments on games. <br><br> See PDF for full Project Report.",
+                "img": "/christopher.github.io/static/images/swe/cloud_compute_diagram.png",
+                "description": "As part of a graduate level cloud computing course project at Columbia, I led a team of seven students to successfully deploy an end-to-end cloud application tailored for NFL fans. <br> As team lead, I collaborated with and encouraged team members to focus on different cloud technologies that best suited their programming backgrounds, which allowed for a deep understanding and ownership of each component. <br> To alleviate some team challenges that arose with the learning curve of new technologies and busy school schedules, I facilitated weekly meetings to synchronize our progress, and created a Slack channel to share helpful tutorials and design patterns. <br>This collaboration was crucial when a team member using Google Cloud faced significant obstacles, potentially delaying our project. Leveraging the skillsets I developed in AWS that semester, I was able to provide guidance and additional support to overcome these issues in Google Cloud and ensure a timely project completion.",
+                "completion": "December 2023",
+                "github": "https://github.com/cjd2186/e6156-Cloud-Computing-Master-Repo",
+                "pdf": "/christopher.github.io/static/pdf/Final Project Report and Outlines.pdf",
+                "tags": ["Python", "Backend", "Database", "Full Stack", "AWS", "GCP", "App-Engine", "Lambda", "S3", "Agile", "FAST API", "Microservices", "Git", "Cloud", "Middleware", "Rest API", "Flask", "Flask-alqemy", "Docker", "IaaS", "Data-visualization", "Teamwork", "Columbia"]
+                },
                 {
-                    "name": "",
-                    "title": "",
-                    "summary": "",
-                    "image": "",
-                    "description": "",
-                    "completion": "Month Year",
-                    "github": "",
-                    "tags": ["", ""]
-                    }
+                "name": "tickets",
+                "title": "NYC Parking Ticket Data Querying",
+                "summary": "This program ingests parking ticket data taken from nyc.gov in Parking.csv file, in order to find different statistics of parking tickets",
+                "img": "/christopher.github.io/static/images/swe/nyc.png",
+                "description": "This project leverages the Python Pandas library in order to injest data from a csv file, allowing for many different statistics to be calculated regarding nyc parking ticket information. <br> Statistics calculated include: <br> * Amount of money owed given a plate number. <br> * The license plate that owes the most money. <br> * Year with most money owed in parking tickets",
+                "completion": "November 2020",
+                "github": "https://github.com/cjd2186/Finance-Projects-Python/blob/main/Finance%20Projects/ParkingTickets.py",
+                "tags": ["Python", "Backend", "Pandas", "Statistics", "Data-visualization", "Columbia"]
+                },
+                {
+                "name": "struct",
+                "title": "Projects in Data Structures",
+                "summary": "Three smaller programs are implemented: <br> A stack in Java using an array <br> A queue in Java using two stacks <br> A counter in Java that keeps track of the K best objects",
+                "img": "/christopher.github.io/static/images/swe/struct.png",
+                "description": "<br><b> MyStack.java </b> <br> The class uses an array of Generic type T to implement a stack. <br>The stack starts at the left side of the array, building to the right. <br>Methods: <br> &nbsp * pop(): returns the top value of stack, also decrements top and size <br> &nbsp * push(T x): increments top and size, also adds element x to the top of stack <br> &nbsp * peek(): returns the value of top <br> &nbsp * isEmpty(): returns true if there are no elements on stack  <br> &nbsp * size(): returns the value of size (number of elements on stack) <br><br> <b> TwoStackQueue.java </b> <br> This class uses two stacks, S1 and S2, to implement a queue. <br> Methods: <br> &nbsp * enqueue(): adds an element to the back of the queue (top of S1) <br> &nbsp * dequeue(): removes and returns an element from the front of the queue (top of S2) <br> &nbsp * size(): returns the number of elements in the queue <br> &nbsp * isEmpty(): returns true if the queue has no elements <br><br> <b> KBestCounter.java </b> <br> Constructor: <br> &nbsp &nbsp takes in an int that represents the number of largest elements to be returned<br> Methods: <br> &nbsp * count(T x) <br> &nbsp &nbsp takes in the next element in the set of data <br> &nbsp &nbsp no return <br> &nbsp &nbsp runs in worst O(log k) time; <br> &nbsp * kbest(): <br> &nbsp &nbsp takes in no arguments <br> &nbsp &nbsp returns a list of the k-largest elements. <br> &nbsp &nbsp runs in worst O(k logk) time. ",
+                "completion": "August 2021",
+                "github": "https://github.com/cjd2186/Java-Projects/tree/main/Java%20Projects/Data%20Structures",
+                "tags": ["Java", "Object Oriented Programming", "Data Structures","Backend", "Columbia"]
+                },
+                {
+                "name": "Poker",
+                "title": "Video Poker in Java",
+                "summary": "This program allows for an interactive game of video poker. <br> Using Command Line Inputs, the user can choose to keep or trade in cards in their hand, place a bet, and win/lose credits based on the rank of their hand.",
+                "img": "/christopher.github.io/static/images/swe/poker.png",
+                "description": "To play one interactive game of Video Poker the following classes are used: <br>*Card.java <br>*Player.java <br>*Deck.java <br>*Game.java <br>*PokerTester.java <br><br>Go to <a href='https://github.com/cjd2186/Java-Projects/blob/main/Java%20Projects/Video-Poker%20Game/ReadMe-Poker.txt' target='_blank'>ReadMe</a> document to see move about each class.",
+                "completion": "April 2021",
+                "github": "https://github.com/cjd2186/Java-Projects/tree/main/Java%20Projects/Video-Poker%20Game",
+                "tags": ["Java", "Object Oriented Programming", "Backend", "Columbia"]
+                }
             ],
             "database": [
                 {
-                    "name": "",
-                    "title": "",
-                    "summary": "",
-                    "image": "",
-                    "description": "",
-                    "completion": "Month Year",
-                    "github": "",
-                    "tags": ["", ""]
-                    }
-            ],
-            "mobile": []
-        },
-        "aiml": {
-            "ai": [],
-            "natural language processing": [
-                {
-                "name": "BERT",
-                "title": "NFL Webiste",
-                "summary": "This project...",
-                "img": "",
-                "description": "This is a group project...",
-                "completion": "December 2023",
-                "github": "http///git...",
-                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                "name": "db",
+                "title": "Relational Database and Flask Application for NFL Player Querying",
+                "summary": "Database and associated web application to allow NFL fans to track the statistics, status, and biographical information of each player in the NFL.<br> The current implementation of this project includes information for all the NFL teams and top players in the 2023 NFL season. <br><br> See PDF for full Project Report.",
+                "img": "/christopher.github.io/static/images/swe/DB_diagram.png",
+                "description": "I completed this project with a partner for a Columbia University graduate course in Database design and implementation. <br><br> Overview: <br>  This relational database is for the National Football League. The database will be used to track the statistics, status, and biographical information of each player in the NFL. This tool will be useful for avid NFL fans, especially for fans who engage in Fantasy Football, a game played over the course of the football season where players create a team of players across the league, receiving points based on the performance of the players they select. <br><br>Purpose: <br> What makes this relational database unique from existing statistics repositories such as ESPN and football reference is that our database will allow for specific queries to be performed, which is not admissible on existing sites. <br> For example, if I search “NFL players with at least 6 receiving touchdowns in 2022 season”, I will not receive a list of player names with the proper criteria, but rather a comprehensive data table of the receiving statistics for all NFL players, which can be sorted from least to greatest.",
+                "completion": "May 2023",
+                "github": "https://github.com/cjd2186/4111_Databases_Flask_Project",
+                "pdf": "/christopher.github.io/static/pdf/DB_project_outline.pdf",
+                "tags": ["Database", "Frontend", "HTML", "CSS", "Flask", "Json", "SQL", "PostgreSQL", "mySQL", "Data-visualization", "Teamwork", "Columbia"]
                 }
             ],
-            "robotics": [],
-            "computer vision": [],
-            "ml": [],
-            "finstats": []
+            "mobile": [
+                {
+                "name": "tbd",
+                "title": "Stay Tuned!",
+                "summary": "",
+                "img": "/christopher.github.io/static/images/swe/tbd.png",
+                "description": "",
+                "completion": "Soon!",
+                "github": "",
+                "tags": ["", ""]
+                }
+            ]
+        },
+        "aiml": {
+            "nlp": [
+                {
+                "name": "srl",
+                "title": "Finetuning BERT for Semantic Role Labeling",
+                "summary": "This project trains and evaluates a PropBank-style Semantic Role Labeling (SRL) system by finetuning a pretrained BERT model. <br> BERT will be used to compute contextualized token represententations and then will be fine-tuned on the SRL task.",
+                "img": "/christopher.github.io/static/images/ml/srl.png",
+                "description": "<b>Data Preparation/Encoding:</b><br> The data is retrieved from the Ontonotes 5.0 dataset, which is an extension of PropBank. <br> Using the BERT tokenizer, sentences are converted into IDs and attention masks so show BERT which words are real tokens vs padding, highlighting words important for the context. <br><br><b>Model Composition and Training:</b><br> A pretrained BERT model is frozen, and a classifier layer is added. The pretrained BERT model provided good contextualized embeddings for the input, so the classifier layer can now be trained using the OntoNotes 5.0 dataset, minimizing the loss and backprogating/updating the model weights to improve prediction accuracy. <br><br><b>Decoding:</b><br> Now the classifier will return logits to representation the predicted labels for each word in the sentence. This decoding process involves mapping the logits to labels and aligning them with the input tokens. Once decoded, the model's performance can be evaluated based on how well the predicted labels match the ground truth labels.                ",
+                "completion": "December 2023",
+                "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-e_fine_tuning_bert_for_srl-ipynb",
+                "tags": ["NLP", "Python", "Neural Network", "HuggingFace", "PyTorch", "Finetuning", "Columbia"]
+                },
+                {
+                "name": "bert",
+                "title": "BERT Lexical Substitution",
+                "summary": "This program solves a lexical substitution task, using, WordNet, pre-trained Word2Vec embeddings, and BERT.",
+                "img": "/christopher.github.io/static/images/ml/bert_architecture.png",
+                "description": "<b>Task:</b> <br> In this task, the goal is to find lexical substitutes for individual target words in context. For example, given the following sentence: 'Anyway, my pants are getting tighter every day.' the goal is to propose an alternative word for tight, such that the meaning of the sentence is preserved. Such a substitute could be 'constricting', 'small' or 'uncomfortable.' <br> To complete this task the pretrained model, DistilBERT from HuggingFace, is used to find substitutes. <br><br> Five different approaches are taken to find lexical substitutes: WordNet Frequency Baseline, Lesk Algorithm, Word2Vec Embeddings, BERT Pretrained Embeddings, Query with Chatgpt API. <br><br><b> WordNet Frequency Baseline </b><br> Given a context, use WordNet to find the possible synynomy with the highest total occurrence frequency in the same context in WordNet. <br><b> Lesk Algorithm </b> Word Sense Disambiguation (WSD) is performed using the Lesk Algorithm to select a synset for the target word where the definition of the synset and the context of the target word are similar. The algorithm then returns the most frequent synonym from that synset as a substitute.  <br><b> Word2Vec Embeddings </b> Find possible synonyms for the target word using WordNet. Return the synonym that is most similar to the target word according to the Word2Vec embedding. <br><b> BERT Pretrained Embedding </b> Using Keras, feed in an embedded sentenced with the target word masked. BERT will returned the candidate for the target word given the context. <br><b> Query Chatgpt API </b> Feed the sentence into a Chatgpt prompt using Chatgpt's API. Chatgpt will give the best substitute. Results are improved using few-shot prompting.",
+                "completion": "November 2023",
+                "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-d_lexical_substitution_word2vec_bert_chatgpt-py",
+                "tags": ["NLP", "Python", "HuggingFace", "Rest API", "Word2Vec", "Neural Network","TensorFlow", "Keras",  "Prompting","Columbia"]
+                },
+                {
+                "name": "dependency",
+                "title": "Neural Network Dependency Parser",
+                "summary": "This model is a trained feed-forward neural network that predicts the transitions of an arc-standard dependency parser",
+                "img": "/christopher.github.io/static/images/ml/dependency.png",
+                "description": "<b>Training:</b> <br> For input, the model is trained on a series of input pairs (x,y), where x is a parser state (consisting of a stack and a buffer), and y is the transition the parser should make (e.g. left-arc, right-arc, shift). These input pairs will be made using one hot representations for words based on its Part of Speech (POS) tag within each state. The training program also contains outputs pairs of (transitions, label), where a label is a dependency label. These outputs are also represented as one hot vectors to be fed into the neural network.<br> <br> The Neural Network is created using Keras, an API for Tensorflow. <br><br> <b>Network Composition:</b> <br>The Neural Network consists of:<br> * One Embedding layer, the input_dimension being the number possible words, input_length is the number of words using this same embedding layer. <br> * The output_dim of the embedding layer is 32, which is then flattened. <br> * A Dense hidden layer of 100 units using relu activation. <br> * A Dense hidden layer of 10 units using relu activation. <br> * An output layer using softmax activation. <br><br><b>Parser Creation: </b><br> The standard transition-based algorithm is used to create a parser, using the trained and stored model to predict transitions. As long as the buffer is not empty, the feature extractor obtains a representation of the current state and the call model.predict(features) and retrieve a softmax actived vector of possible actions.",
+                "completion": "October 2023",
+                "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-c_neural_network_dependency_parser-py",
+                "tags": ["NLP", "Python", "Neural Network","TensorFlow", "Keras", "Columbia"]
+                },
+                {
+                "name": "trigram",
+                "title": "Essay Classification with Trigram Language Model",
+                "summary": "This program builds a Trigram Language Model, which computes three word sequences to determine the probability of this triple of words occurring consecutively.",
+                "img": "/christopher.github.io/static/images/ml/trigram.png",
+                "description": "This model is trained on the Brown corpus, which is a sample of American written English collected in the 1950s. <br> The model is trained on the Brown corpus to calculate the log probabilities of a the sequence of words in a sentence using smoothed n-gram probabilties (via linear interpolation). This program then finds the perplexity of the model on a test corpus, measuring how well the model predicts a sample of text. <br><br>The model's accuracy is then tested on a dataset of essays written by non-native speakers of English for the ETS TOEFL test. These essays are scored according to skill level low, medium, or high. Only the essays that have been scored as 'high' or 'low' are considered. A different language model on a training set of each category is trained and then use these models to automatically score unseen essays. The perplexity of each language model on each essay is computed. The model with the lower perplexity determines the class of the essay. <br><br> The model accuracy is calculated as (correct predicitions/total predictions). <br>This model successfully scored an accuracy greater than 80%.",
+                "completion": "September 2023",
+                "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-b_trigram_model-py",
+                "tags": ["NLP", "Python", "Columbia"]
+                }
+            ],
+            "robotics": [
+                {
+                "name": "astar",
+                "title": "Lifelong Planning A* on Grid",
+                "summary": "This program implements a dynamic path planner for a point robot in a 2D terrain discretized as a grid world",
+                "img": "/christopher.github.io/static/images/ml/astar.png",
+                "description": "This program is the implementation of the A* Lifelong Planning Algorithm. LPA* accounts for changes to be made to a graph, allowing for a new optimal path to be recalculated by computing affected nodes.",
+                "completion": "May 2024",
+                "github": "https://github.com/cjd2186/LPA-/blob/main/p1_workbook.ipynb",
+                "tags": ["Robotics", "Python", "Columbia"]
+                }
+            ],
+            "cv": [{
+                "name": "cnn",
+                "title": "Identifying Robot Collisions using Convolution Neural Network",
+                "summary": "Using a Convolution Neural Network, images are able to fed into a model, and output whether the Kuka robot collides with obstacles or not.",
+                "img": "/christopher.github.io/static/images/ml/cnn_diagram.png",
+                "description": "A Convolutional Neural Network allows for images to be processed in 3 dimensions (depth, height, width) instead of vectorized forms. <br><br><b> Dataset: </b><br> The pretrained ResNet-18 model was used as a CNN. This model was fed 1000 images of the robot in various collision states along with their collision status (image, label) pairs.<br><br> <b> Training: </b><br> The model's classifer is trained on the 900 sample images generated earlier to update the weights and finetune it for this task. <br><br><b> Evaluation: </b><br> Since the model is now trained, the remaining 100 images are used to validate the accuracy of the model. The Learning Rate and Number of Epochs hyperparameters are modified during training maximize the accuracry of the model.",
+                "completion": "May 2024",
+                "github": "https://github.com/cjd2186/CNN_Robotics/blob/main/P3_Notebook.ipynb",
+                "tags": ["Robotics", "Computer Vision", "Finetuning", "Transfer Learning", "Pybullet", "Python", "PyTorch", "Columbia"]
+                }],
+            "mlw": [{
+                "name": "frozen_lakes",
+                "title": "Reinforcement Learning-Frozen Lakes Toy Example",
+                "summary": "Demonstration of Reinforcement Learning. <br> Man walks around ice grid, avoiding holes to reach goal. <br> By utilizing reinforcement learning, the man is able to learn how to properly navigate to the goal without falling into holes.",
+                "img": "/christopher.github.io/static/images/ml/frozen_lakes.png",
+                "description": "Using Q-Learning and Decaying exploration, after many episodes, the man learns the optimal path to reach the goal while avoiding holes in the ice. <br> By adjusting the exploration and learning-rate parameters, the success rate of the program is maximized.",
+                "completion": "March 2023",
+                "github": "https://github.com/cjd2186/Reinforcement-Learning",
+                "tags": ["Machine Learning", "Python", "Columbia"]
+                }]          
         },
         "cyber":{
             "networks": [
                 {
                 "name": "P4",
                 "title": "P4 IoT Firewall",
-                "summary": "This project...",
-                "img": "",
-                "description": "This is a research project...",
-                "completion": "December 2023",
-                "github": "http///git...",
-                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                "summary": "P4 Firewall from research in Columbia's Internet Real Time Lab: a white-list only firewall of Internet of Things (IoT) Devices programmed in P4. <br><br> This firewall is meant to prevent malicious traffic from entering the networks that IoT Devices (such as smart cameras, smart doorbells, smart light bulbs) are on. <br> For this reason, the P4 IoT firewall is essential to home network security.",
+                "img": "/christopher.github.io/static/images/cyber/p4.png",
+                "description": "In this repository, I built upon the exisiting codebase of the lab's P4 Firewall project. My contributions lie in the following files:<br><br>*controller.py <br>*basic.p4 <br><br> Where I created a blacklist routine for the firewall. This routine would block ip addresses when the traffic received from these IoT devices contained abnormally large packet sizes, or if the rate at which these packets were received were abnormal as well. Both of these rules monitor live traffic sent to and received at the firewall.",
+                "completion": "August 2023",
+                "github": "https://github.com/cjd2186/P4-Firewall",
+                "tags": ["Research", "P4", "Python", "Networks", "Intelligence", "Firewall", "Wireshark", "IoT", "Columbia"]
+                },
+                {
+                "name": "DNS",
+                "title": "Domain Name System Resolver",
+                "summary": "This Domain Name System (DNS) Resolver server allows for a domain name to be inputted, and will output the ip address of this domain by querying other domain servers.<br> This server follows <a href='https://www.rfc-editor.org/rfc/rfc1035.html' target='_blank'>RFC 1035</a>",
+                "img": "/christopher.github.io/static/images/cyber/dns.png",
+                "description": "LOGIC: <br> This program follows the structure and logic as presented in the DNS RFC 1035.<br><br>ITERATIVE QUERY PROCESS:<br> First, this program takes in a port number as a command line argument, in which this DNS resolver will run on. <br>This DNS server then makes a connection with the DIG user program, and takes in the user's DNS query. <br> This DNS query is then relayed to the ICANN DNS root server. <br> The root server sends a response back to this DNS resolver, which is parsed for its  type A record (most likely stored under additional RRs), containing the IP address of the Top Level Domain (TLD) server to relay the user query to.<br><br> The TLD server is then queried, and its response is once again parsed to find the type A record for the IP address of the authoritative server to relay the user query to.<br> The authoritative server is finally queiried, and its response contains a type A RR under its answer, which contains the ip of the user's query.<br>This ip is then wrapped into a response header format that is sent back to the user client.<br> The ip and ttl (time to live) are then cached in a dictionary with the ip as the key, and the cache is later checked before each query, deleting any records that are expired before checking if a domain ip is cached. If a domain ip is not in the cache, the query process begins, and the DNS resolver queries the root server and iteratively finds the domain ip.<br><br>TOOLS:<br>Wireshark was used along with dig and localhost to figure out the byte order and structure for which bytes correspond to which flag and component of the DNS header.",
+                "completion": "March 2022",
+                "github": "https://github.com/cjd2186/Computer-Networks/tree/main/DNS%20Resolver",
+                "tags": ["Networks", "Python", "Json", "Wireshark", "Columbia"]
+                },
+                {
+                "name": "RipV2",
+                "title": "Distance Vector Protcol RIPv2",
+                "summary": "This program implements the Distance Vector Protcol 'Routing Information Protocol' (RIPv2), which allows for packets to be routed to their destination using the shortest possible path. <br> This program follows <a href='https://www.rfc-editor.org/rfc/rfc2453.html' target='_blank'>RFC 2453</a>",
+                "img": "/christopher.github.io/static/images/cyber/ripv2.png",
+                "description": "LOGIC: <br> This program follows the structure and logic as presented in the DNS RFC 1035.<br><br>ITERATIVE QUERY PROCESS:<br> First, this program takes in a port number as a command line argument, in which this DNS resolver will run on. <br>This DNS server then makes a connection with the DIG user program, and takes in the user's DNS query. <br> This DNS query is then relayed to the ICANN DNS root server. <br> The root server sends a response back to this DNS resolver, which is parsed for its  type A record (most likely stored under additional RRs), containing the IP address of the Top Level Domain (TLD) server to relay the user query to.<br><br> The TLD server is then queried, and its response is once again parsed to find the type A record for the IP address of the authoritative server to relay the user query to.<br> The authoritative server is finally queiried, and its response contains a type A RR under its answer, which contains the ip of the user's query.<br>This ip is then wrapped into a response header format that is sent back to the user client.<br> The ip and ttl (time to live) are then cached in a dictionary with the ip as the key, and the cache is later checked before each query, deleting any records that are expired before checking if a domain ip is cached. If a domain ip is not in the cache, the query process begins, and the DNS resolver queries the root server and iteratively finds the domain ip.<br><br>TOOLS:<br>Wireshark was used along with dig and localhost to figure out the byte order and structure for which bytes correspond to which flag and component of the DNS header.",
+                "completion": "May 2022",
+                "github": "https://github.com/cjd2186/Computer-Networks/tree/main/%20Distance%20Vector%20Protocol%20RIPv2%20Mininet",
+                "tags": ["Networks", "Python", "Json", "Mininet", "Wireshark", "Columbia"]
+                },
+                {
+                "name": "Proxy",
+                "title": "HTTP Proxy Webserver",
+                "summary": "This program implements a proxy web server. <br>The web proxy accepts incoming HTTP requests from the browser and relays it to the desired web site, thus is both an HTTP server and a client.",
+                "img": "/christopher.github.io/static/images/cyber/proxy.png",
+                "description": "<br><br>HOW TO RUN PROGRAM<br>In order to use the 'cjd2186_proxy.py' file, run the python-file locally under port 8080 (hard-coded). <br><br>OUTPUT<br>Upon running this program, the proxy will make a connection with the web-browser and the proxy will take in, and parse the GET request from the browser. The GET request will then be stored into a dictionary, and will be given a new 'X-Forwarded-For' heading, all of which will be sent to the web-server via a new connection. <br><br>LOGIC<br> Therefore, there will be a connection between the web browser, and the proxy, as well as between the proxy and the web server. After sending the GET request to the web server, the proxy will receive the response from the web server, and send the response to the web browser.",
+                "completion": "March 2022",
+                "github": "https://github.com/cjd2186/Computer-Networks/tree/main/Proxy%20Webserver",
+                "tags": ["Networks", "Python", "Wireshark", "Columbia"]
+                },
+                {
+                "name": "TCP",
+                "title": "Transmission Control Protocol Lite",
+                "summary": "This program implements a lite version of the Transmission Control Protocol (TCP), which is built using User Datagram Protocol (UDP). <br> This protocol allows for information to be exchanged between a client and server quickly and without information loss.<br> This program follows <a href='https://www.rfc-editor.org/rfc/rfc793.html' target='_blank'>RFC 793</a> ",
+                "img": "/christopher.github.io/static/images/cyber/tcp.png",
+                "description": "<br><br>LOGIC:<br> This program follows the structure and logic as presented in the TCP Lite assignment, implementing a simiplified version of TCP on top of UDP.<br><br>Transfer Process: <br>Upon loading up the server receiver and the client sender, the client sends a SYN segment to the server, in which case the server responds to the client with a SYN ACK, and the client finishes this handshake with an ACK.<br>After this handshake, the client is able to send over its data in segments of size 1024, which are taken in and appened to a file by the server.<br>Finally, after an EOF is read from the client's file to be sent, the client sends a FIN segment to initiate a closed connection. The server responds with a FIN ACK, and the client sends an ACK before closing its TCP connection. The server persists its connection as well, as it is a server.<br><br>TOOLS:<br>Wireshark was used along RFC 793 to find out how to construct the TCP headers, and the protocol that is used to send data over TCP.",
+                "completion": "March 2022",
+                "github": "https://github.com/cjd2186/Computer-Networks/tree/main/TCP%20Implementation",
+                "tags": ["Networks", "Python", "Wireshark", "Columbia"]
                 },
                 {
                 "name": "C_Server",
                 "title": "HTTP Web Server in C",
-                "summary": "This project...",
-                "img": "",
-                "description": "This is a group project...",
-                "completion": "December 2023",
-                "github": "http///git...",
-                "tags": ["NLP", "AWS", "Columbia", "Teamwork"]
+                "summary": "This program creates two web servers in the C programming language. <br> These servers act as an HTTP client and and HTTP proxy server, respectively.",
+                "img": "/christopher.github.io/static/images/cyber/c.png",
+                "description": "The HTTP client server acts as a limited version of wget, tot download a single file to the current directory given a host machine, port number and file path. <br><br>The http-client program works as follows:<br>The file from the given file path is read from its host machine, and the contents of the file is written to a new file in the current directory using the same file name.<br>The http-client.c file was implemented as follows: <br>First the host name inputted in the commandline argument is converted into an IP address. <br>Next, a socket for the TCP connection is created and connected to IP address. A GET request in then created with the file path, host machine, and port number.<br>This GET request is sent to the host server, and the client then reads the server's response as a file. <br>If the server response does not start with '200 OK', the client program terminates and shows an error message. <br>Upon reading the response, the headers following the first 200 OK line are bypassed until a blank line is read, preceding the message body The file body is read from and written to a new file one byte at a time, to ensure that the entire file body is downloaded properly. <br>Finally, the proper resources are closed and the client program terminates. <br><br><br> The HTTP web server acts a proxy server between the browser and a database server. <br>Usage:<br> The http-server must be terminated manually using ctrl-C, and will serve clients in succession, but not simultaneously. <br>The http-server is able to take GET requests from netcat/firefox, and deliver the necessary files to the client. The http-server is also able to send a dynamic webpage to a browser, in which mdb-lookup can be executed, accessing the mdb-lookup-server.",
+                "completion": "December 2021",
+                "github": "https://github.com/cjd2186/HTTP-Web-Server-and-Client",
+                "tags": ["Networks", "C", "Git", "HTTP", "Columbia"]
                 }
+            ]
+        },
+        "finstats":{
+            "finance":[
+                {
+                "name": "monte_carlo",
+                "title": "Stock Option Pricing using Monte Carlo Simulation",
+                "summary": "This project contains a variety of programs that use Monte Carlo Simulations to price various call options such as Asian Call Options, Barrier Call Options and European Call Options with the Black Scholes Merton Formula.",
+                "img": "/christopher.github.io/static/images/finstats/monte_carlo.png",
+                "description": "This project implements European, Asian and Barrier Call options using Monte Carlo Simulations, Bernoulli Variables and the Black Scholes Merton Formula to project the prices trajectories.<br> This methodology is in line with the Binomial Lattice Model of calculating options prices.",
+                "completion": "November 2020",
+                "github": "https://github.com/cjd2186/Finance-Projects-Python/blob/main/Finance%20Projects/MonteCarlo.py",
+                "tags": ["Python", "Backend", "Pandas", "Finance", "Statistics", "Data-visualization", "Columbia"]
+                },
+                {
+                "name": "markowitz",
+                "title": "Finding Optimal Portfolio Weights Using Markowitz Portfolios",
+                "summary": "This project uses Markowitz Portfolio Optimization to find the optimal weights to maximize returns on given stocks. <br><br>See PDF for full projec report.",
+                "img": "/christopher.github.io/static/images/finstats/markowitz.png",
+                "description": "Using Markowitz Portfolio Optimization, a portfolio is optimized to: <br> * minimize volatility <br> * minimize volatility given target ratio <br> * maximize Sharpe Ratio",
+                "completion": "May 2024",
+                "github": "https://github.com/cjd2186/Markowitz-Portfolios",
+                "pdf": "christopher.github.io/static/pdf/Chris_Kaja_Zach_Markowitz Portfolios.pdf",
+                "tags": ["Python", "Backend", "Finance", "Statistics", "Data-visualization", "Columbia"]
+                }
+            ],
+            "statistics":[
+                {
+                "name": "baseball_stats",
+                "title": "Leveraging Statistics to Understand How to Build a Playoff Baseball Team",
+                "summary": "This project seeks to explore the underlying team statistics that best can predict a team's likelihood of reaching the MLB playoffs. <br><br> See PDF for project report.",
+                "img": "/christopher.github.io/static/images/finstats/baseball_stats.png",
+                "description": "This project seeks to explore the underlying team statistics that best can predict a team's likelihood of reaching the MLB playoffs. <br> The approach is two-fold, providing an 'offensive' regression that regresses wins on offensive statistics and a “defensive” regression that regresses wins on defensive statistics. These regressions helped show the significance of specific statistics influencing wins and the magnitude and direction of these statistics. As we are interested in creating a model that creates a playoff-caliber team, we then run a Monte-Carlo simulation for an imagined team with specific stats and show the percentage of that team making the playoffs by reaching a threshold amount of wins. <br> The project's data was collected from the 2008 season until the most recent 2023 season; however, 2020 was omitted from the data set due to the coronavirus pandemic leading to a shortened season and unique playoff format.",
+                "completion": "December 2023",
+                "github": "https://github.com/cjd2186/Baseball_Stats_Project/blob/main/Demirjian_Christopher_Huruk_Kaja_Isaza_Nicholas_Report.pdf",
+                "pdf": "/christopher.github.io/static/pdf/Demirjian_Christopher_Huruk_Kaja_Isaza_Nicholas_Report.pdf",
+                "tags": ["R", "Microsoft Excel", "Linear Regression", "Statistics", "Data-visualization", "Teamwork", "Columbia"]
+            }
             ]
         }
     },
 
-    
     "jobs": {
         "roles": {
             "internships": [
                 {
                 "role": "Columbia University IRT Lab Undergraduate Research Assistant",
                 "company": "Columbia",
-                "summary": "As an undergraduate junior, I served as an Undergraduate Research Assistant to Columbia's Internet Real Time (IRT) Lab under Professor Henning Schulzrinne.<br><br> My work centered around researching how to program rules for a firewall that protects Internet of Things (IoT) devices from malicous traffic. This firewall was programming in the P4 language, adding intelligence to the forwarding of packets in the dataplane of network traffic for these devices. <br><a href='/christopher.github.io/templates/pages/index.html#P4' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a>",
+                "summary": "As an undergraduate junior, I served as an Undergraduate Research Assistant to Columbia's Internet Real Time (IRT) Lab under Professor Henning Schulzrinne.<br><br> My work centered around researching how to program rules for a firewall that protects Internet of Things (IoT) devices from malicous traffic. This firewall was programming in the P4 language, adding intelligence to the forwarding of packets in the dataplane of network traffic for these devices. <br><a href='/christopher.github.io/templates/pages/index.html#P4 IoT Firewall' class='read-more-button'><button type='button' class='btn btn-outline-info btn-sm'>See Project</button></a>",
                 "img": "/christopher.github.io/static/images/columbia.png",
                 "description": "At the Columbia Internet Real Time Lab, under Professor Henning Schulzrinne, I analyzed Internet of Things (IoT) network traffic, and developed a firewall for devices on this network. <br><br> Distinct from most course projects, I worked independently under a single PhD advisor, rather than alongside a team of peers. <br> Being a self-starter, I was given broad specifications for the firewall's features, and utilized my creativity by conducting my own brainstorming, research and planning to successfully implement these specifications to my advisor's feedback.",
                 "time": "January 2023 - August 2023",
@@ -134,7 +301,7 @@
                 "img": "/christopher.github.io/static/images/yale.png",
                 "description": "My time at the Yale NLP lab introduced me to the wonderful world of Natural Language Processing. <br><br> Here, I was able to collaborate with experienced researchers in the NLP field, allowing me to learn how to properly read, interpret and structure scientific research papers in Computer Science. This experience also bolstered my presentations skills, as I was able to summarize and present prominent papers on the frontier of NLP research to the lab each week. <br><br> My main task as a research assistant was to create a companion website for the lab's L2CEval Paper, which studied the performance of various Large Language Models on different lexical and semantic tasks. The website demo I created served as the predecessor to the current L2CEval website. This project taught me how to use Python's Streamlit library for web development and required me to analyze training and testing data from LLMs using HuggingFace.",
                 "time": "May 2023 - August 2023",
-                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural-Language-Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
+                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural Language Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
                 },
                 {       
                 "role": "Accelerate Program Intern",
@@ -158,7 +325,7 @@
         {
         "name": "Problem Solving (Intermediate)",
         "company": "Hackerrank",
-        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "img": "/christopher.github.io/static/images/certs/hackerrank.png",
         "issue": "July 2024",
         "link": "https://www.hackerrank.com/certificates/6a0d693670fa?trk=public_profile_see-credential",
         "tags": ["Problem Solving", "Python", "Backend", "Certificate"]
@@ -166,7 +333,7 @@
         {
         "name": "Rest API (Intermediate)",
         "company": "Hackerrank",
-        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "img": "/christopher.github.io/static/images/certs/hackerrank.png",
         "issue": "July 2024",
         "link": "https://www.hackerrank.com/certificates/1d66d767292a?trk=public_profile_see-credential",
         "tags": ["Rest API", "Data-visualization", "Web", "Python", "Backend", "Certificate"]
@@ -174,7 +341,7 @@
         {
         "name": "SQL (Basic)",
         "company": "Hackerrank",
-        "img": "/christopher.github.io/static/images/hackerrank.png",
+        "img": "/christopher.github.io/static/images/certs/hackerrank.png",
         "issue": "July 2024",
         "link": "https://www.hackerrank.com/certificates/60340eb2d092?trk=public_profile_see-credential",
         "tags": ["SQL", "Data-visualization", "Database", "Certificate"]
@@ -182,7 +349,7 @@
         {
         "name": "Bloomberg Environmental Social and Governance Course",
         "company": "Bloomberg",
-        "img": "/christopher.github.io/static/images/bloomberg_esg.png",
+        "img": "/christopher.github.io/static/images/certs/bloomberg_esg.png",
         "issue": "May 2024",
         "link": "https://portal.bloombergforeducation.com/certificates/m46F1m8KF9sVCpYagWiLAw8S?trk=public_profile_see-credential",
         "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
@@ -190,7 +357,7 @@
         {
         "name": "Bloomberg Finance Fundamentals Course",
         "company": "Bloomberg",
-        "img": "/christopher.github.io/static/images/bloomberg_fin.png",
+        "img": "/christopher.github.io/static/images/certs/bloomberg_fin.png",
         "issue": "May 2024",
         "link": "https://portal.bloombergforeducation.com/certificates/L1ZbMAWLcABXg6XNrgsnza2W?trk=public_profile_see-credential",
         "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
@@ -198,7 +365,7 @@
         {
         "name": "Bloomberg Market Concepts Course",
         "company": "Bloomberg",
-        "img": "/christopher.github.io/static/images/bloomberg_mkt.png",
+        "img": "/christopher.github.io/static/images/certs/bloomberg_mkt.png",
         "issue": "May 2024",
         "link": "https://portal.bloombergforeducation.com/certificates/gzxoF4zb292FRLkVdyWt2RgJ?trk=public_profile_see-credential",
         "tags": ["Bloomberg", "Finance", "Statistics", "Certificate"]
@@ -206,7 +373,7 @@
         {
         "name": "IBM Accelerate - Software Developer",
         "company": "IBM",
-        "img": "/christopher.github.io/static/images/ibm_accel.png",
+        "img": "/christopher.github.io/static/images/certs/ibm_accel.png",
         "issue": "August 2022",
         "link": "https://www.credly.com/badges/b3da068b-3c98-497b-aa67-8a7d9bfc39d9/linked_in_profile?trk=public_profile_see-credential",
         "tags": ["Cybersecurity", "Agile", "Cloud", "Git", "HTML", "CSS", "JavaScript", "React", "Teamwork", "IBM", "Certificate"]
@@ -214,12 +381,10 @@
         {
         "name": "Cybersecurity Fundamentals ",
         "company": "IBM",
-        "img": "/christopher.github.io/static/images/ibm_cyber.png",
+        "img": "/christopher.github.io/static/images/certs/ibm_cyber.png",
         "issue": "July 2022",
         "link": "https://www.credly.com/badges/69425435-2caa-42d3-9a25-befd6efe19fb?source=linked_in_profile&trk=public_profile_see-credential",
         "tags": ["Cybersecurity", "Cloud", "Networks", "IBM", "Certificate"]
         }
     ]
-    
-    
 }

@@ -65,8 +65,6 @@
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#ai">Artificial Intelligence</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#robotics">Robotics</a>
@@ -74,12 +72,13 @@
                             <a class="dropdown-item" href="index.html#cv">Computer Vision</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#mlw">Machine Learning</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.html#finstats">Financial Technology/Stats</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#finstats">Financial Technology/Stats</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#certs">Certifications</a>
@@ -88,10 +87,14 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search Tags [E.g. 'Python']" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>
+                <form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
+                    <label for="SearchInput"></label>
+                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>                 
                 </form>
+                <div id="searchResults"></div>
+
+                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
@@ -162,7 +165,6 @@
         </a>
     </div>
 </body>
-
 
         </div>
 

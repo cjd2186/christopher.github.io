@@ -18,86 +18,12 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Define the color generation function
 def generate_color(tag):
-    lang_colors = {
-        "Python": "#306998",
-        "Java": "#007396",
-        "C": "#00599C",
-        "PostgreSQL": "#336791",
-        "SQL": "#336791",
-        "mySQL": "#336791",
-        "TypeScript": "#007ACC",
-        "JavaScript": "#F7D35B",
-        "HTML": "#E34F26",
-        "C++": "#00599C",
-        "CSS": "#2DA2D5",
-        "React": "#61DAFB",
-        "Duck DB": "#F8E7A4",
-        "R": "#276DC3",
-        "GO": "#00ADD8",
-        "P4": "#000000"  # Example color for P4
-    }
-
-    software_colors = {
-        "Bloomberg": "#00000F",
-        "Finance": "#4F8A79",
-        "Statistics": "#B38E8F",
-        "Linux": "#000000",
-        "Object Oriented Programming": "#FFC107",
-        "Git": "#F05032",
-        "Pandas": "#150458",
-        "Microsoft Office": "#F25022",
-        "jQuery": "#0769AD",
-        "Rest API": "#67C4D8",
-        "FAST API": "#00D1FF",
-        "AWS": "#FF9900",
-        "GCP": "#EA4335",
-        "Docker": "#0DB7ED",
-        "TensorFlow": "#FF6F00",
-        "PyTorch": "#EE4C2C",
-        "PyBullet": "#28A745",
-        "Wireshark": "#339933",
-        "Nix": "#7E8C8D",
-        "Flask": "#000000",
-        "Ajax": "#0F7BC2",
-        "Streamlit": "#FD4145",
-        "Terraform": "#7C3AED",
-        "Yale": "#00356B",
-        "IBM": "#1565F8",
-        "Cloud": "#66DAD7",
-        "Certificate": "#C8C390"
-    }
-
-    if tag in lang_colors:
-        color_code = lang_colors[tag]
-    elif tag in software_colors:
-        color_code = software_colors[tag]
-    elif tag == "Columbia":
-        color_code = "#C4D8E2"
-    elif tag == "Teamwork":
-        color_code = "#4CAF50"
-    elif tag == "Independent":
-        color_code = "#0AFFFF"
-    elif tag == "Frontend":
-        color_code = "#DC143C"
-    elif tag == "Backend":
-        color_code = "#FF8C00"
-    elif tag == "Database":
-        color_code = "#FFD700"
-    elif tag == "Mobile":
-        color_code = "#FFFFF0"
-    elif tag == "Natural-Language-Processing":
-        color_code= "#00FF00"
-    elif tag == "Machine-Learning":
-        color_code= "#FFFFE0"
-    elif tag == "Computer-Vision":
-        color_code= "#FFFACD"
-    elif tag == "Robotics":
-        color_code= "#ADD8E6"
-    elif tag == "Research":
-        color_code= "#9370DB"
+    with open('static/json/colors.json', 'r') as file:
+        colors = json.load(file)
+    if tag in colors.keys():
+        return colors[tag]
     else:
-        color_code = "#BEE7FE"  # Default color for unknown tags
-    return color_code
+        return "#BEE7FE"
 
 def get_tag_colors(data):
     tag_colors = {}

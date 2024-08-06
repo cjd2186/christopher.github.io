@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Christopher's Portfolio
+{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/christopher.github.io/static/css/project.css">
+</head>
+<body>
+    <div class="summary">
+        <h1>Search Results for "{{ query }}"</h1>
+        {% if results %}
+            {% for result in results %}
+                <div class="result-item">
+                    <h2>{{ result.title }}</h2>
+                    <h3>Completion: {{ result.completion }}</h3>
+                    <p>{{ result.description }}</p>
+                    <p>Tags: 
+                        {% for tag in result.tags %}
+                            <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                                {{ tag }}
+                            </span>
+                        {% endfor %}
+                    </p>
+                    <a href="index.html#{{ result.title }}">
+                        <button type="button" class="btn btn-outline-info">Back to Home</button>
+                    </a>
+                </div>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}
