@@ -35,6 +35,16 @@
             ],
             "backend": [
                 {
+                "name": "portfolio",
+                "title": "Christopher's Portfolio Website",
+                "summary": "Successfully deployed Full Stack web application that acts as a clear representation of my experiences, projects, and credentials.",
+                "img": "/christopher.github.io/static/images/swe/website.png",
+                "description": "Using my UI knowledge I was able to learn how to use Jinja templates and how to deploy a website to an AWS S3 bucket. <br> This website features numerous templates, detailed descriptions of my projects, and a design that integrates my favorite features of LinkedIn and Github. <br> This website is unique in that it is easy to add to, as all the data and web templates were designed to be easily iterated and exapnded upon.",
+                "completion": "August 2024",
+                "github": "https://github.com/cjd2186/christopher.github.io",
+                "tags": ["Frontend", "jQuery", "Jinja", "HTML", "CSS", "JavaScript", "Twitter-bootstrap", "Python", "UI-Design", "Full Stack", "Cloud", "AWS", "S3"]
+                },
+                {
                 "name": "cloud_compute",
                 "title": "NFL Cloud Native Application",
                 "summary": "This cloud-based application NFL FanZone is built and designed for NFL fans' casual interaction and NFL-related information lookup. <br>It offers three features that will enhance fans' NFL experience: <br><br> &nbsp 1. NFL searching: fans can find information (eg. player stats, player basic information.) in HTML format or JSON format regarding their favorite players. The microservice also has operations to add/modify/delete players. <br><br> &nbsp 2. Team management: management personnel with different clearance levels can modify and query team/player information to keep fans updated. <br><br> &nbsp 3. Fan post-game reviews forum: fans can share insights and comments on games. <br><br> See PDF for full Project Report.",
