@@ -1,7 +1,7 @@
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
-
+import collections 
 # Load JSON data
 with open('static/json/data.json', 'r') as file:
     data = json.load(file)
@@ -45,7 +45,6 @@ def get_tag_colors(data):
         process_items(roles)
 
     for cert in data['certs']:
-        print(cert)
         if cert:  # Ensure the item is not empty
             for tag in cert['tags']:
                 if tag not in tag_colors:
@@ -96,3 +95,29 @@ for category, categories in data['jobs'].items():
             with open(job_output_path, 'w', encoding='utf-8') as file:
                 file.write(job_html_content)
                 print(f"{job['company'].replace(' ', '_')}.html has been created.")
+
+def count_tags(data):
+    #get project tags
+    tags=collections.defaultdict(int)
+
+    for category, subcategories in data['projects'].items():
+        for subcategory, items in subcategories.items():
+            for item in items:
+                for tag in item.get('tags', []):
+                    tags[tag]+=1
+    # Process jobs
+    for role_category, roles in data['jobs']['roles'].items():
+        for item in roles:
+            for tag in item.get('tags', []):
+                tags[tag]+=1
+
+    for cert in data['certs']:
+        if cert: 
+            for tag in cert['tags']:
+                tags[tag]+=1
+    
+    with open("static/json/tags.json", 'w', encoding='utf-8') as file:
+        json.dump(tags, file, ensure_ascii=False, indent=4)
+        print("tags.json has been created")
+
+count_tags(data)

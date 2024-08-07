@@ -17,4 +17,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error fetching the text file:', error);
       });
   });
-  
