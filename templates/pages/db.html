@@ -10,11 +10,17 @@
     <!-- Favicon -->
     <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
@@ -47,11 +53,11 @@
                         <a class="nav-link" href="index.html#exp">Professional Experience</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SWE Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <a class="dropdown-item" href="index.html#frontend" >Frontend Work</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#backend">Backend Work</a>
                             <div class="dropdown-divider"></div>
@@ -61,7 +67,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,19 +93,11 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <!--form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
-                    <label for="SearchInput"></label>
-                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>                 
-                </form-->
-                <div id="searchResults"></div>
-
-                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid dkgray-base">    
+    <div class=" dkgray-base">    
         <div id="scenery-container">
             <div id="scenery"></div>
         </div>
@@ -115,51 +113,51 @@
         <p>I completed this project with a partner for a Columbia University graduate course in Database design and implementation. <br><br> Overview: <br>  This relational database is for the National Football League. The database will be used to track the statistics, status, and biographical information of each player in the NFL. This tool will be useful for avid NFL fans, especially for fans who engage in Fantasy Football, a game played over the course of the football season where players create a team of players across the league, receiving points based on the performance of the players they select. <br><br>Purpose: <br> What makes this relational database unique from existing statistics repositories such as ESPN and football reference is that our database will allow for specific queries to be performed, which is not admissible on existing sites. <br> For example, if I search “NFL players with at least 6 receiving touchdowns in 2022 season”, I will not receive a list of player names with the proper criteria, but rather a comprehensive data table of the receiving statistics for all NFL players, which can be sorted from least to greatest.</p>
         <p>Tags: 
             
-            <span class="tag" style="background-color: #FFD700;">
+            <span class="tag">
                 Database
             </span>
             
-            <span class="tag" style="background-color: #DC143C;">
+            <span class="tag">
                 Frontend
             </span>
             
-            <span class="tag" style="background-color: #E34F26;">
+            <span class="tag">
                 HTML
             </span>
             
-            <span class="tag" style="background-color: #2DA2D5;">
+            <span class="tag">
                 CSS
             </span>
             
-            <span class="tag" style="background-color: #000000;">
+            <span class="tag">
                 Flask
             </span>
             
-            <span class="tag" style="background-color: #BEE7FE;">
+            <span class="tag">
                 Json
             </span>
             
-            <span class="tag" style="background-color: #3367FF;">
+            <span class="tag">
                 SQL
             </span>
             
-            <span class="tag" style="background-color: #336791;">
+            <span class="tag">
                 PostgreSQL
             </span>
             
-            <span class="tag" style="background-color: #336700;">
+            <span class="tag">
                 mySQL
             </span>
             
-            <span class="tag" style="background-color: #FF6347;">
+            <span class="tag">
                 Data-visualization
             </span>
             
-            <span class="tag" style="background-color: #4CAF50;">
+            <span class="tag">
                 Teamwork
             </span>
             
-            <span class="tag" style="background-color: #C4D8E2;">
+            <span class="tag">
                 Columbia
             </span>
             
@@ -186,9 +184,6 @@
         </section>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

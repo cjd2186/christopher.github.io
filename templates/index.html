@@ -15,7 +15,7 @@
             <hr>
         </div>
         <div class="row">
-            <div class="col-3">  
+            <div class="col-md-3 col-6 justify-content-center align-items-center">  
                 <br>
                 <div class="row" id="headshot">
                     <img src="/christopher.github.io/static/images/Lors_headshot_yearbook.png" alt="headshot of Christopher" style="width: 325px"> 
@@ -32,31 +32,40 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-6">
                 <br>
                 <br>
                 <h2 class="bold"> About Me </h2>
                 <p id="about">
                 </p>
                 <div class="row">
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-md-6 col-6 d-flex justify-content-center align-items-center">
                         <img src="/christopher.github.io/static/images/cc.png" class="crown">
                     </div>
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-md-6 col-6 d-flex justify-content-center align-items-center">
                         <img src="/christopher.github.io/static/images/seas.png" class="crown">
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                    <div class="image-container">
-                        <img src="/christopher.github.io/static/images/resume_thumb.png" alt="Resume Thumbnail" style="width: 300px; height: auto;">
-                        <a href="/christopher.github.io/static/pdf/Christopher_Demirjian_Resume_git.pdf" target="_blank" class="overlay-button">View Resume</a>
-                    </div>
+            <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
+                <div class="image-container">
+                    <img src="/christopher.github.io/static/images/resume_thumb.png" alt="Resume Thumbnail">
+                    <a href="/christopher.github.io/static/pdf/Christopher_Demirjian_Resume_git.pdf" target="_blank">
+                        <button type="button" class="btn btn-info resume-btn">View Resume</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div> 
 </section>
 
+<div class="filter">
+    <h2 class="bold underline "> Filter Skills and Experiences</h2>
+    <h7> (size indicates frequency of keyword)</h7>
+    <br><br>
+    <button type="button" class="btn btn-outline-info" id="reset">Click to Remove Filter</button>
+    <div id="tag-cloud" class="tag-cloud"></div>
+</div>
 
 <section class="pad" id="exp">
     <h2 class="bold">Professional Experience</h2>
@@ -64,19 +73,19 @@
     <section id="roles">
         <h3> Internships </h3>
         {% for job in jobs.roles.internships %}
-            <div class="project" id="{{job.company}}">
+            <div class="project" id="{{job.company}}" data-tags="{{ job.tags | join(',') }}">
                 <h4>{{ job.role }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Duration: {{ job.time }}</h5>
                 <div class="row">
-                    <div class="col-3 logo-container d-flex justify-content-center align-items-center">
+                    <div class="col-md-3 col-12 logo-container d-flex justify-content-center align-items-center">
                         <img src="{{ job.img }}" alt="Company Logo" class="logo">
                     </div>
-                    <p class="col-9 sum">{{ job.summary }}</p>
+                    <p class="col-md-9 col-12 sum">{{ job.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in job.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -98,26 +107,28 @@
     <section class="pad" id="frontend">
         <h3> Frontend Projects </h3>
         {% for project in projects.swe.frontend %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
-                            <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail for {{project.title}}" class="thumbnail">
-                            <div class="play-button">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
-                                </svg>
-                            </div>
-                        </a>
+                    <div class="col-md-6 col-12">
+                        <div class=" thumbnail-container">
+                            <a href="https://www.youtube.com/watch?v={{ project.video_id }}" target="_blank">
+                                <img src="https://img.youtube.com/vi/{{ project.video_id }}/hqdefault.jpg" alt="YouTube Thumbnail for {{project.title}}" class="thumbnail">
+                                <div class="play-button">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 5v14l11-7L8 5z" fill="#ffffff"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -137,19 +148,21 @@
     <section class="pad" id="backend">
         <h3> Backend Projects </h3>
         {% for project in projects.swe.backend %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -172,19 +185,21 @@
     <section class="pad" id="database">
         <h3> Database Projects </h3>
         {% for project in projects.swe.database %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -207,19 +222,21 @@
     <section class="pad" id="mobile">
         <h3> Mobile Projects</h3>
         {% for project in projects.swe.mobile %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -243,19 +260,21 @@
     <section class="pad" id="nlp">
         <h3> Natural Language Processing Projects </h3>
         {% for project in projects.aiml.nlp %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -277,19 +296,21 @@
     <section class="pad" id="robotics">
         <h3> Robotics Projects </h3>
         {% for project in projects.aiml.robotics %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -311,19 +332,21 @@
     <section class="pad" id="cv">
         <h3> Computer Vision Projects </h3>
         {% for project in projects.aiml.cv %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -345,19 +368,21 @@
     <section class="pad" id="mlw">
         <h3> Classical Machine Learning Projects </h3>
         {% for project in projects.aiml.mlw %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}}" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}}" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -384,19 +409,21 @@
     <hr>
     <h3> Computer Networks Projects </h3>
         {% for project in projects.cyber.networks %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -415,57 +442,62 @@
 </section>
 
 <section class="pad" id="finstats">
-    <h2 class="bold">Finance and Statistics Projects</h2>
-    <hr>
-    <h3> Finance Projects</h3>
-        {% for project in projects.finstats.finance %}
-            <div class="project" id="{{project.title}}">
-                <h4>{{ project.title }}</h4>
-                <hr class="bar">
-                <h5 class="completion">Completion: {{ project.completion }}</h5>
-                <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+    <section class="pad" id="finance">
+        <h2 class="bold">Finance and Statistics Projects</h2>
+        <hr>
+        <h3> Finance Projects</h3>
+            {% for project in projects.finstats.finance %}
+                <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
+                    <h4>{{ project.title }}</h4>
+                    <hr class="bar">
+                    <h5 class="completion">Completion: {{ project.completion }}</h5>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="thumbnail-container">
+                                <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                            </div>
+                        </div>
+                        <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <h6 class="tag-text">Tags: 
+                        {% for tag in project.tags %}
+                        <span class="tag">
+                            {{ tag }}
+                        </span>
+                        {% endfor %}
+                    </h6>
+                    <div class="project-row">
+                        <span class="project-git">
+                            <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                        </span>
+                        <span class="project-git">
+                            <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
+                        </span>
+                        <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                            <button type="button" class="btn btn-outline-info">Read More</button>
+                        </a>
+                    </div>
                 </div>
-                <h6 class="tag-text">Tags: 
-                    {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
-                        {{ tag }}
-                    </span>
-                    {% endfor %}
-                </h6>
-                <div class="project-row">
-                    <span class="project-git">
-                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
-                    </span>
-                    <span class="project-git">
-                        <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
-                    </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
-                        <button type="button" class="btn btn-outline-info">Read More</button>
-                    </a>
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
         </section>
-
+        <section class="pad" id="stats">
         <h3> Statistics Projects</h3>
         {% for project in projects.finstats.statistics %}
-            <div class="project" id="{{project.title}}">
+            <div class="project" id="{{project.title}}" data-tags="{{ project.tags | join(',') }}">
                 <h4>{{ project.title }}</h4>
                 <hr class="bar">
                 <h5 class="completion">Completion: {{ project.completion }}</h5>
                 <div class="row">
-                    <div class="col-6 thumbnail-container">
-                        <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                    <div class="col-md-6 col-12">
+                        <div class="thumbnail-container">
+                            <img src="{{project.img}}" alt="{{project.title}} diagram" class="thumbnail">
+                        </div>
                     </div>
-                    <p class="col-6 sum">{{ project.summary }}</p>
+                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
                 </div>
                 <h6 class="tag-text">Tags: 
                     {% for tag in project.tags %}
-                    <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                    <span class="tag">
                         {{ tag }}
                     </span>
                     {% endfor %}
@@ -493,23 +525,23 @@
     <div class="row">
         {% for cert in certs %}
             <div class="col-md-6">
-                <div class="project" id="{{cert.name}}">
+                <div class="project" id="{{cert.name}}" data-tags="{{ cert.tags | join(',') }}">
                     <h4>{{ cert.name }}</h4>
                     <hr class="bar">
                     <h5 class="completion">Issued: {{ cert.issue }}</h5>
                     <div class="row">
-                        <div class="col-5 logo-container d-flex justify-content-center align-items-center">
-                            <img src="{{ cert.img }}" alt="Certificate Image" class="logo">
+                        <div class="col-md-6 col-12 logo-container d-flex justify-content-center align-items-center">
+                            <img src="{{ cert.img }}" alt="Certificate" class="logo">
                         </div>
-                        <p class="col-6 sum">
-                            <a href="{{cert.link}}" class="read-more-button">
+                        <p class="col-md-6 col-12 sum">
+                            <a href="{{cert.link}}" target="_blank" class="read-more-button">
                                 <button type="button" class="btn btn-outline-info">See Certificate</button>
                             </a>
                         </p>
                     </div>
                     <p>Tags: 
                         {% for tag in cert.tags %}
-                        <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+                        <span class="tag">
                             {{ tag }}
                         </span>
                         {% endfor %}

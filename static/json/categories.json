@@ -1,0 +1,20 @@
+{
+    "categories":{
+        "Programming Languages": {
+            "tags": ["Python", "Java", "C", "SQL", "JavaScript", "HTML", "CSS", "Full Stack", "Mobile"],
+            "color": "#70B0E2"
+        },
+        "Python Libraries and Frameworks": {
+            "tags": ["Pandas", "FAST API", "Flask", "TensorFlow", "PyTorch", "Keras", "HuggingFace"],
+            "color": "#70B0E2"
+        },
+        "Technologies": {
+            "tags": ["Rest API", "AWS", "Docker", "GCP", "Wireshark", "EC2", "Lambda", "S3", "Terraform", "Cloud"],
+            "color": "#70B0E2"
+        },
+        "Organizations": {
+            "tags": ["Columbia", "Yale", "IBM", "Research"],
+            "color": "#70B0E2"
+        }
+    }
+}

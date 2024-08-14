@@ -8,21 +8,15 @@ body.dkgray-base {
     color: black; /* Ensure links are visible */
 }
 
-.navbar .nav-link:hover, .navbar .navbar-brand:hover, .dropdown:hover .nav-link {
-    background-color: #BEE7FE;
-    color: black;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
 .dropdown-menu {
-    background-color: #62c3fc;
+    width: 40%; /* Set this to your desired width */
+    background-color: #8ec1db;
 }
 
-.dropdown-menu .dropdown-item:hover {
-    background-color: lightgrey;
+@media (min-width: 1000px) { /* Adjust this value to your desired breakpoint */
+    .dropdown-menu {
+        width: 250px; /* Wider width for larger screens */
+    }
 }
 
 .navbar-nav .nav-item {
@@ -31,7 +25,7 @@ body.dkgray-base {
 
 .navbar {
     margin-bottom: 0; /* Remove space below the navbar */
-    transition: top 0.2s ease-in-out; /* Smooth transition for hiding/showing the navbar */
+    transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing the navbar */
     background-color: white;
 }
 
@@ -40,81 +34,81 @@ body.dkgray-base {
     text-align: center;
 }
 
-.content {
-    height: auto; /* Just for scrolling effect */
-    padding-top: 60px; /* Make space for the navbar */
-}
-
 .main-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 400px); /* Adjust based on the margin-left and margin-right */
-    padding-left: 100px;
-    padding-right: 100px;
+    width: 100%; /* Default to full width */
+    padding-left: 6%;
+    padding-right: 6%;
     background-color: white;
     border-radius: 0px 0px 50px 50px;
     padding-bottom: 20px;
 }
 
+/* Apply margins for larger screens */
+@media (min-width: 768px) { /* Tablets and larger */
+    .main-container {
+        max-width: 100%;
+        width: 78%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scenery-container {
+        padding-left: 11%;
+        padding-right: 11%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scenery {
+        width: 78%; /* Full width of the container */
+        height: 78%; /* Full height of the container */
+        border-radius: 50px 50px 0 0; /* Rounded top corners */
+    }
+    
+    #contact{
+        width: 78%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 #contact {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: white;
     border-radius: 50px;
     font-size: 20px;
+}
+
+#scenery-container {
+    position: relative; /* Context for absolutely positioned children */
+    width: 100%; /* Match the width of main container, adjusting for side margins */
+    height: 150px; /* Fixed height to fit the container */
+    overflow: hidden; /* Prevent content from overflowing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scenery {
+    position: relative; /* Absolute positioning for background image */
+    bottom: 0; /* Align with the top of the container */
+    left: 0; /* Align with the left of the container */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    border-radius: 50px 50px 0 0; /* Rounded top corners */
+    background-image: url('/christopher.github.io/static/images/clouds_snow.png'); /* Background image URL */
+    background-size: cover; /* Cover the container, cropping if necessary */
+    background-position: center bottom; /* Align bottom of the image with the container bottom */
+    background-repeat: no-repeat; /* Prevent image tiling */
 }
 
 .accent-color {
     color: #BEE7FE;
 }
 
-.base-color {
-    color: #FFFFFF;
-}
-
-.lgray-base {
-    background-color: #CBCBCB;
-}
-
 .dkgray-base {
     background-color: rgb(190, 190, 190);
-}
-
-.black-text {
-    color: black;
-}
-
-.clickable {
-    cursor: pointer;
-}
-
-#center-img {
-    vertical-align: top;
-    text-align: center;
-    margin-top: 0;
-}
-
-.red-base {
-    background-color: rgb(220, 47, 47);
-}
-
-.white {
-    color: white;
-}
-
-.navy {
-    background-color: rgb(2, 2, 55);
-}
-
-.gray {
-    background-color: gray;
-}
-
-.lgray {
-    color: lightgray;
 }
 
 .bold {
@@ -133,78 +127,15 @@ body.dkgray-base {
     font-style: italic;
 }
 
-.large {
-    font-size: large;
-}
-
-.inline {
-    display: inline-block;
-}
-
 li {
     list-style-type: none;
 }
 
-.menu {
-    display: none;
-    position: absolute;
-    background-color: #f8f9fa;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    width: 200%;
-    z-index: 1;
-}
-
-#home-nav {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.menu a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: black;
-}
-
-.menu a:hover {
-    background-color: #f1f1f1;
-}
-
-.home-img {
-    width: 70%;
-}
-
 body {
-    padding-top: 60px; /* Adjust based on the height of your navbar */
+    padding-top: 3%; /* Adjust based on the height of your navbar */
 }
 
 section {
     padding-top: 60px; /* or use margin-top: 60px; */
     margin-top: -60px; /* This negative margin compensates for the added padding */
-}
-
-#home {
-    padding-left: 20;
-    padding-right: 20;
-}
-
-#scenery-container {
-    position: relative; /* Context for absolutely positioned children */
-    width: calc(100% - 400px); /* Match the width of main container, adjusting for side margins */
-    height: 150px; /* Fixed height to fit the container */
-    overflow: hidden; /* Prevent content from overflowing */
-    border-radius: 50px 50px 0 0; /* Rounded top corners */
-    margin: 0 auto; /* Center the container horizontally */
-}
-
-#scenery {
-    position: absolute; /* Absolute positioning for background image */
-    top: 0; /* Align with the top of the container */
-    left: 0; /* Align with the left of the container */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    background-image: url('/christopher.github.io/static/images/clouds_snow.png'); /* Background image URL */
-    background-size: cover; /* Cover the container, cropping if necessary */
-    background-position: center bottom; /* Align bottom of the image with the container bottom */
-    background-repeat: no-repeat; /* Prevent image tiling */
 }

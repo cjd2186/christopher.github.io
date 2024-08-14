@@ -1,12 +1,6 @@
-.image-container {
-    position: relative; /* Establishes a positioning context for the button */
-    display: inline-block; /* Allows the container to fit the image size */
-    margin: 20px; /* Optional: Adds space around the container */
-}
-
 #headshot{
-    width: 250px; /* Adjust the size as needed */
-    height: 250px; /* Should be the same as width to ensure it's a perfect circle */
+    width: 80%; /* Adjust the size as needed */
+    height: auto; /* Should be the same as width to ensure it's a perfect circle */
     border-radius: 50%; /* This makes the container a circle */
     overflow: hidden; /* Ensures the image fits within the circle and doesn’t overflow */
     display: flex; /* Optional: Centers the image if you use `object-fit` */
@@ -22,10 +16,41 @@
 }
 
 /* Style for the image */
-.image-container img {
-    display: block; /* Removes bottom space/extra gap under the image */
+.about-container{
+    width: 100%; /* Adjust the size as needed */
+    height: auto; /* Should be the same as width to ensure it's a perfect circle */
+    overflow: hidden; /* Ensures the image fits within the circle and doesn’t overflow */
+    display: flex; /* Optional: Centers the image if you use `object-fit` */
+    align-items: center; /* Optional: Vertically centers the image */
+    justify-content: center; /* Optional: Horizontally centers the image */
+}
+
+.about-container img {
+    width: 100%; /* Ensure the image is responsive */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.image-container{
+    width: 100%; /* Adjust the size as needed */
+    display: flex; /* Optional: Centers the image if you use `object-fit` */
+    align-items: center; /* Optional: Vertically centers the image */
+    justify-content: center; /* Optional: Horizontally centers the image */
+    position: relative;
+}
+
+@media (max-width: 770px) { /* Tablets and larger */
+    .image-container{
+        margin-top: 5%;
+        width: 50%;
+    }
+}
+
+
+.image-container img{
     width: 100%; /* Ensure the image is responsive */
     height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 #top-name{
@@ -35,28 +60,12 @@
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-
-/* Overlay button style */
-.overlay-button {
-    position: absolute; /* Positions the button relative to the container */
-    bottom: 200px; /* Position the button 10px from the bottom of the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust position to truly center */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding around the text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center the text */
-    font-size: 1em; /* Adjust font size as needed */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
-}
-
-/* Button hover effect */
-.overlay-button:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
-    transform: translateX(-50%) scale(1.1); /* Slightly enlarge button on hover */
+.image-container button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .icons {
@@ -97,14 +106,60 @@
     margin: 4px;
     border-radius: 4px;
     color: #fff;
+    background-color: #70B0E2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.813);
     font-size: 14px;
     font-weight: bold;
     text-align: center;
     text-transform: capitalize;  /* Capitalize the first letter of each tag */
 }
 
+.legend{
+    border-radius: 5px;
+    border: black 3px solid;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.tag-cloud .tag {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tag.selected {
+    border: 2px solid #000;
+    transform: scale(1.1);
+}
+
+.filter{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+@media (min-width: 770px) { /* Tablets and larger */
+    .category{
+        padding: 2%; /* Adjust as needed */
+    }
+
+    .filter{
+        padding: 6%;
+        padding-bottom: 3%;
+    }
+}
+
+.category {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 1%; /* Adjust to add space between categories */
+    background-color: white; /* Background color of the box */
+}
+
+
 .thumbnail {
-    max-width: 100%;
+    max-width: 80%;
     width: 100%;
     height: auto;
     padding: 10pt;
@@ -112,17 +167,27 @@
     margin-bottom: 3pt;
 }
 
-.thumbnail-container {
+.thumbnail-container{
+    width: 100%; /* Adjust the size as needed */
+    display: flex; /* Optional: Centers the image if you use `object-fit` */
+    align-items: center; /* Optional: Vertically centers the image */
+    justify-content: center; /* Optional: Horizontally centers the image */
     position: relative;
-    display: inline-block;
-    max-width: 100%;
 }
 
-.play-button {
+@media (max-width: 770px) { /* Tablets and larger */
+    .thumbnail-container{
+        margin-top: 5%;
+        width: 100%;
+    }
+}
+
+.thumbnail-container .play-button{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
+    z-index: 1;
     width: 50px;
     height: 50px;
     background: rgba(0, 0, 0, 0.5);
@@ -184,6 +249,7 @@
     padding: 50px 0px;
 }
 
+
 #about{
     padding: 10px 0px 10px 10px;
 }
@@ -193,7 +259,6 @@
     display: inline-block;
     max-width: 100%;
 }
-
 .logo {
     max-width: 100%;
     width: 100%;
@@ -204,8 +269,9 @@
 }
 
 .crown{
-    max-width: 200px;
-    height: 200px;
+    max-width: 80%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 

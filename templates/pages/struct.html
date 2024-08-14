@@ -10,11 +10,17 @@
     <!-- Favicon -->
     <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
@@ -47,11 +53,11 @@
                         <a class="nav-link" href="index.html#exp">Professional Experience</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SWE Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <a class="dropdown-item" href="index.html#frontend" >Frontend Work</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#backend">Backend Work</a>
                             <div class="dropdown-divider"></div>
@@ -61,7 +67,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,19 +93,11 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <!--form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
-                    <label for="SearchInput"></label>
-                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>                 
-                </form-->
-                <div id="searchResults"></div>
-
-                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid dkgray-base">    
+    <div class=" dkgray-base">    
         <div id="scenery-container">
             <div id="scenery"></div>
         </div>
@@ -115,23 +113,23 @@
         <p><br><b> MyStack.java </b> <br> The class uses an array of Generic type T to implement a stack. <br>The stack starts at the left side of the array, building to the right. <br>Methods: <br> &nbsp * pop(): returns the top value of stack, also decrements top and size <br> &nbsp * push(T x): increments top and size, also adds element x to the top of stack <br> &nbsp * peek(): returns the value of top <br> &nbsp * isEmpty(): returns true if there are no elements on stack  <br> &nbsp * size(): returns the value of size (number of elements on stack) <br><br> <b> TwoStackQueue.java </b> <br> This class uses two stacks, S1 and S2, to implement a queue. <br> Methods: <br> &nbsp * enqueue(): adds an element to the back of the queue (top of S1) <br> &nbsp * dequeue(): removes and returns an element from the front of the queue (top of S2) <br> &nbsp * size(): returns the number of elements in the queue <br> &nbsp * isEmpty(): returns true if the queue has no elements <br><br> <b> KBestCounter.java </b> <br> Constructor: <br> &nbsp &nbsp takes in an int that represents the number of largest elements to be returned<br> Methods: <br> &nbsp * count(T x) <br> &nbsp &nbsp takes in the next element in the set of data <br> &nbsp &nbsp no return <br> &nbsp &nbsp runs in worst O(log k) time; <br> &nbsp * kbest(): <br> &nbsp &nbsp takes in no arguments <br> &nbsp &nbsp returns a list of the k-largest elements. <br> &nbsp &nbsp runs in worst O(k logk) time. </p>
         <p>Tags: 
             
-            <span class="tag" style="background-color: #007396;">
+            <span class="tag">
                 Java
             </span>
             
-            <span class="tag" style="background-color: #FFC107;">
+            <span class="tag">
                 Object Oriented Programming
             </span>
             
-            <span class="tag" style="background-color: #BEE7FE;">
+            <span class="tag">
                 Data Structures
             </span>
             
-            <span class="tag" style="background-color: #FF8C00;">
+            <span class="tag">
                 Backend
             </span>
             
-            <span class="tag" style="background-color: #C4D8E2;">
+            <span class="tag">
                 Columbia
             </span>
             
@@ -158,9 +156,6 @@
         </section>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

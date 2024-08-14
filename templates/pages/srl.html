@@ -10,11 +10,17 @@
     <!-- Favicon -->
     <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
@@ -47,11 +53,11 @@
                         <a class="nav-link" href="index.html#exp">Professional Experience</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SWE Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <a class="dropdown-item" href="index.html#frontend" >Frontend Work</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#backend">Backend Work</a>
                             <div class="dropdown-divider"></div>
@@ -61,7 +67,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,19 +93,11 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <!--form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
-                    <label for="SearchInput"></label>
-                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>                 
-                </form-->
-                <div id="searchResults"></div>
-
-                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid dkgray-base">    
+    <div class=" dkgray-base">    
         <div id="scenery-container">
             <div id="scenery"></div>
         </div>
@@ -115,31 +113,31 @@
         <p><b>Data Preparation/Encoding:</b><br> The data is retrieved from the Ontonotes 5.0 dataset, which is an extension of PropBank. <br> Using the BERT tokenizer, sentences are converted into IDs and attention masks so show BERT which words are real tokens vs padding, highlighting words important for the context. <br><br><b>Model Composition and Training:</b><br> A pretrained BERT model is frozen, and a classifier layer is added. The pretrained BERT model provided good contextualized embeddings for the input, so the classifier layer can now be trained using the OntoNotes 5.0 dataset, minimizing the loss and backprogating/updating the model weights to improve prediction accuracy. <br><br><b>Decoding:</b><br> Now the classifier will return logits to representation the predicted labels for each word in the sentence. This decoding process involves mapping the logits to labels and aligning them with the input tokens. Once decoded, the model's performance can be evaluated based on how well the predicted labels match the ground truth labels.                </p>
         <p>Tags: 
             
-            <span class="tag" style="background-color: #00FF00;">
-                NLP
+            <span class="tag">
+                Natural Language Processing
             </span>
             
-            <span class="tag" style="background-color: #306998;">
+            <span class="tag">
                 Python
             </span>
             
-            <span class="tag" style="background-color: #BEE7FE;">
+            <span class="tag">
                 Neural Network
             </span>
             
-            <span class="tag" style="background-color: #FFCA36;">
+            <span class="tag">
                 HuggingFace
             </span>
             
-            <span class="tag" style="background-color: #EE4C2C;">
+            <span class="tag">
                 PyTorch
             </span>
             
-            <span class="tag" style="background-color: #BEE7FE;">
+            <span class="tag">
                 Finetuning
             </span>
             
-            <span class="tag" style="background-color: #C4D8E2;">
+            <span class="tag">
                 Columbia
             </span>
             
@@ -166,9 +164,6 @@
         </section>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

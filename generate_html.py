@@ -16,50 +16,12 @@ job_template = env.get_template('job.html')
 output_dir = 'templates/pages'
 os.makedirs(output_dir, exist_ok=True)
 
-# Define the color generation function
-def generate_color(tag):
-    with open('static/json/colors.json', 'r') as file:
-        colors = json.load(file)
-    if tag in colors.keys():
-        return colors[tag]
-    else:
-        return "#BEE7FE"
-
-def get_tag_colors(data):
-    tag_colors = {}
-
-    def process_items(items):
-        for item in items:
-            if item:  # Ensure the item is not empty
-                for tag in item.get('tags', []):
-                    if tag not in tag_colors:
-                        tag_colors[tag] = generate_color(tag)
     
-    # Process projects
-    for category, subcategories in data['projects'].items():
-        for subcategory, items in subcategories.items():
-            process_items(items)
-    
-    # Process jobs
-    for role_category, roles in data['jobs']['roles'].items():
-        process_items(roles)
-
-    for cert in data['certs']:
-        if cert:  # Ensure the item is not empty
-            for tag in cert['tags']:
-                if tag not in tag_colors:
-                    tag_colors[tag] = generate_color(tag)
-    return tag_colors
-
-# Generate tag colors
-tag_colors = get_tag_colors(data)
-
 # Prepare the context for index.html
 context = {
     'projects': data['projects'],
     'jobs': data['jobs'],
     'certs': data['certs'],
-    'tag_colors': tag_colors
 }
 
 # Render and save index.html
@@ -74,7 +36,6 @@ for category, categories in data['projects'].items():
         for project in projects:
             project_context = {
                 'project': project,
-                'tag_colors': tag_colors
             }
             project_html_content = project_template.render(project_context)
             project_output_path = os.path.join(output_dir, f"{project['name']}.html")
@@ -88,7 +49,6 @@ for category, categories in data['jobs'].items():
         for job in jobs:
             job_context = {
                 'jobs': job,
-                'tag_colors': tag_colors
             }
             job_html_content = job_template.render(job_context)
             job_output_path = os.path.join(output_dir, f"{job['company'].replace(' ', '_')}.html")
@@ -99,7 +59,6 @@ for category, categories in data['jobs'].items():
 def count_tags(data):
     #get project tags
     tags=collections.defaultdict(int)
-
     for category, subcategories in data['projects'].items():
         for subcategory, items in subcategories.items():
             for item in items:
@@ -116,8 +75,11 @@ def count_tags(data):
             for tag in cert['tags']:
                 tags[tag]+=1
     
+    
+    sorted_tags = dict(sorted(tags.items(), key=lambda item: (item[1], item[0])))
+    print(sorted_tags)
     with open("static/json/tags.json", 'w', encoding='utf-8') as file:
-        json.dump(tags, file, ensure_ascii=False, indent=4)
+        json.dump(sorted_tags, file, ensure_ascii=False, indent=4)
         print("tags.json has been created")
 
 count_tags(data)

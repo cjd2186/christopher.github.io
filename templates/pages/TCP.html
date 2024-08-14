@@ -10,11 +10,17 @@
     <!-- Favicon -->
     <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
@@ -47,11 +53,11 @@
                         <a class="nav-link" href="index.html#exp">Professional Experience</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SWE Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html#frontend">Frontend Work</a>
+                            <a class="dropdown-item" href="index.html#frontend" >Frontend Work</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html#backend">Backend Work</a>
                             <div class="dropdown-divider"></div>
@@ -61,7 +67,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#ml" id="navbarDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ML Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,19 +93,11 @@
                         <a class="nav-link" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
-                <!--form class="d-flex" action="/christopher.github.io/templates/results.html" method="GET" id="searchForm">
-                    <label for="SearchInput"></label>
-                    <input id = "SearchInput" class="form-control me-2" type="search" name="query" placeholder="Search Tags" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>                 
-                </form-->
-                <div id="searchResults"></div>
-
-                <script src="static/js/search.js"></script>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid dkgray-base">    
+    <div class=" dkgray-base">    
         <div id="scenery-container">
             <div id="scenery"></div>
         </div>
@@ -115,19 +113,19 @@
         <p><br><br>LOGIC:<br> This program follows the structure and logic as presented in the TCP Lite assignment, implementing a simiplified version of TCP on top of UDP.<br><br>Transfer Process: <br>Upon loading up the server receiver and the client sender, the client sends a SYN segment to the server, in which case the server responds to the client with a SYN ACK, and the client finishes this handshake with an ACK.<br>After this handshake, the client is able to send over its data in segments of size 1024, which are taken in and appened to a file by the server.<br>Finally, after an EOF is read from the client's file to be sent, the client sends a FIN segment to initiate a closed connection. The server responds with a FIN ACK, and the client sends an ACK before closing its TCP connection. The server persists its connection as well, as it is a server.<br><br>TOOLS:<br>Wireshark was used along RFC 793 to find out how to construct the TCP headers, and the protocol that is used to send data over TCP.</p>
         <p>Tags: 
             
-            <span class="tag" style="background-color: #222222;">
+            <span class="tag">
                 Networks
             </span>
             
-            <span class="tag" style="background-color: #306998;">
+            <span class="tag">
                 Python
             </span>
             
-            <span class="tag" style="background-color: #339933;">
+            <span class="tag">
                 Wireshark
             </span>
             
-            <span class="tag" style="background-color: #C4D8E2;">
+            <span class="tag">
                 Columbia
             </span>
             
@@ -154,9 +152,6 @@
         </section>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

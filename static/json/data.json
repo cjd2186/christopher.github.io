@@ -3,6 +3,16 @@
         "swe": {
             "frontend": [
                 {
+                "name": "portfolio",
+                "title": "Christopher's Portfolio Website",
+                "summary": "Successfully deployed Full Stack website application that acts as a clear representation of my experiences, projects, and credentials.",
+                "video_id": "bJX9s_hfm2k",
+                "description": "Using my UI knowledge I was able to learn how to use Jinja templates and how to deploy a website to an AWS S3 bucket. <br> This website features numerous templates, detailed descriptions of my projects, and a design that integrates my favorite features of LinkedIn and Github. <br> This website is unique in that it is easy to add to, as all the data and web templates were designed to be easily iterated and exapnded upon.",
+                "completion": "August 2024",
+                "github": "https://github.com/cjd2186/christopher.github.io",
+                "tags": ["Frontend", "jQuery", "Jinja", "HTML", "CSS", "Responsive-Design", "JavaScript", "Twitter-bootstrap", "Python", "UI-Design", "Full Stack", "Cloud", "Deployed", "Mobile"]
+                },
+                {
                 "name": "Baseball",
                 "title": "EdTech: How to Identify Pitches in Baseball",
                 "summary": "Interactive Web Application that teaches user how to identify baseball pitch types. <br><br> This group project showcases a full stack web application using a Flask framework, HTML, CSS, and Javascript.",
@@ -30,30 +40,20 @@
                 "description": "In the summer of 2023, I served as an undergraduate research assistant to Yale's NLP Lab under PI Professor Arman Cohan. <br><br>As an academic collaborator, I was introduced to the field of Natural Language Processing, learning about techniques such as tokenization, few-shot/zero-shot learning and prompting. Additionally, I created presentations on important NLP research papers to build my understanding and familiarity with academic research papers. <br><br> The LC2Eval research project evaluated 54 existing models from 13 organizations on 7 different tasks. The web demo I created with a lab partner clearly visualized the results obtained from this study, using the Python Streamlit libray to implement web design techniques such as pagination, tabling, sorting and searching. <br><br> The Lab's full paper can be found <a href='https://arxiv.org/abs/2309.17446' target='_blank'> here</a>.",
                 "completion": "August 2023",
                 "github": "https://github.com/cjd2186/Web_Demo",
-                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural Language Processing", "Data-visualization", "Research", "Teamwork", "Yale"]
+                "tags": ["Frontend", "Python", "Streamlit", "Webapp", "Natural Language Processing", "Deployed", "Data-visualization", "Research", "Teamwork", "Yale"]
                 }
             ],
             "backend": [
                 {
-                "name": "portfolio",
-                "title": "Christopher's Portfolio Website",
-                "summary": "Successfully deployed Full Stack web application that acts as a clear representation of my experiences, projects, and credentials.",
-                "img": "/christopher.github.io/static/images/swe/website.png",
-                "description": "Using my UI knowledge I was able to learn how to use Jinja templates and how to deploy a website to an AWS S3 bucket. <br> This website features numerous templates, detailed descriptions of my projects, and a design that integrates my favorite features of LinkedIn and Github. <br> This website is unique in that it is easy to add to, as all the data and web templates were designed to be easily iterated and exapnded upon.",
-                "completion": "August 2024",
-                "github": "https://github.com/cjd2186/christopher.github.io",
-                "tags": ["Frontend", "jQuery", "Jinja", "HTML", "CSS", "JavaScript", "Twitter-bootstrap", "Python", "UI-Design", "Full Stack", "Cloud", "AWS", "S3"]
-                },
-                {
                 "name": "cloud_compute",
                 "title": "NFL Cloud Native Application",
-                "summary": "This cloud-based application NFL FanZone is built and designed for NFL fans' casual interaction and NFL-related information lookup. <br>It offers three features that will enhance fans' NFL experience: <br><br> &nbsp 1. NFL searching: fans can find information (eg. player stats, player basic information.) in HTML format or JSON format regarding their favorite players. The microservice also has operations to add/modify/delete players. <br><br> &nbsp 2. Team management: management personnel with different clearance levels can modify and query team/player information to keep fans updated. <br><br> &nbsp 3. Fan post-game reviews forum: fans can share insights and comments on games. <br><br> See PDF for full Project Report.",
+                "summary": "This cloud-based application NFL FanZone is built and designed for NFL fans' casual interaction and NFL-related information lookup, allowing users to query player/coach statistics and view player news. <br><br> See PDF for full Project Report.",
                 "img": "/christopher.github.io/static/images/swe/cloud_compute_diagram.png",
-                "description": "As part of a graduate level cloud computing course project at Columbia, I led a team of seven students to successfully deploy an end-to-end cloud application tailored for NFL fans. <br> As team lead, I collaborated with and encouraged team members to focus on different cloud technologies that best suited their programming backgrounds, which allowed for a deep understanding and ownership of each component. <br> To alleviate some team challenges that arose with the learning curve of new technologies and busy school schedules, I facilitated weekly meetings to synchronize our progress, and created a Slack channel to share helpful tutorials and design patterns. <br>This collaboration was crucial when a team member using Google Cloud faced significant obstacles, potentially delaying our project. Leveraging the skillsets I developed in AWS that semester, I was able to provide guidance and additional support to overcome these issues in Google Cloud and ensure a timely project completion.",
+                "description": "Application Features: <br>&nbsp 1. NFL searching: fans can find information (eg. player stats, player basic information.) in HTML format or JSON format regarding their favorite players. The microservice also has operations to add/modify/delete players. <br><br> &nbsp 2. Team management: management personnel with different clearance levels can modify and query team/player information to keep fans updated. <br><br> &nbsp 3. Fan post-game reviews forum: fans can share insights and comments on games. <br><br>As part of a graduate level cloud computing course project at Columbia, I led a team of seven students to successfully deploy an end-to-end cloud application tailored for NFL fans. <br> As team lead, I collaborated with and encouraged team members to focus on different cloud technologies that best suited their programming backgrounds, which allowed for a deep understanding and ownership of each component. <br> To alleviate some team challenges that arose with the learning curve of new technologies and busy school schedules, I facilitated weekly meetings to synchronize our progress, and created a Slack channel to share helpful tutorials and design patterns. <br>This collaboration was crucial when a team member using Google Cloud faced significant obstacles, potentially delaying our project. Leveraging the skillsets I developed in AWS that semester, I was able to provide guidance and additional support to overcome these issues in Google Cloud and ensure a timely project completion.",
                 "completion": "December 2023",
                 "github": "https://github.com/cjd2186/e6156-Cloud-Computing-Master-Repo",
-                "pdf": "/christopher.github.io/static/pdf/Final Project Report and Outlines.pdf",
-                "tags": ["Python", "Backend", "Database", "Full Stack", "AWS", "GCP", "App-Engine", "Lambda", "S3", "Agile", "FAST API", "Microservices", "Git", "Cloud", "Middleware", "Rest API", "Flask", "Flask-alqemy", "Docker", "IaaS", "Data-visualization", "Teamwork", "Columbia"]
+                "pdf": "/christopher.github.io/static/pdf/Cloud_report.pdf",
+                "tags": ["Python", "Backend", "Database", "Full Stack", "AWS", "GCP", "App-Engine", "Lambda", "S3", "Agile", "FAST API", "Microservices", "Git", "Cloud", "Middleware", "Rest API", "Flask", "Flask-alqemy", "Docker", "IaaS", "Data-visualization", "Deployed", "Teamwork", "Columbia"]
                 },
                 {
                 "name": "tickets",
@@ -108,7 +108,7 @@
                 "description": "",
                 "completion": "Soon!",
                 "github": "",
-                "tags": ["", ""]
+                "tags": []
                 }
             ]
         },
@@ -122,7 +122,7 @@
                 "description": "<b>Data Preparation/Encoding:</b><br> The data is retrieved from the Ontonotes 5.0 dataset, which is an extension of PropBank. <br> Using the BERT tokenizer, sentences are converted into IDs and attention masks so show BERT which words are real tokens vs padding, highlighting words important for the context. <br><br><b>Model Composition and Training:</b><br> A pretrained BERT model is frozen, and a classifier layer is added. The pretrained BERT model provided good contextualized embeddings for the input, so the classifier layer can now be trained using the OntoNotes 5.0 dataset, minimizing the loss and backprogating/updating the model weights to improve prediction accuracy. <br><br><b>Decoding:</b><br> Now the classifier will return logits to representation the predicted labels for each word in the sentence. This decoding process involves mapping the logits to labels and aligning them with the input tokens. Once decoded, the model's performance can be evaluated based on how well the predicted labels match the ground truth labels.                ",
                 "completion": "December 2023",
                 "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-e_fine_tuning_bert_for_srl-ipynb",
-                "tags": ["NLP", "Python", "Neural Network", "HuggingFace", "PyTorch", "Finetuning", "Columbia"]
+                "tags": ["Natural Language Processing", "Python", "Neural Network", "HuggingFace", "PyTorch", "Finetuning", "Columbia"]
                 },
                 {
                 "name": "bert",
@@ -132,7 +132,7 @@
                 "description": "<b>Task:</b> <br> In this task, the goal is to find lexical substitutes for individual target words in context. For example, given the following sentence: 'Anyway, my pants are getting tighter every day.' the goal is to propose an alternative word for tight, such that the meaning of the sentence is preserved. Such a substitute could be 'constricting', 'small' or 'uncomfortable.' <br> To complete this task the pretrained model, DistilBERT from HuggingFace, is used to find substitutes. <br><br> Five different approaches are taken to find lexical substitutes: WordNet Frequency Baseline, Lesk Algorithm, Word2Vec Embeddings, BERT Pretrained Embeddings, Query with Chatgpt API. <br><br><b> WordNet Frequency Baseline </b><br> Given a context, use WordNet to find the possible synynomy with the highest total occurrence frequency in the same context in WordNet. <br><b> Lesk Algorithm </b> Word Sense Disambiguation (WSD) is performed using the Lesk Algorithm to select a synset for the target word where the definition of the synset and the context of the target word are similar. The algorithm then returns the most frequent synonym from that synset as a substitute.  <br><b> Word2Vec Embeddings </b> Find possible synonyms for the target word using WordNet. Return the synonym that is most similar to the target word according to the Word2Vec embedding. <br><b> BERT Pretrained Embedding </b> Using Keras, feed in an embedded sentenced with the target word masked. BERT will returned the candidate for the target word given the context. <br><b> Query Chatgpt API </b> Feed the sentence into a Chatgpt prompt using Chatgpt's API. Chatgpt will give the best substitute. Results are improved using few-shot prompting.",
                 "completion": "November 2023",
                 "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-d_lexical_substitution_word2vec_bert_chatgpt-py",
-                "tags": ["NLP", "Python", "HuggingFace", "Rest API", "Word2Vec", "Neural Network","TensorFlow", "Keras",  "Prompting","Columbia"]
+                "tags": ["Natural Language Processing", "Python", "HuggingFace", "Rest API", "Word2Vec", "Neural Network","TensorFlow", "Keras",  "Prompting","Columbia"]
                 },
                 {
                 "name": "dependency",
@@ -142,7 +142,7 @@
                 "description": "<b>Training:</b> <br> For input, the model is trained on a series of input pairs (x,y), where x is a parser state (consisting of a stack and a buffer), and y is the transition the parser should make (e.g. left-arc, right-arc, shift). These input pairs will be made using one hot representations for words based on its Part of Speech (POS) tag within each state. The training program also contains outputs pairs of (transitions, label), where a label is a dependency label. These outputs are also represented as one hot vectors to be fed into the neural network.<br> <br> The Neural Network is created using Keras, an API for Tensorflow. <br><br> <b>Network Composition:</b> <br>The Neural Network consists of:<br> * One Embedding layer, the input_dimension being the number possible words, input_length is the number of words using this same embedding layer. <br> * The output_dim of the embedding layer is 32, which is then flattened. <br> * A Dense hidden layer of 100 units using relu activation. <br> * A Dense hidden layer of 10 units using relu activation. <br> * An output layer using softmax activation. <br><br><b>Parser Creation: </b><br> The standard transition-based algorithm is used to create a parser, using the trained and stored model to predict transitions. As long as the buffer is not empty, the feature extractor obtains a representation of the current state and the call model.predict(features) and retrieve a softmax actived vector of possible actions.",
                 "completion": "October 2023",
                 "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-c_neural_network_dependency_parser-py",
-                "tags": ["NLP", "Python", "Neural Network","TensorFlow", "Keras", "Columbia"]
+                "tags": ["Natural Language Processing", "Python", "Neural Network","TensorFlow", "Keras", "Columbia"]
                 },
                 {
                 "name": "trigram",
@@ -152,7 +152,7 @@
                 "description": "This model is trained on the Brown corpus, which is a sample of American written English collected in the 1950s. <br> The model is trained on the Brown corpus to calculate the log probabilities of a the sequence of words in a sentence using smoothed n-gram probabilties (via linear interpolation). This program then finds the perplexity of the model on a test corpus, measuring how well the model predicts a sample of text. <br><br>The model's accuracy is then tested on a dataset of essays written by non-native speakers of English for the ETS TOEFL test. These essays are scored according to skill level low, medium, or high. Only the essays that have been scored as 'high' or 'low' are considered. A different language model on a training set of each category is trained and then use these models to automatically score unseen essays. The perplexity of each language model on each essay is computed. The model with the lower perplexity determines the class of the essay. <br><br> The model accuracy is calculated as (correct predicitions/total predictions). <br>This model successfully scored an accuracy greater than 80%.",
                 "completion": "September 2023",
                 "github": "https://gist.github.com/cjd2186/155c7d54bd256af211328dfffdd92a0a#file-b_trigram_model-py",
-                "tags": ["NLP", "Python", "Columbia"]
+                "tags": ["Natural Language Processing", "Python", "Columbia"]
                 }
             ],
             "robotics": [
@@ -193,7 +193,7 @@
                 {
                 "name": "P4",
                 "title": "P4 IoT Firewall",
-                "summary": "P4 Firewall from research in Columbia's Internet Real Time Lab: a white-list only firewall of Internet of Things (IoT) Devices programmed in P4. <br><br> This firewall is meant to prevent malicious traffic from entering the networks that IoT Devices (such as smart cameras, smart doorbells, smart light bulbs) are on. <br> For this reason, the P4 IoT firewall is essential to home network security.",
+                "summary": "P4 Firewall from research in Columbia's Internet Real Time Lab: a white-list only firewall of Internet of Things (IoT) Devices programmed in P4. <br><br> This firewall is meant to prevent malicious traffic from entering IoT device networks (smart cameras, smart doorbells, smart light bulbs).",
                 "img": "/christopher.github.io/static/images/cyber/p4.png",
                 "description": "In this repository, I built upon the exisiting codebase of the lab's P4 Firewall project. My contributions lie in the following files:<br><br>*controller.py <br>*basic.p4 <br><br> Where I created a blacklist routine for the firewall. This routine would block ip addresses when the traffic received from these IoT devices contained abnormally large packet sizes, or if the rate at which these packets were received were abnormal as well. Both of these rules monitor live traffic sent to and received at the firewall.",
                 "completion": "August 2023",

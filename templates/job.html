@@ -17,7 +17,7 @@
         <p>{{ jobs.description }}</p>
         <p>Tags: 
             {% for tag in jobs.tags %}
-            <span class="tag" style="background-color: {{ tag_colors[tag] }};">
+            <span class="tag">
                 {{ tag }}
             </span>
             {% endfor %}
