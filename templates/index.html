@@ -6,8 +6,8 @@
 
     
 {% block content %}
-<link rel="stylesheet" href="/christopher.github.io/static/css/index.css">
-<script src="/christopher.github.io/static/js/index.js"></script>
+<link rel="stylesheet" href="/static/css/index.css">
+<script src="/static/js/index.js"></script>
 <section class="pad" id="home">
     <div id="container-fluid">
         <div class="row" id="top-name">
@@ -18,7 +18,7 @@
             <div class="col-md-3 col-6 justify-content-center align-items-center">  
                 <br>
                 <div class="row" id="headshot">
-                    <img src="/christopher.github.io/static/images/Lors_headshot_yearbook.png" alt="headshot of Christopher" style="width: 325px"> 
+                    <img src="/static/images/Lors_headshot_yearbook.png" alt="headshot of Christopher" style="width: 325px"> 
                 </div>
                 <div class="row" id="blurb">
                     <div id="student">
@@ -38,25 +38,162 @@
                 <h2 class="bold"> About Me </h2>
                 <p id="about">
                 </p>
-                <div class="row">
+                <!--div class="row">
                     <div class="col-md-6 col-6 d-flex justify-content-center align-items-center">
-                        <img src="/christopher.github.io/static/images/cc.png" class="crown">
+                        <img src="/static/images/cc.png" class="crown">
                     </div>
                     <div class="col-md-6 col-6 d-flex justify-content-center align-items-center">
-                        <img src="/christopher.github.io/static/images/seas.png" class="crown">
+                        <img src="/static/images/seas.png" class="crown">
                     </div>
-                </div>
+                </div-->
             </div>
-            <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
+            <div class="col-md-3 col-12 d-flex justify-content-center align-items-start">
                 <div class="image-container">
-                    <img src="/christopher.github.io/static/images/resume_thumb.png" alt="Resume Thumbnail">
-                    <a href="/christopher.github.io/static/pdf/Christopher_Demirjian_Resume_git.pdf" target="_blank">
+                    <img src="/static/images/resume_thumb.png" alt="Resume Thumbnail">
+                    <a href="/static/pdf/Christopher_Demirjian_Resume_9_6.pdf" target="_blank">
                         <button type="button" class="btn btn-info resume-btn">View Resume</button>
                     </a>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
+</section>
+
+<section class="carousel">
+    <div class="row">
+        <h3> Featured Projects </h3>
+        <div id="projectCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+                <!-- First project -->
+                <div class="carousel-item active">
+                    {% for project in projects.swe.backend %}
+                        {% if project.name == 'cloud_compute' %}
+                            <div class="project" id="{{ project.name }}" data-tags="{{ project.tags | join(',') }}">
+                                <h4>{{ project.title }}</h4>
+                                <hr class="bar">
+                                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="thumbnail-container">
+                                            <img src="{{ project.img }}" alt="{{ project.title }} diagram" class="thumbnail">
+                                        </div>
+                                    </div>
+                                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
+                                </div>
+                                <h6 class="tag-text">Tags: 
+                                    {% for tag in project.tags %}
+                                    <span class="tag">{{ tag }}</span>
+                                    {% endfor %}
+                                </h6>
+                                <div class="project-row">
+                                    <span class="project-git">
+                                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                                    </span>
+                                    <span class="project-git">
+                                        <a href="{{ project.pdf }}" class="project-git fa-solid fa-file-pdf fa-2xl" target="_blank" aria-label="link to project report"></a>
+                                    </span>
+                                    <a href="/templates/pages/{{ project.name }}.html" class="read-more-button">
+                                        <button type="button" class="btn btn-outline-info">Read More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+        
+                <!-- Second project -->
+                <div class="carousel-item">
+                    {% for project in projects.cyber.networks %}
+                        {% if project.name == 'P4' %}
+                            <div class="project" id="{{ project.name }}" data-tags="{{ project.tags | join(',') }}">
+                                <h4>{{ project.title }}</h4>
+                                <hr class="bar">
+                                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="thumbnail-container">
+                                            <img src="{{ project.img }}" alt="{{ project.title }} diagram" class="thumbnail">
+                                        </div>
+                                    </div>
+                                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
+                                </div>
+                                <h6 class="tag-text">Tags: 
+                                    {% for tag in project.tags %}
+                                    <span class="tag">{{ tag }}</span>
+                                    {% endfor %}
+                                </h6>
+                                <div class="project-row">
+                                    <span class="project-git">
+                                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                                    </span>
+                                    <span class="project-git">
+                                        <a href="{{ project.pdf }}" class="project-git fa-solid fa-file-pdf fa-2xl" target="_blank" aria-label="link to project report"></a>
+                                    </span>
+                                    <a href="/templates/pages/{{ project.name }}.html" class="read-more-button">
+                                        <button type="button" class="btn btn-outline-info">Read More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Third project -->
+                <div class="carousel-item">
+                    {% for project in projects.aiml.nlp %}
+                        {% if project.name == 'bert' %}
+                            <div class="project" id="{{ project.name }}" data-tags="{{ project.tags | join(',') }}">
+                                <h4>{{ project.title }}</h4>
+                                <hr class="bar">
+                                <h5 class="completion">Completion: {{ project.completion }}</h5>
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="thumbnail-container">
+                                            <img src="{{ project.img }}" alt="{{ project.title }} diagram" class="thumbnail">
+                                        </div>
+                                    </div>
+                                    <p class="col-md-6 col-12 sum">{{ project.summary }}</p>
+                                </div>
+                                <h6 class="tag-text">Tags: 
+                                    {% for tag in project.tags %}
+                                    <span class="tag">{{ tag }}</span>
+                                    {% endfor %}
+                                </h6>
+                                <div class="project-row">
+                                    <span class="project-git">
+                                        <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
+                                    </span>
+                                    <span class="project-git">
+                                        <a href="{{ project.pdf }}" class="project-git fa-solid fa-file-pdf fa-2xl" target="_blank" aria-label="link to project report"></a>
+                                    </span>
+                                    <a href="/templates/pages/{{ project.name }}.html" class="read-more-button">
+                                        <button type="button" class="btn btn-outline-info">Read More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Controls for manual navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 </section>
 
 <div class="filter">
@@ -91,7 +228,7 @@
                     {% endfor %}
                 </h6>
                 <div class="project-row">
-                    <a href="/christopher.github.io/templates/pages/{{job.company}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{job.company}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -137,7 +274,7 @@
                     <span class="project-git">
                         <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -174,7 +311,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -211,7 +348,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -245,7 +382,7 @@
                     <span class="project-git">
                         <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div-->
@@ -286,7 +423,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -322,7 +459,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -358,7 +495,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -394,7 +531,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -432,7 +569,7 @@
                     <span class="project-git">
                         <a href="{{ project.github }}" class="fab fa-github" target="_blank" aria-label="link to github page"></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>
@@ -473,7 +610,7 @@
                         <span class="project-git">
                             <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                         </span>
-                        <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                        <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                             <button type="button" class="btn btn-outline-info">Read More</button>
                         </a>
                     </div>
@@ -509,7 +646,7 @@
                     <span class="project-git">
                         <a href={{project.pdf}} class='project-git fa-solid fa-file-pdf fa-2xl' target='_blank' aria-label='link to project report'></a>
                     </span>
-                    <a href="/christopher.github.io/templates/pages/{{project.name}}.html" class="read-more-button">
+                    <a href="/templates/pages/{{project.name}}.html" class="read-more-button">
                         <button type="button" class="btn btn-outline-info">Read More</button>
                     </a>
                 </div>

@@ -77,7 +77,6 @@ def count_tags(data):
     
     
     sorted_tags = dict(sorted(tags.items(), key=lambda item: (item[1], item[0])))
-    print(sorted_tags)
     with open("static/json/tags.json", 'w', encoding='utf-8') as file:
         json.dump(sorted_tags, file, ensure_ascii=False, indent=4)
         print("tags.json has been created")

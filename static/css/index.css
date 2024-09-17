@@ -34,7 +34,6 @@
 .image-container{
     width: 100%; /* Adjust the size as needed */
     display: flex; /* Optional: Centers the image if you use `object-fit` */
-    align-items: center; /* Optional: Vertically centers the image */
     justify-content: center; /* Optional: Horizontally centers the image */
     position: relative;
 }
@@ -45,7 +44,6 @@
         width: 50%;
     }
 }
-
 
 .image-container img{
     width: 100%; /* Ensure the image is responsive */
@@ -102,16 +100,17 @@
 
 .tag {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 6px 10px;              /* Slightly smaller padding for a more compact look */
     margin: 4px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #70B0E2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.813);
-    font-size: 14px;
-    font-weight: bold;
+    border-radius: 20px;            /* Larger border-radius for a pill-shaped appearance */
+    color: #ffffff;                 /* Keep the text white for contrast */
+    background-color: #5C9ECF;      /* Use a more muted, modern shade of blue */
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    font-size: 14px;                /* Slightly smaller font size for a sleeker look */
+    font-weight: 500;               /* Use medium weight for a more modern feel */
     text-align: center;
-    text-transform: capitalize;  /* Capitalize the first letter of each tag */
+    text-transform: capitalize;     /* Capitalize the first letter of each tag */
+    letter-spacing: 0.5px;          /* Slightly increased letter spacing for readability */
 }
 
 .legend{
@@ -270,7 +269,7 @@
 
 .crown{
     max-width: 80%;
-    width: 100%;
+    width: 50%;
     height: auto;
     object-fit: cover;
 }

@@ -1,0 +1,141 @@
+/* Custom CSS */
+
+body.dkgray-base {
+    background-color: #CBCBCB;
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+    color: black; /* Ensure links are visible */
+}
+
+.dropdown-menu {
+    width: 60%; /* Set this to your desired width */
+    background-color: #8ec1db;
+}
+
+@media (min-width: 1000px) { /* Adjust this value to your desired breakpoint */
+    .dropdown-menu {
+        width: 250px; /* Wider width for larger screens */
+    }
+}
+
+.navbar-nav .nav-item {
+    list-style: none; /* Remove list-style numbers */
+}
+
+.navbar {
+    margin-bottom: 0; /* Remove space below the navbar */
+    transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing the navbar */
+    background-color: white;
+}
+
+/* Other styles */
+#title {
+    text-align: center;
+}
+
+.main-container {
+    width: 100%; /* Default to full width */
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: white;
+    border-radius: 0px 0px 50px 50px;
+    padding-bottom: 20px;
+}
+
+/* Apply margins for larger screens */
+@media (min-width: 768px) { /* Tablets and larger */
+    .main-container {
+        max-width: 100%;
+        width: 78%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scenery-container {
+        padding-left: 11%;
+        padding-right: 11%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #scenery {
+        width: 78%; /* Full width of the container */
+        height: 78%; /* Full height of the container */
+        border-radius: 50px 50px 0 0; /* Rounded top corners */
+    }
+    
+    #contact{
+        width: 78%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#contact {
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+#scenery-container {
+    position: relative; /* Context for absolutely positioned children */
+    width: 100%; /* Match the width of main container, adjusting for side margins */
+    height: 150px; /* Fixed height to fit the container */
+    overflow: hidden; /* Prevent content from overflowing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scenery {
+    position: relative; /* Absolute positioning for background image */
+    bottom: 0; /* Align with the top of the container */
+    left: 0; /* Align with the left of the container */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    border-radius: 50px 50px 0 0; /* Rounded top corners */
+    background-image: url('/static/images/clouds_snow.png'); /* Background image URL */
+    background-size: cover; /* Cover the container, cropping if necessary */
+    background-position: center bottom; /* Align bottom of the image with the container bottom */
+    background-repeat: no-repeat; /* Prevent image tiling */
+}
+
+.accent-color {
+    color: #BEE7FE;
+}
+
+.dkgray-base {
+    background-color: rgb(190, 190, 190);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    padding-top: 3%; /* Adjust based on the height of your navbar */
+}
+
+section {
+    padding-top: 60px; /* or use margin-top: 60px; */
+    margin-top: -60px; /* This negative margin compensates for the added padding */
+}

@@ -8,7 +8,7 @@
 </title>
     
     <!-- Favicon -->
-    <link rel="icon" href="/christopher.github.io/static/images/favicon.jpg">
+    <link rel="icon" href="/static/images/favicon.jpg">
 
 
     <!-- jQuery -->
@@ -23,19 +23,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/christopher.github.io/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <script src="/christopher.github.io/static/js/layout.js"></script>
+    <script src="/static/js/layout.js"></script>
     
 </head>
 <body class="dkgray-base">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid nav-container">
             <!-- Navbar Brand -->
-            <a class="navbar-brand" href="#"><img src="/christopher.github.io/static/images/favicon.jpg" alt="logo" width="50" height="40"></a>
+            <a class="navbar-brand" href="#"><img src="/static/images/favicon.jpg" alt="logo" width="50" height="40"></a>
             <!-- Navbar Toggle (for mobile view) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,17 +44,17 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html#home"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About Me</a>
+                        <a class="nav-link" href="index.html#about"> About Me </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#exp">Professional Experience</a>
+                        <a class="nav-link" href="index.html#exp"> Professional Experience </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SWE Work
+                            SWE Work 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="index.html#frontend" >Frontend Work</a>
@@ -68,7 +68,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="index.html#swe" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ML Work
+                            ML Work 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="index.html#nlp">Natural Language Processing</a>
@@ -81,16 +81,16 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#cyber">Cybersecurity</a>
+                        <a class="nav-link" href="index.html#cyber"> Cyber Security Work </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#finstats">Financial Technology/Stats</a>
+                        <a class="nav-link" href="index.html#finstats"> Financial Technology/Stats Work </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#certs">Certifications</a>
+                        <a class="nav-link" href="index.html#certs"> Certifications </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact Me</a>
+                    <li class="nav-item me-auto">
+                        <a class="nav-link" href="index.html#contact"> Contact Me </a>
                     </li>
                 </ul>
             </div>
@@ -104,13 +104,13 @@
         <div class="main-container">
             
 <head>
-    <link rel="stylesheet" href="/christopher.github.io/static/css/project.css">
+    <link rel="stylesheet" href="/static/css/project.css">
 </head>
 <body>
     <div class="summary">
         <h1>Distance Vector Protcol RIPv2</h1>
         <h3>Completion: May 2022</h3>
-        <p>LOGIC: <br> This program follows the structure and logic as presented in the DNS RFC 1035.<br><br>ITERATIVE QUERY PROCESS:<br> First, this program takes in a port number as a command line argument, in which this DNS resolver will run on. <br>This DNS server then makes a connection with the DIG user program, and takes in the user's DNS query. <br> This DNS query is then relayed to the ICANN DNS root server. <br> The root server sends a response back to this DNS resolver, which is parsed for its  type A record (most likely stored under additional RRs), containing the IP address of the Top Level Domain (TLD) server to relay the user query to.<br><br> The TLD server is then queried, and its response is once again parsed to find the type A record for the IP address of the authoritative server to relay the user query to.<br> The authoritative server is finally queiried, and its response contains a type A RR under its answer, which contains the ip of the user's query.<br>This ip is then wrapped into a response header format that is sent back to the user client.<br> The ip and ttl (time to live) are then cached in a dictionary with the ip as the key, and the cache is later checked before each query, deleting any records that are expired before checking if a domain ip is cached. If a domain ip is not in the cache, the query process begins, and the DNS resolver queries the root server and iteratively finds the domain ip.<br><br>TOOLS:<br>Wireshark was used along with dig and localhost to figure out the byte order and structure for which bytes correspond to which flag and component of the DNS header.</p>
+        <p>RIP Modifications: I created two new functions called 'getLinkWeights' and 'poisonReverse', the latter of which only consists of pseudocode. <br><br> getLinkWeights reads from the json files created that each store the  link weights of a the links to a node's adjacent neighbtors. <br>These values are stored into a dictionary, where each value is another link weights for the link named key. <br><br> The poisonReverse function is written in pseudocode, to communicate how poisonReverse would work if it were used: <br> [without poison Reverse: (as in it would ensure that there is not a case as in 5.7 where the loop will persist for 44 iterations (message exchanges between y and z)—until z eventually computes the cost ofits path via y to be greater than 50)]. <br> With poisonReverse: y’s distance table will indicicate Dz(x) = ∞. The cost of the (x, y) link changes from 4 to 60 at time t=0, y updates its table and continues to route directly to x, (to 60),  and will tell z of its new cost to x, that is, Dy(x) = 60.</p>
         <p>Tags: 
             
             <span class="tag">
