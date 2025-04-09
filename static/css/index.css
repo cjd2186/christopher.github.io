@@ -240,8 +240,9 @@
 }
 
 .project-row {
-    display: -webkit-box;
+    display: flex;
     align-items: center; /* Align items vertically in the center */
+    justify-content: center;
 }
 
 .sum{

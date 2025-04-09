@@ -97,7 +97,7 @@ body.dkgray-base {
     width: 100%; /* Full width of the container */
     height: 100%; /* Full height of the container */
     border-radius: 50px 50px 0 0; /* Rounded top corners */
-    background-image: url('/static/images/clouds_snow.png'); /* Background image URL */
+    background-image: url('/christopher.github.io/static/images/clouds_snow.png'); /* Background image URL */
     background-size: cover; /* Cover the container, cropping if necessary */
     background-position: center bottom; /* Align bottom of the image with the container bottom */
     background-repeat: no-repeat; /* Prevent image tiling */

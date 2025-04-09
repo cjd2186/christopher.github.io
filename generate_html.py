@@ -3,7 +3,7 @@ import json
 from jinja2 import Environment, FileSystemLoader
 import collections 
 # Load JSON data
-with open('static/json/data.json', 'r') as file:
+with open('/static/json/data.json', 'r') as file:
     data = json.load(file)
 
 # Set up Jinja2 environment
@@ -13,7 +13,7 @@ project_template = env.get_template('project.html')
 job_template = env.get_template('job.html')
 
 # Ensure the output directory exists
-output_dir = 'templates/pages'
+output_dir = '/templates/pages'
 os.makedirs(output_dir, exist_ok=True)
 
     
@@ -77,7 +77,7 @@ def count_tags(data):
     
     
     sorted_tags = dict(sorted(tags.items(), key=lambda item: (item[1], item[0])))
-    with open("static/json/tags.json", 'w', encoding='utf-8') as file:
+    with open("/static/json/tags.json", 'w', encoding='utf-8') as file:
         json.dump(sorted_tags, file, ensure_ascii=False, indent=4)
         print("tags.json has been created")
 

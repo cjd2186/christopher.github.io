@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/static/about.txt')
+  fetch('/christopher.github.io/static/about.txt')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -38,10 +38,10 @@ const darkenColor = (color, amount) => {
   return (usePound ? "#" : "") + (r << 16 | g << 8 | b).toString(16).padStart(6, '0');
 };
 
-fetch('/static/json/tags.json')
+fetch('/christopher.github.io/static/json/tags.json')
   .then(response => response.json())
   .then(tags => {
-      fetch('/static/json/categories.json')
+      fetch('/christopher.github.io/static/json/categories.json')
           .then(response => response.json())
           .then(categoriesData => {
               const tagCloudContainer = document.getElementById('tag-cloud');
